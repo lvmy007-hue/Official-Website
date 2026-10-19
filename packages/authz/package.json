@@ -1,0 +1,1 @@
+{"name":"@nova/authz","private":true,"version":"1.0.0","type":"commonjs","main":"./dist/index.js","types":"./dist/index.d.ts","exports":{".":{"types":"./dist/index.d.ts","require":"./dist/index.js","default":"./dist/index.js"}},"scripts":{"typecheck":"tsc --noEmit","build":"tsc -p tsconfig.build.json"},"devDependencies":{"typescript":"^5.6.3"}}

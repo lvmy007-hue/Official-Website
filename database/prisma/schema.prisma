@@ -1,0 +1,427 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+
+model User {
+  id String @id @default(cuid())
+  email String @unique
+  displayName String
+  passwordHash String
+  status String @default("ACTIVE")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  memberships Membership[]
+  sessions Session[]
+  oauthStates OAuthState[]
+  auditEvents AuditEvent[]
+  reportJobs FbaReportJob[]
+}
+model Tenant {
+  id String @id @default(cuid())
+  name String
+  slug String @unique
+  mode String @default("LIVE")
+  timezone String @default("Asia/Shanghai")
+  defaultCurrency String @default("USD")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  memberships Membership[]
+  roles Role[]
+  legalEntities LegalEntity[]
+  sellerAccounts SellerAccount[]
+  connections PlatformConnection[]
+  syncJobs SyncJob[]
+  orders Order[]
+  inventory InventorySnapshot[]
+  fbaProducts FbaProduct[]
+  fbaInventory FbaInventoryRecord[]
+  fbaInboundPlans FbaInboundPlan[]
+  fbaFeeEvents FbaFeeEvent[]
+  fbaReturns FbaReturnCase[]
+  auditEvents AuditEvent[]
+  reportJobs FbaReportJob[]
+}
+model Role {
+  id String @id @default(cuid())
+  tenantId String?
+  name String
+  permissions Json
+  resourceScope Json
+  system Boolean @default(false)
+  version Int @default(1)
+  tenant Tenant? @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  memberships Membership[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([tenantId, name])
+}
+model Membership {
+  id String @id @default(cuid())
+  userId String
+  tenantId String
+  roleId String
+  status String @default("ACTIVE")
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  role Role @relation(fields: [roleId], references: [id], onDelete: Restrict)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([userId, tenantId])
+  @@index([tenantId, status])
+}
+model Session {
+  id String @id @default(cuid())
+  userId String
+  refreshTokenHash String
+  userAgent String?
+  ipHash String?
+  expiresAt DateTime
+  revokedAt DateTime?
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  @@index([userId, revokedAt])
+}
+model LegalEntity {
+  id String @id @default(cuid())
+  tenantId String
+  name String
+  registeredCountry String
+  registrationNo String?
+  status String @default("ACTIVE")
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  sellerAccounts SellerAccount[]
+  oauthStates OAuthState[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([tenantId, name])
+}
+model SellerAccount {
+  id String @id @default(cuid())
+  tenantId String
+  legalEntityId String
+  provider String @default("AMAZON_SP_API")
+  sellerId String
+  logicalRegion String
+  displayName String
+  marketplaceIds Json
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  legalEntity LegalEntity @relation(fields: [legalEntityId], references: [id], onDelete: Restrict)
+  connections PlatformConnection[]
+  orders Order[]
+  inventory InventorySnapshot[]
+  fbaProducts FbaProduct[]
+  fbaInventory FbaInventoryRecord[]
+  fbaInboundPlans FbaInboundPlan[]
+  fbaFeeEvents FbaFeeEvent[]
+  fbaReturns FbaReturnCase[]
+  reportJobs FbaReportJob[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([provider, sellerId, logicalRegion])
+  @@index([tenantId, logicalRegion])
+}
+model PlatformConnection {
+  id String @id @default(cuid())
+  tenantId String
+  sellerAccountId String?
+  provider String
+  state String @default("NOT_CONFIGURED")
+  externalAccountId String?
+  encryptedRefreshToken String?
+  refreshTokenUpdatedAt DateTime?
+  grantedScopes Json
+  lastSuccessfulSyncAt DateTime?
+  lastHealthCheckedAt DateTime?
+  lastErrorCode String?
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  sellerAccount SellerAccount? @relation(fields: [sellerAccountId], references: [id], onDelete: Cascade)
+  oauthStates OAuthState[]
+  healthChecks ConnectionHealth[]
+  syncJobs SyncJob[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([tenantId, provider, state])
+}
+model OAuthState {
+  id String @id @default(cuid())
+  tenantId String
+  connectionId String
+  initiatedById String?
+  legalEntityId String?
+  stateHash String @unique
+  redirectUri String
+  expiresAt DateTime
+  consumedAt DateTime?
+  connection PlatformConnection @relation(fields: [connectionId], references: [id], onDelete: Cascade)
+  initiatedBy User? @relation(fields: [initiatedById], references: [id], onDelete: SetNull)
+  legalEntity LegalEntity? @relation(fields: [legalEntityId], references: [id], onDelete: SetNull)
+  createdAt DateTime @default(now())
+  @@index([tenantId, expiresAt, consumedAt])
+  @@index([legalEntityId])
+}
+model ConnectionHealth {
+  id String @id @default(cuid())
+  connectionId String
+  status String
+  checks Json
+  requestId String
+  checkedAt DateTime @default(now())
+  connection PlatformConnection @relation(fields: [connectionId], references: [id], onDelete: Cascade)
+  @@index([connectionId, checkedAt])
+}
+model Order {
+  id String @id @default(cuid())
+  tenantId String
+  sellerAccountId String
+  amazonOrderId String
+  marketplaceId String
+  purchaseDate DateTime
+  status String
+  fulfillment String?
+  currency String
+  amount Decimal? @db.Decimal(20, 6)
+  itemCount Int?
+  sourceUpdatedAt DateTime
+  sourceRecordId String
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  sellerAccount SellerAccount @relation(fields: [sellerAccountId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([sellerAccountId, amazonOrderId])
+  @@index([tenantId, purchaseDate])
+}
+model InventorySnapshot {
+  id String @id @default(cuid())
+  tenantId String
+  sellerAccountId String
+  sku String
+  title String?
+  available Int @default(0)
+  inbound Int @default(0)
+  reserved Int @default(0)
+  sourceUpdatedAt DateTime
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  sellerAccount SellerAccount @relation(fields: [sellerAccountId], references: [id], onDelete: Cascade)
+  @@unique([sellerAccountId, sku])
+  @@index([tenantId, available])
+}
+model SyncJob {
+  id String @id @default(cuid())
+  tenantId String
+  connectionId String
+  type String
+  status String @default("PENDING")
+  progressCurrent Int @default(0)
+  progressTotal Int @default(0)
+  attempts Int @default(0)
+  failureCode String?
+  requestId String
+  startedAt DateTime?
+  finishedAt DateTime?
+  createdAt DateTime @default(now())
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  connection PlatformConnection @relation(fields: [connectionId], references: [id], onDelete: Cascade)
+  @@index([tenantId, createdAt])
+}
+model AuditEvent {
+  id String @id @default(cuid())
+  tenantId String
+  actorId String?
+  action String
+  resourceType String
+  resourceId String?
+  requestId String
+  result String
+  detail Json?
+  createdAt DateTime @default(now())
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  actor User? @relation(fields: [actorId], references: [id], onDelete: SetNull)
+  @@index([tenantId, createdAt])
+}
+model ContactRequest {
+  id String @id @default(cuid())
+  name String
+  company String
+  email String
+  message String
+  status String @default("NEW")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([createdAt])
+  @@index([status, createdAt])
+}
+
+model FbaProduct {
+  id String @id @default(cuid())
+  tenantId String
+  sellerAccountId String
+  marketplaceId String @default("ATVPDKIKX0DER")
+  asin String
+  sellerSku String
+  fnsku String?
+  title String
+  brand String?
+  productType String?
+  listingStatus String @default("ACTIVE")
+  fulfillmentChannel String @default("AFN")
+  sizeTier String?
+  packageLengthCm Decimal? @db.Decimal(12, 4)
+  packageWidthCm Decimal? @db.Decimal(12, 4)
+  packageHeightCm Decimal? @db.Decimal(12, 4)
+  packageWeightKg Decimal? @db.Decimal(12, 4)
+  price Decimal? @db.Decimal(20, 6)
+  currency String @default("USD")
+  sourceUpdatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  sellerAccount SellerAccount @relation(fields: [sellerAccountId], references: [id], onDelete: Cascade)
+  @@unique([sellerAccountId, marketplaceId, sellerSku])
+  @@index([tenantId, marketplaceId, asin])
+}
+
+model FbaInventoryRecord {
+  id String @id @default(cuid())
+  tenantId String
+  sellerAccountId String
+  marketplaceId String @default("ATVPDKIKX0DER")
+  asin String
+  sellerSku String
+  fnsku String?
+  fulfillableQuantity Int @default(0)
+  inboundWorkingQuantity Int @default(0)
+  inboundShippedQuantity Int @default(0)
+  inboundReceivingQuantity Int @default(0)
+  reservedQuantity Int @default(0)
+  unfulfillableQuantity Int @default(0)
+  researchQuantity Int @default(0)
+  daysOfSupply Decimal? @db.Decimal(12, 2)
+  inventoryAgeDays Int?
+  strandedReason String?
+  healthStatus String @default("HEALTHY")
+  sourceUpdatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  sellerAccount SellerAccount @relation(fields: [sellerAccountId], references: [id], onDelete: Cascade)
+  @@unique([sellerAccountId, marketplaceId, sellerSku])
+  @@index([tenantId, healthStatus, daysOfSupply])
+}
+
+model FbaInboundPlan {
+  id String @id @default(cuid())
+  tenantId String
+  sellerAccountId String
+  marketplaceId String @default("ATVPDKIKX0DER")
+  externalPlanId String?
+  name String
+  status String @default("DRAFT")
+  sourceAddress String
+  placementOption String?
+  totalUnits Int @default(0)
+  shipmentCount Int @default(0)
+  sourceUpdatedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  sellerAccount SellerAccount @relation(fields: [sellerAccountId], references: [id], onDelete: Cascade)
+  shipments FbaInboundShipment[]
+  @@index([tenantId, status, createdAt])
+}
+
+model FbaInboundShipment {
+  id String @id @default(cuid())
+  planId String
+  shipmentId String
+  status String @default("WORKING")
+  destinationFc String?
+  placementOption String?
+  transportStatus String?
+  trackingNumber String?
+  unitsExpected Int @default(0)
+  unitsReceived Int @default(0)
+  discrepancyQuantity Int @default(0)
+  sourceUpdatedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  plan FbaInboundPlan @relation(fields: [planId], references: [id], onDelete: Cascade)
+  @@unique([planId, shipmentId])
+  @@index([status, destinationFc])
+}
+
+model FbaFeeEvent {
+  id String @id @default(cuid())
+  tenantId String
+  sellerAccountId String
+  marketplaceId String @default("ATVPDKIKX0DER")
+  settlementId String?
+  amazonOrderId String?
+  asin String?
+  sellerSku String?
+  eventType String
+  amount Decimal @db.Decimal(20, 6)
+  currency String @default("USD")
+  postedAt DateTime
+  description String?
+  sourceUpdatedAt DateTime
+  createdAt DateTime @default(now())
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  sellerAccount SellerAccount @relation(fields: [sellerAccountId], references: [id], onDelete: Cascade)
+  @@index([tenantId, postedAt, eventType])
+  @@index([sellerAccountId, settlementId])
+}
+
+model FbaReturnCase {
+  id String @id @default(cuid())
+  tenantId String
+  sellerAccountId String
+  marketplaceId String @default("ATVPDKIKX0DER")
+  amazonOrderId String
+  returnId String?
+  asin String
+  sellerSku String
+  quantity Int @default(1)
+  disposition String?
+  reason String?
+  refundAmount Decimal? @db.Decimal(20, 6)
+  reimbursementStatus String @default("NOT_REVIEWED")
+  status String @default("OPEN")
+  returnDate DateTime
+  sourceUpdatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  sellerAccount SellerAccount @relation(fields: [sellerAccountId], references: [id], onDelete: Cascade)
+  @@unique([sellerAccountId, amazonOrderId, asin, returnDate])
+  @@index([tenantId, status, returnDate])
+}
+
+model FbaReportJob {
+  id String @id @default(cuid())
+  tenantId String
+  sellerAccountId String?
+  marketplaceId String @default("ATVPDKIKX0DER")
+  reportType String
+  fromDate DateTime?
+  toDate DateTime?
+  status String @default("PENDING")
+  externalReportId String?
+  documentId String?
+  downloadUrl String?
+  expiresAt DateTime?
+  failureCode String?
+  requestId String
+  createdById String?
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  sellerAccount SellerAccount? @relation(fields: [sellerAccountId], references: [id], onDelete: SetNull)
+  createdBy User? @relation(fields: [createdById], references: [id], onDelete: SetNull)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([tenantId, createdAt])
+  @@index([tenantId, status])
+  @@index([sellerAccountId, reportType])
+}

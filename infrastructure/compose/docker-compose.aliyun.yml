@@ -1,0 +1,75 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-nova}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
+      POSTGRES_DB: ${POSTGRES_DB:-nova_erp}
+    volumes: [nova-aliyun-postgres:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes: [nova-aliyun-redis:/data]
+    healthcheck: { test: ["CMD", "redis-cli", "ping"], interval: 5s, timeout: 5s, retries: 24 }
+  migrate:
+    build: { context: ../.., dockerfile: infrastructure/compose/api.Dockerfile }
+    restart: "no"
+    environment:
+      APP_MODE: production
+      DEMO_MODE: "false"
+      MOCK_CONNECTOR: "false"
+      DATABASE_URL: ${DATABASE_URL:?DATABASE_URL is required}
+      BOOTSTRAP_CONFIRM: ${BOOTSTRAP_CONFIRM:-}
+      BOOTSTRAP_ADMIN_EMAIL: ${BOOTSTRAP_ADMIN_EMAIL:-}
+      BOOTSTRAP_ADMIN_PASSWORD: ${BOOTSTRAP_ADMIN_PASSWORD:-}
+      BOOTSTRAP_ADMIN_NAME: ${BOOTSTRAP_ADMIN_NAME:-}
+      BOOTSTRAP_TENANT_NAME: ${BOOTSTRAP_TENANT_NAME:-}
+      BOOTSTRAP_TENANT_SLUG: ${BOOTSTRAP_TENANT_SLUG:-}
+    command: ["sh", "-c", "pnpm --filter @nova/api prisma:deploy && if [ \"$BOOTSTRAP_CONFIRM\" = \"CREATE_FIRST_ADMIN\" ]; then pnpm --filter @nova/api prisma:bootstrap; fi"]
+    depends_on: { postgres: { condition: service_healthy } }
+  api:
+    build: { context: ../.., dockerfile: infrastructure/compose/api.Dockerfile }
+    restart: unless-stopped
+    environment:
+      APP_MODE: production
+      DEMO_MODE: "false"
+      MOCK_CONNECTOR: "false"
+      PORT: 4000
+      DATABASE_URL: ${DATABASE_URL:?DATABASE_URL is required}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379}
+      JWT_SECRET: ${JWT_SECRET:?JWT_SECRET is required}
+      TOKEN_ENCRYPTION_KEY: ${TOKEN_ENCRYPTION_KEY:?TOKEN_ENCRYPTION_KEY is required}
+      CORS_ORIGINS: ${CORS_ORIGINS:?CORS_ORIGINS is required}
+      AMAZON_SP_API_APPROVED: ${AMAZON_SP_API_APPROVED:-false}
+      AMAZON_SP_APPLICATION_ID: ${AMAZON_SP_APPLICATION_ID:-}
+      AMAZON_SP_AUTH_URL: ${AMAZON_SP_AUTH_URL:-https://sellercentral.amazon.com/apps/authorize/consent}
+    healthcheck: { test: ["CMD-SHELL", "wget -q -O - http://127.0.0.1:4000/api/v1/health >/dev/null"], interval: 10s, timeout: 5s, start_period: 20s, retries: 12 }
+    depends_on: { postgres: { condition: service_healthy }, redis: { condition: service_healthy }, migrate: { condition: service_completed_successfully } }
+  worker:
+    build: { context: ../.., dockerfile: infrastructure/compose/worker.Dockerfile }
+    restart: unless-stopped
+    environment:
+      APP_MODE: production
+      DEMO_MODE: "false"
+      MOCK_CONNECTOR: "false"
+      DATABASE_URL: ${DATABASE_URL:?DATABASE_URL is required}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379}
+    depends_on: { postgres: { condition: service_healthy }, redis: { condition: service_healthy }, migrate: { condition: service_completed_successfully } }
+  web:
+    build:
+      context: ../..
+      dockerfile: infrastructure/compose/web.Dockerfile
+      args: { VITE_API_MODE: server, VITE_API_BASE_URL: /api/v1 }
+    restart: unless-stopped
+    ports: ["${HTTP_PORT:-80}:80"]
+    depends_on: { api: { condition: service_healthy } }
+volumes:
+  nova-aliyun-postgres:
+  nova-aliyun-redis:

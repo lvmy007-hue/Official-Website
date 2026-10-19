@@ -1,0 +1,1 @@
+{"name":"@nova/worker","private":true,"version":"1.0.0","type":"commonjs","scripts":{"dev":"tsx watch src/main.ts","build":"tsc -p tsconfig.json","start":"node dist/main.js","typecheck":"tsc -p tsconfig.json --noEmit"},"dependencies":{"@prisma/client":"^5.22.0","bullmq":"^5.25.1","ioredis":"^5.4.1","pino":"^9.5.0"},"devDependencies":{"tsx":"^4.19.2","typescript":"^5.6.3"}}

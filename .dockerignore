@@ -1,0 +1,11 @@
+node_modules
+dist
+.turbo
+.pnpm-store
+.npm-cache
+.git
+.env
+.env.*
+!.env.example
+!.env.aliyun.example
+coverage

@@ -1,0 +1,10 @@
+node_modules/
+dist/
+apps/*/dist/
+.env
+.env.*
+!.env.example
+!.env.aliyun.example
+.pnpm-store/
+.npm-cache/
+coverage/

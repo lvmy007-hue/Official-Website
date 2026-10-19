@@ -1,0 +1,31 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment: { POSTGRES_USER: nova, POSTGRES_PASSWORD: nova_dev_password, POSTGRES_DB: nova_erp }
+    # Keep local development isolated from other stacks that commonly bind
+    # PostgreSQL on 5432 (for example Chatwoot). Containers still use the
+    # internal postgres:5432 address through DATABASE_URL.
+    ports: ["15432:5432"]
+    volumes: [nova-postgres:/var/lib/postgresql/data]
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U nova -d nova_erp"], interval: 5s, timeout: 5s, retries: 12 }
+  redis:
+    image: redis:7-alpine
+    # Keep local development isolated from other Redis stacks on 6379.
+    ports: ["16379:6379"]
+    volumes: [nova-redis:/data]
+    healthcheck: { test: ["CMD", "redis-cli", "ping"], interval: 5s, timeout: 5s, retries: 12 }
+  migrate:
+    build: { context: ../.., dockerfile: infrastructure/compose/api.Dockerfile }
+    environment: { APP_MODE: development, DEMO_MODE: "false", LOCAL_NO_AUTH: "true", LOCAL_DEV_TENANT_ID: local-dev-tenant, LOCAL_DEV_USER_ID: local-dev-user, LOCAL_DEV_USER_EMAIL: local.admin@nova-erp.local, DATABASE_URL: postgresql://nova:nova_dev_password@postgres:5432/nova_erp?schema=public }
+    command: ["sh", "-c", "pnpm --filter @nova/api prisma:deploy && pnpm --filter @nova/api prisma:local-bootstrap"]
+    depends_on: { postgres: { condition: service_healthy } }
+  api:
+    build: { context: ../.., dockerfile: infrastructure/compose/api.Dockerfile }
+    environment: { APP_MODE: development, DEMO_MODE: "false", MOCK_CONNECTOR: "false", LOCAL_NO_AUTH: "true", LOCAL_DEV_TENANT_ID: local-dev-tenant, LOCAL_DEV_USER_ID: local-dev-user, JWT_SECRET: local-development-secret-change-me-at-least-32, TOKEN_ENCRYPTION_KEY: 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef, DATABASE_URL: postgresql://nova:nova_dev_password@postgres:5432/nova_erp?schema=public, REDIS_URL: redis://redis:6379, CORS_ORIGINS: http://127.0.0.1:5173 }
+    ports: ["4000:4000"]
+    depends_on: { postgres: { condition: service_healthy }, redis: { condition: service_healthy }, migrate: { condition: service_completed_successfully } }
+  worker:
+    build: { context: ../.., dockerfile: infrastructure/compose/worker.Dockerfile }
+    environment: { APP_MODE: development, DEMO_MODE: "false", MOCK_CONNECTOR: "false", DATABASE_URL: postgresql://nova:nova_dev_password@postgres:5432/nova_erp?schema=public, REDIS_URL: redis://redis:6379 }
+    depends_on: { postgres: { condition: service_healthy }, redis: { condition: service_healthy }, migrate: { condition: service_completed_successfully } }
+volumes: { nova-postgres: {}, nova-redis: {} }
