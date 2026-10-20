@@ -1,0 +1,44 @@
+时间: 2026-10-19
+目录: V7_商业级全站UI施工包
+pnpm 不在 PATH，改用 node_modules 内的本地命令。
+
+.\node_modules\.bin\tsc.cmd -b --pretty false
+退出码: 0
+
+.\node_modules\.bin\vite.cmd build
+退出码: 0
+有既有的 charts chunk 体积警告，构建完成。
+
+.\node_modules\.bin\vitest.cmd run src/public-site.test.ts src/data.test.ts
+退出码: 0
+4 passed
+
+开发服务: .\node_modules\.bin\vite.cmd --host 127.0.0.1 --port 5173
+HTTP:
+200 / /product /solutions /about /news /resources /contact /privacy /terms /security /robots.txt /sitemap.xml
+404 /no-such-page
+
+Chrome headless 渲染首页后，12 个板块标题都在文档中。
+桌面下拉可打开，Esc 后关闭。退款矩阵点击后出现“退款 ≠ 实物退货”。
+第 2 条 FAQ aria-expanded=true。390 宽下页头显示“菜单”，登录和预约在页头为隐藏，抽屉打开后 body overflow=hidden，Esc 后抽屉关闭。
+1440 / 768 / 390 的 documentElement 横向溢出差值均为 0。
+
+第二轮 2026-10-19
+.\node_modules\.bin\tsc.cmd -b --pretty false
+退出码: 0
+.\node_modules\.bin\tsc.cmd -p packages\api-contracts\tsconfig.build.json --pretty false
+退出码: 0
+.\node_modules\.bin\tsc.cmd -p apps\api\tsconfig.json --pretty false --noEmit
+退出码: 0
+.\node_modules\.bin\vitest.cmd run src/public-site.test.ts src/data.test.ts
+退出码: 0
+5 passed
+.\node_modules\.bin\vite.cmd build
+退出码: 0
+
+HTTP 127.0.0.1:5173
+200 /product /product/stores /product/orders /product/returns /product/finance /product/advertising /product/permissions /solutions/advertising /pricing
+404 /no-such-page
+
+Chrome 测量 1440 与 390：上述新页面 documentElement 横向溢出差值均为 0。
+未安装 Playwright。帮助中心、英文版和咨询后台仍未做。

@@ -1,0 +1,4079 @@
+[
+  {
+    "name": "LowcodeNormalPage",
+    "chars": 335,
+    "texts": [
+      "data-module-name=\"LowcodeNormalPage\" data-module-id=\"sNBy12KbB5Kfn_hu-NN3w\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "AliyunComGlobalNav",
+    "chars": 3701,
+    "texts": [
+      "data-module-name=\"AliyunComGlobalNav\" data-module-id=\"4VYgf18xNlTAyFFbOuOQe\" data-homon-module=\"\" data-spm=\"J_4VYgf18xNlTAyFFbOuOQe\">",
+      "打开 APP",
+      "<div class=\"global-nav-search _626567c051250ffe2f303af907d3fc83_global-nav-search\""
+    ],
+    "links": [
+      "https://download.app.aliyun.com/app/aliyunapp/download/home?ulinks_fallback=aliyun%3A%2F%2",
+      "打开 APP -> https://download.app.aliyun.com/app/aliyunapp/download/home?ulinks_fallback=aliyun%3A%2F%2",
+      "https://www.aliyun.com/"
+    ],
+    "imgs": [
+      " | https://img.alicdn.com/imgextra/i2/O1CN01kKjxfa1zWjQ55xJWd_!!6000000006722-2-tps-636-156.png"
+    ],
+    "vars": [
+      "--translate-y: -94px;"
+    ]
+  },
+  {
+    "name": "AliyunComGlobalNavSearch",
+    "chars": 9917,
+    "texts": [
+      "data-module-name=\"AliyunComGlobalNavSearch\" data-module-id=\"XmGx2FZCDAeIy2ZCWL7sW\">",
+      "搜索图标",
+      "查看 \"\" 全部搜索结果",
+      "AI 助理",
+      "你好，我是AI助理，可以解答问题、推荐解决方案等",
+      "<div class=\"_18a32969382a277c44015217fbc5cb5a_box\""
+    ],
+    "links": [
+      "https://www.aliyun.com/search?from=h5-global-nav-search",
+      "AI 助理 你好，我是AI助理，可以解答问题、推荐解决方案等 -> https://www.aliyun.com/ai-assistant?displayMode=side"
+    ],
+    "imgs": [
+      " | https://img.alicdn.com/imgextra/i2/O1CN01bYc1m81RrcSAyOjMu_!!6000000002165-54-tps-60-60.apng",
+      "头像 | https://img.alicdn.com/imgextra/i3/O1CN01yXhn5t1WbC3mVT1db_!!6000000002806-2-tps-44-44.png",
+      "菜单 | https://img.alicdn.com/imgextra/i1/O1CN01Brs4C81doCcbIEL6F_!!6000000003782-2-tps-48-48.png"
+    ],
+    "vars": []
+  },
+  {
+    "name": "Ace2023Box",
+    "chars": 223,
+    "texts": [
+      "data-module-name=\"Ace2023Box\" data-module-id=\"6snujIvDMAucw3-5Wze5i\" data-homon-module=\"\" data-spm=\"J_6snujIvDMAucw3-5Wze5i\">",
+      "<div class=\"_18a32969382a277c44015217fbc5cb5a_box\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "LowcodeNormalPage",
+    "chars": 116,
+    "texts": [
+      "data-module-name=\"LowcodeNormalPage\" data-module-id=\"sNBy12KbB5Kfn_hu-NN3w\">",
+      "<div class=\"adc-theme-homepage\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025HomepageTheme",
+    "chars": 144,
+    "texts": [
+      "data-module-name=\"Adc2025HomepageTheme\" data-module-id=\"KB0psRudOYpVnH8sAIANa\">",
+      "<div class=\"_057258e6648eb2be78548afadf3687d6_container\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025HomepageBanner",
+    "chars": 9425,
+    "texts": [
+      "data-module-name=\"Adc2025HomepageBanner\" data-module-id=\"E6lQbksm_Obit3Bf0Tx1p\" data-homon-module=\"\" data-spm=\"J_E6lQbksm_Obit3Bf0Tx1p\">",
+      "Token Plan",
+      "全面升级",
+      "Token Plan 个人版价格不变，权益加码。新增 Agent Harness 工具权益，一站式覆盖模型调用、工具集成与 Agent 编排运行全流程",
+      "立即订阅",
+      "在线咨询",
+      "多模态 MOE 模型 Qwen3.8-Flash",
+      "支持百万级上下文窗口，能一次性处理超长文档、代码仓库",
+      "万小智 3.0，首月低至 15 元",
+      "建站+经营，支持 GEO/SEO/内容分发，送域名备案 2000 积分",
+      "云服务器 99 元/年，续费不涨价",
+      "2 核 2G 3M不限流量，一口价锁至 2029 年，送安全防护与备份",
+      "2.4 万亿参数模型 Qwen3.8-Max",
+      "编程与办公能力全面跃升，长程任务中自主规划与闭环迭代",
+      "<div class=\"_759aaddcf987cc3e494267d08f2bb527_container bg-white rounded-tl-card-lg rounded-tr-card-lg shadow-large z-index-1 inject-style-d4cdbf6c6055c9141f1efb27f1632c28\""
+    ],
+    "links": [
+      "https://www.qianwenai.com/benefits/tokenplan",
+      "立即订阅 -> https://www.qianwenai.com/benefits/tokenplan",
+      "在线咨询 ->  https://smartservice.console.aliyun.com/service/pre-sales-chat?from=ai&amp;displayMode=wi",
+      "多模态 MOE 模型 Qwen3.8-Flash 支持百万级上下文窗口，能一次性处理超长文档、代码仓库 -> https://www.qianwenai.com/models/qwen3.8-flash",
+      "万小智 3.0，首月低至 15 元 建站+经营，支持 GEO/SEO/内容分发，送域名备案 2000 积分 -> https://wanwang.aliyun.com/website/xiaozhi",
+      "云服务器 99 元/年，续费不涨价 2 核 2G 3M不限流量，一口价锁至 2029 年，送安全防护与备份 -> https://www.aliyun.com/activity/ecs/99program",
+      "2.4 万亿参数模型 Qwen3.8-Max 编程与办公能力全面跃升，长程任务中自主规划与闭环迭代 -> https://www.qianwenai.com/models/qwen3.8-max"
+    ],
+    "imgs": [
+      " | https://img.alicdn.com/imgextra/i3/O1CN01KZf5wl21JZM4AuxvI_!!6000000006964-2-tps-3072-1512.png"
+    ],
+    "vars": [
+      "--background-color: rgb(250,250,250);",
+      "--mouse-x: -1000px; --mouse-y: -1000px;",
+      "--mouse-x: -1000px; --mouse-y: -1000px;",
+      "--icon: url(https://img.alicdn.com/imgextra/i3/O1CN01LseP2y1oHC9WYGoNR_!!6000000005199-2-tps-2304-64.png);",
+      "--icon: url(https://img.alicdn.com/imgextra/i3/O1CN01LseP2y1oHC9WYGoNR_!!6000000005199-2-tps-2304-64.png); --steps: 35; --duration: 1.5s;",
+      "--icon: url(https://img.alicdn.com/imgextra/i3/O1CN01LseP2y1oHC9WYGoNR_!!6000000005199-2-tps-2304-64.png);",
+      "--icon: url(https://img.alicdn.com/imgextra/i3/O1CN01LseP2y1oHC9WYGoNR_!!6000000005199-2-tps-2304-64.png); --steps: 35; --duration: 1.5s;",
+      "--icon: url(https://img.alicdn.com/imgextra/i1/O1CN01GkRtkU1YGFTv9baEw_!!6000000003031-2-tps-2304-64.png);",
+      "--icon: url(https://img.alicdn.com/imgextra/i1/O1CN01GkRtkU1YGFTv9baEw_!!6000000003031-2-tps-2304-64.png); --steps: 35; --duration: 1.5s;",
+      "--icon: url(https://img.alicdn.com/imgextra/i3/O1CN01LseP2y1oHC9WYGoNR_!!6000000005199-2-tps-2304-64.png);",
+      "--icon: url(https://img.alicdn.com/imgextra/i3/O1CN01LseP2y1oHC9WYGoNR_!!6000000005199-2-tps-2304-64.png); --steps: 35; --duration: 1.5s;"
+    ]
+  },
+  {
+    "name": "Adc2025DoubleColumnsScrollScreen",
+    "chars": 614,
+    "texts": [
+      "data-module-name=\"Adc2025DoubleColumnsScrollScreen\" data-module-id=\"zsjI5GlfrwE0jnH6hsdfr\" data-homon-module=\"\" data-spm=\"J_zsjI5GlfrwE0jnH6hsdfr\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--top:0",
+      "background-size: 100% 100%; background-position: center center; --mobile-background-image: none; --background-image: url(https://img.alicdn.com/imgextra/i4/O1CN01CwowNR22Du2CNNTVs_!!6000000007087-2-tps-2880-1666.png);"
+    ]
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 364,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"7KCzqCuKfg9XyCoQPlfTx\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--column-count:12;--mobile-column-count:12;--row-height:auto;--mobile-row-height:auto;--gap:1;--split-border-color:transparent;--split-border-width:0;--mobile-split-border-color:transparent;--mobile-split-border-width:0"
+    ]
+  },
+  {
+    "name": "Adc2025Grid",
+    "chars": 253,
+    "texts": [
+      "data-module-name=\"Adc2025Grid\" data-module-id=\"zHqF10tcbWQ7ZXFXFXAxt\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:6;--mobile-row:1;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 210,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"bhC77gG0L_U_80tsNT-x1\">",
+      "<h2 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading2 text-44 leading-64 font-semibold mobile:text-26 mobile:leading-40 text-default\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 375,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"vmI9DZp6MN23CZ-H-MJfn\">更强模型、更新能力、",
+      "热门 AI 应用免费体验"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--mouse-x:-1000px;--mouse-y:-1000px"
+    ]
+  },
+  {
+    "name": "Adc2025LinkButton",
+    "chars": 204,
+    "texts": [
+      "data-module-name=\"Adc2025LinkButton\" data-module-id=\"jbz1km38X6GilplZD6y6T\">立即免费体验",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 980,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"hByboHs4VQz58voAWmpIN\">",
+      "<a href=\"https://www.aliyun.com/exp\" target=\"_blank\" class=\"_6d94b21afe0614eecb752aa6de89f339_container group/card mt-14 rounded-card aspect-video shadow-medium\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 954,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"ZgPymnSVAuPag-4wUTnh2\">",
+      "<a class=\"_5a295cc3e71c8cee4e60826c135730c0_container pb-6 border-b-1 border-solid border-disabled mobile:pb-5\" href=\"https://www.aliyun.com/exp/llm\" target=\"_blank\""
+    ],
+    "links": [],
+    "imgs": [
+      " | https://img.alicdn.com/imgextra/i2/O1CN01lX1Hup1bkQZ01gTTU_!!6000000003503-0-tps-1664-936.jpg"
+    ],
+    "vars": [
+      "--row:1;--col:6;--mobile-row:1;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025HomepageAiExpCard",
+    "chars": 227,
+    "texts": [
+      "data-module-name=\"Adc2025HomepageAiExpCard\" data-module-id=\"lz5iqCTp0HlqfEtlcxSX6\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box h-full flex-col justify-center\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 256,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"hC8r04XOB9VS9p20Y6N8E\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i4/O1CN01RiKZHR1UUDCcjAdA0_!!6000000002520-55-tps-28-28.svg\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-7 h-7\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 311,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"j_sKsoy3qFmF30i1dS5Od\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row items-center mt-3 mobile:mt-2 inject-style-7259275f6d83e66885bc8fa61c6e6ba5\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 234,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"ZAUyfHY2fanj1Hdok00gf\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 text-18 leading-28 font-semibold hover:text-primary transition-colors line-clamp-1 mobile:text-default\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 437,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"G0JDPZohjioryAvvjFDTz\">大语言模型",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body pl-2 pr-2 text-12 leading-20 rounded-tag text-subtler inject-style-3379bc3adb9edce9bf4cf544a444579d\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 864,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"-bQS4SxcDh2sfOoVlL0ph\">千问大模型 | 达到领域SOTA水平",
+      "最新千问 Qwen3.8 系列原生多模态大模型，Vibe Coding更强，多模态识别更准"
+    ],
+    "links": [],
+    "imgs": [
+      "封面图 | https://img.alicdn.com/imgextra/i2/O1CN01MQu8Rv1PzHzzPlC0f_!!6000000001911-0-tps-512-288.jpg"
+    ],
+    "vars": []
+  },
+  {
+    "name": "Adc2025HomepageAiExpCard",
+    "chars": 227,
+    "texts": [
+      "data-module-name=\"Adc2025HomepageAiExpCard\" data-module-id=\"fPiqLz_UK2ON-6OwwiZjN\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box h-full flex-col justify-center\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 256,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"Tq1Xw1x2BF6Xn6Wc3gpZZ\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i3/O1CN01DhJubA1dXGOQ5APoj_!!6000000003745-55-tps-28-28.svg\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-7 h-7\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 311,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"t4HXlP9XRHCLlYSdqS9hM\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row items-center mt-3 mobile:mt-2 inject-style-7259275f6d83e66885bc8fa61c6e6ba5\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 234,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"OYYPZJF7vw1Dw0Dw6VDJV\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 text-18 leading-28 font-semibold line-clamp-1 transition-colors hover:text-primary mobile:text-default\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 436,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"R5H2R5YPmOuDi84tWDFgw\">视频生成",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body pl-2 pr-2 text-12 leading-20 rounded-tag text-subtler inject-style-3379bc3adb9edce9bf4cf544a444579d\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 860,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"u4xnJO7YlLXb7VyYDWmYU\">HappyHorse 模型 | 影视级创作能力",
+      "视频生成模型，实现智能分镜调度；支持多镜头叙事，自然高品质音色"
+    ],
+    "links": [],
+    "imgs": [
+      "封面图 | https://img.alicdn.com/imgextra/i1/O1CN01D4TCPV1XcP8TPPnBv_!!6000000002944-2-tps-1664-936.png"
+    ],
+    "vars": []
+  },
+  {
+    "name": "Adc2025HomepageAiExpCard",
+    "chars": 227,
+    "texts": [
+      "data-module-name=\"Adc2025HomepageAiExpCard\" data-module-id=\"XB7PgsMH54w6uXU0zJSg0\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box h-full flex-col justify-center\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 256,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"KhBhbdyKlN9IPFeDsKwqq\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i3/O1CN01WJKVJm1m4FqTM6bZJ_!!6000000004900-55-tps-20-20.svg\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-7 h-7\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 311,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"50pcPeddKKFwYqVagXfYX\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row items-center mt-3 mobile:mt-2 inject-style-7259275f6d83e66885bc8fa61c6e6ba5\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 234,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"QZgX17RTKIEwEgYeD0vrG\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 text-18 leading-28 font-semibold line-clamp-1 transition-colors hover:text-primary mobile:text-default\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 436,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"1Z7tE2gF3HOocHr7FKcLO\">智能建站",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body pl-2 pr-2 text-12 leading-20 rounded-tag text-subtler inject-style-3379bc3adb9edce9bf4cf544a444579d\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 851,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"4OGCwCtd_eNBl384cjI7A\">万小智 3.0 | 不止建站，更懂经营",
+      "智能生成网站前后台，支持 GEO/SEO，上线即经营"
+    ],
+    "links": [],
+    "imgs": [
+      "封面图 | https://img.alicdn.com/imgextra/i2/O1CN01gKxRe11ubhhHuDoCT_!!6000000006056-2-tps-640-360.png"
+    ],
+    "vars": []
+  },
+  {
+    "name": "Adc2025HomepageAiExpCard",
+    "chars": 227,
+    "texts": [
+      "data-module-name=\"Adc2025HomepageAiExpCard\" data-module-id=\"KTflZjVPzlEfN0mfw-zJp\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box h-full flex-col justify-center\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 256,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"k8NPuKKgpA2bVz7tNanCi\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i3/O1CN01H7B5vd1ZotA7atogB_!!6000000003242-55-tps-28-28.svg\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-7 h-7\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 311,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"O5tBsnjjzKQABWvL5RPoE\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row items-center mt-3 mobile:mt-2 inject-style-7259275f6d83e66885bc8fa61c6e6ba5\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 234,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"5tUHtOaTqrXFbrM45RN_R\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 text-18 leading-28 font-semibold line-clamp-1 transition-colors hover:text-primary mobile:text-default\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 440,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"peRdlV08QcWltZgJqgNk9\">分析 Agent",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body pl-2 pr-2 text-12 leading-20 rounded-tag text-subtler inject-style-3379bc3adb9edce9bf4cf544a444579d\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 865,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"5bm7K3wZ52-4FMqr22Z3B\">Quick BI AIPro｜对话分析、主动巡检",
+      "一个入口，对话即完成深度分析，有洞察和建议，越用越聪明，每个结论都可追溯"
+    ],
+    "links": [],
+    "imgs": [
+      "封面图 | https://img.alicdn.com/imgextra/i1/O1CN01cPp8kh1HIDpUgJraZ_!!6000000000734-0-tps-512-288.jpg"
+    ],
+    "vars": []
+  },
+  {
+    "name": "Adc2025HomepageAiExpCard",
+    "chars": 227,
+    "texts": [
+      "data-module-name=\"Adc2025HomepageAiExpCard\" data-module-id=\"brRUOTiAIkr7eGWAcYq0I\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box h-full flex-col justify-center\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 256,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"y1uQVUtoYYtzuCa_Fn5Xk\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i1/O1CN01B78Zgv1HbSV5y9DxD_!!6000000000776-55-tps-28-28.svg\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-7 h-7\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 311,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"5W-D_vBIILydv_rwPk8b5\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row items-center mt-3 mobile:mt-2 inject-style-7259275f6d83e66885bc8fa61c6e6ba5\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 234,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"69Ykl9o6JKXpc2W3kvp2g\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 text-18 leading-28 font-semibold line-clamp-1 transition-colors hover:text-primary mobile:text-default\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 436,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"7l4upCk3Fx0tJV_6pOyLX\">智能运维",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body pl-2 pr-2 text-12 leading-20 rounded-tag text-subtler inject-style-3379bc3adb9edce9bf4cf544a444579d\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 858,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"gV0H_oLoBm77y05pk1ddG\">STAROps | 问题定位、持续守护",
+      "从被动响应到智能自治，7×24 小时保障业务连续、稳定运行"
+    ],
+    "links": [],
+    "imgs": [
+      "封面图 | https://img.alicdn.com/imgextra/i3/O1CN01ux51xd1b6a76CUBsF_!!6000000003416-0-tps-1280-720.jpg"
+    ],
+    "vars": []
+  },
+  {
+    "name": "Adc2025HomepageAiExpCard",
+    "chars": 227,
+    "texts": [
+      "data-module-name=\"Adc2025HomepageAiExpCard\" data-module-id=\"WIH3sk9hUG45n72HdJd4Q\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box h-full flex-col justify-center\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 256,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"5_jXKcHR9u5VMqiKCjjop\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i2/O1CN01QhM0tL1sBToGmgoaV_!!6000000005728-55-tps-28-28.svg\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-7 h-7\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 311,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"HTU8wPDJfcrbP6jaMHLZ5\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row items-center mt-3 mobile:mt-2 inject-style-7259275f6d83e66885bc8fa61c6e6ba5\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 234,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"nrCvaaVG0Aunac5df4XZa\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 text-18 leading-28 font-semibold line-clamp-1 transition-colors hover:text-primary mobile:text-default\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 439,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"CCXe8hvYFRuAm9zIhaWIl\">AI 数据集成",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body pl-2 pr-2 text-12 leading-20 rounded-tag text-subtler inject-style-3379bc3adb9edce9bf4cf544a444579d\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 848,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"lZ5IjXsnDn-eZmycb4_UM\">EventBridge | 多源接入、全链路打通",
+      "零代码接入多源数据，一站式智能清洗转换，让 AI 轻松读懂你的业务数据",
+      "<div class=\"_919636c0de3715e095cfaadbf0ef4638_container pt-20 flex-col items-center z-index-1 pb-20 mobile:pt-10 mobile:pb-10 adc-pre-exposure\""
+    ],
+    "links": [],
+    "imgs": [
+      "封面图 | https://img.alicdn.com/imgextra/i1/O1CN01EIL5Mx1NGkGuK8dD5_!!6000000001543-2-tps-512-288.png"
+    ],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 956,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"I7xHD_9yWNMiSjao6eMEL\" data-homon-module=\"\" data-spm=\"J_I7xHD_9yWNMiSjao6eMEL\">"
+    ],
+    "links": [],
+    "imgs": [
+      " | https://img.alicdn.com/imgextra/i3/O1CN01leeZsJ1EHod6M23i7_!!6000000000327-2-tps-2880-1724.png"
+    ],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 1553,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"z4D2aZL-yzEn6F4v5SEjo\">",
+      "千",
+      "问",
+      "大",
+      "模",
+      "型",
+      "，",
+      "企",
+      "业",
+      "拥",
+      "抱",
+      "A",
+      "I",
+      "时",
+      "代",
+      "优",
+      "选"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--column-count:12;--mobile-column-count:12;--row-height:auto;--mobile-row-height:auto;--gap:0;--split-border-color:#E0E0E0;--split-border-width:1;--mobile-split-border-color:#E0E0E0;--mobile-split-border-width:1"
+    ]
+  },
+  {
+    "name": "Adc2025Grid",
+    "chars": 654,
+    "texts": [
+      "data-module-name=\"Adc2025Grid\" data-module-id=\"q9mwVCaLXrmVpANNuZaSz\">",
+      "<div class=\"_6d94b21afe0614eecb752aa6de89f339_container p-6 h-full mobile:pl-4 mobile:pr-4 inject-style-ab15b52599c78ca209409b88180fd60f\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:4;--mobile-row:1;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 555,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"mBZZ1IQnqXzpJqCUy9oTq\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 text-26 leading-40 font-semibold text-default\""
+    ],
+    "links": [],
+    "imgs": [
+      " | https://img.alicdn.com/imgextra/i1/O1CN01kWOqch1qrUsvR2y1k_!!6000000005549-0-tps-1248-1152.jpg"
+    ],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 179,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"f-8Opu6F0_EyTeVCqDtrk\">千问大模型",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row mt-3 items-start\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 229,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"l1E1VclxY82ATfrPPZ6XF\">",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" class=\"text-primary text-16 m-1 font-semibold\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconCheckOutlined",
+    "chars": 387,
+    "texts": [
+      "data-module-name=\"Adc2025IconCheckOutlined\" data-module-id=\"wulc10jZaJgJkpjCug5bM\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-14 leading-24 ml-1 text-subtle\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 204,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"E0tpU529_tvGPnF7nB0Fc\">全模态高效精准的模型服务调用",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row items-start mt-1-5\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 215,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"BKiaOdgiVhb-3ftZJfmka\">",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" class=\"text-primary text-16 m-1\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconCheckOutlined",
+    "chars": 387,
+    "texts": [
+      "data-module-name=\"Adc2025IconCheckOutlined\" data-module-id=\"Bf7zp_mH6m_h3_FmOeD-a\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-14 leading-24 ml-1 text-subtle\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 208,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"toIzAInnOit3yabIHZIkl\">丰富的多模态大模型，契合更多业务场景",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row items-start mt-1-5\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 215,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"sCPrJzqPr45PRIwM60mrx\">",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" class=\"text-primary text-16 m-1\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconCheckOutlined",
+    "chars": 387,
+    "texts": [
+      "data-module-name=\"Adc2025IconCheckOutlined\" data-module-id=\"KHDuiZbfiBuyman1iHYwP\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-14 leading-24 ml-1 text-subtle\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 209,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"RNVgQd8Ks64-F6PGotIZy\">万亿级超大规模数据训练和领先的算法框架",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row items-start mt-1-5\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 215,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"ZEjtGFUCJfQJMwICmFAp0\">",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" class=\"text-primary text-16 m-1\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconCheckOutlined",
+    "chars": 387,
+    "texts": [
+      "data-module-name=\"Adc2025IconCheckOutlined\" data-module-id=\"1hkyQT3nxFA89EM7n-GXT\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-14 leading-24 ml-1 text-subtle\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 387,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"yuNRgydrAVkP9iTW7l3Gl\">AI 云市场份额超过 2-4 名总和"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--mouse-x:-1000px;--mouse-y:-1000px"
+    ]
+  },
+  {
+    "name": "Adc2025LinkButton",
+    "chars": 204,
+    "texts": [
+      "data-module-name=\"Adc2025LinkButton\" data-module-id=\"yXmk6EqHjWnzG-Tku9cMy\">访问模型市场",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 1227,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"7nP95lJLMLMDytPAzwzDf\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:8;--mobile-row:1;--mobile-col:12",
+      "--column-count:12;--mobile-column-count:12;--row-height:194px;--mobile-row-height:auto;--gap:0;--split-border-color:#E0E0E0;--split-border-width:1;--mobile-split-border-color:#E0E0E0;--mobile-split-border-width:1"
+    ]
+  },
+  {
+    "name": "Adc2025Grid",
+    "chars": 550,
+    "texts": [
+      "data-module-name=\"Adc2025Grid\" data-module-id=\"GQGesfVPqw3zba9fsWCmL\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:6;--mobile-row:1;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 918,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"3ncmqUOvl2sIZjzd_m-M1\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i3/O1CN01bURbCF1jUPcPd4Nnn_!!6000000004551-2-tps-80-80.png\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-10 h-10\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%)",
+      "--image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%)"
+    ]
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 165,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"GkrG1BGNlhUMX8dxhulYr\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row items-center mt-4\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 234,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"fi8d9Qf03v1YV4yzvzNHg\">",
+      "<h4 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading4 line-clamp-1 font-semibold text-18 leading-28 hover:text-primary transition-colors mobile:text-default\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 445,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"EN-iwP4WfwDSjxFLCy5G8\">视觉语言大模型",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box ml-2 flex-row items-center pl-1 pr-1 rounded-tag h-5 inject-style-e4f8c26f37df555fce974c5a810e8270\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 255,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"vDQyP_pMtimzcX0K-HUc9\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i3/O1CN01DLgu6T1Vf2B17sKoJ_!!6000000002679-2-tps-40-40.png\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-4 h-4\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 175,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"bSj6fHfp1SP5facl6Hujk\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-subtlest ml-1 text-12 leading-20\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 896,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"zT1aP4uz4kJDzMGkphL_U\">Qwen3.8-Max",
+      "Qwen3.8-Max-0902 快照版本重磅更新，通过进一步的后训练，重点提升 Coding、Cowork 和视觉理解（VL）能力。"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:6;--mobile-row:1;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 919,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"_Ul2Ed3AoCYHIZxKYml_O\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%)",
+      "--image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%)"
+    ]
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 165,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"h0iSSSgj1O_e-d6lWWwK_\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row items-center mt-4\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 234,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"vqiOG5-ldTyv7lyvMVF1b\">",
+      "<h4 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading4 line-clamp-1 font-semibold text-18 leading-28 transition-colors hover:text-primary mobile:text-default\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 445,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"UiXmp53N4aaqilSlAEVHd\">视觉理解大模型",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box ml-2 flex-row items-center pl-1 pr-1 rounded-tag h-5 inject-style-e4f8c26f37df555fce974c5a810e8270\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 255,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"RhfbMaVUkRy1-tVgGyjHS\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i3/O1CN01DLgu6T1Vf2B17sKoJ_!!6000000002679-2-tps-40-40.png\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-4 h-4\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 175,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"uGD9-Aa44WnBEtX2AhZm5\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-subtlest ml-1 text-12 leading-20\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 871,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"huo5iNCDlKCKu2JG9JqjZ\">Qwen3-VL-Plus",
+      "Qwen3 系列视觉理解模型，实现思考和非思考模式的有效融合，视觉感知与识别能力大幅提升，支持超长视频理解。"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:6;--mobile-row:1;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 919,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"oiTx6yamszPh7XGM4KslD\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%)",
+      "--image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%)"
+    ]
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 165,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"RR7wX7FmL15Y2dubQrl6r\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row items-center mt-4\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 234,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"Ts7do-q3qlC2PITbgdlM2\">",
+      "<h4 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading4 line-clamp-1 font-semibold text-18 leading-28 transition-colors hover:text-primary mobile:text-default\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 445,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"4gRGxK9uVSE-bzq7D3fr6\">图片生成大模型",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box ml-2 flex-row items-center pl-1 pr-1 rounded-tag h-5 inject-style-e4f8c26f37df555fce974c5a810e8270\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 255,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"Q9FejuyowN7C5GqNDZwkg\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i3/O1CN01DLgu6T1Vf2B17sKoJ_!!6000000002679-2-tps-40-40.png\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-4 h-4\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 175,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"gUZJkmR99Tbcas2gfDyig\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-subtlest ml-1 text-12 leading-20\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 839,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"pLTOS79JRNL-sCRyelsr3\">Qwen-Image-3.0-Pro",
+      "复杂图文一键生成，细节真实可用；12国语言多字体，网页、游戏、直播界面轻松仿真。"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:6;--mobile-row:1;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 919,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"8WWVyMEADlmDjj99B9kkO\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%)",
+      "--image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%)"
+    ]
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 165,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"k3noKEJkG4RIW-S_HQxcx\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row items-center mt-4\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 234,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"y9fAlv2oBpWuVchKHc0jC\">",
+      "<h4 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading4 line-clamp-1 font-semibold text-18 leading-28 transition-colors hover:text-primary mobile:text-default\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 445,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"f9pkKpQt6pIbG9vx9aNrx\">视频生成大模型",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box ml-2 flex-row items-center pl-1 pr-1 rounded-tag h-5 inject-style-e4f8c26f37df555fce974c5a810e8270\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 255,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"bsr1cmU9lFzwTj91Y5PfK\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i3/O1CN01DLgu6T1Vf2B17sKoJ_!!6000000002679-2-tps-40-40.png\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-4 h-4\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 175,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"bj7SWp-wHFZT5EC07O7k8\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-subtlest ml-1 text-12 leading-20\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 860,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"gdXO8KrmiCWrwZ6Cw7hEZ\">Wan3.0-Video",
+      "万相3.0邀测中。四模态全能参考，集参考、编辑、复刻、驱动于一体，30秒成片，角色一致，音画震撼。"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:6;--mobile-row:1;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 919,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"174kuviE4sAr6zN1o9qDN\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%)",
+      "--image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%)"
+    ]
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 165,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"lUtmTvpu2bWMrcCYObBmH\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row items-center mt-4\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 234,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"r1EcdX0BeRPY8lhUvcUN2\">",
+      "<h4 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading4 line-clamp-1 font-semibold text-18 leading-28 transition-colors hover:text-primary mobile:text-default\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 444,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"6s0P1tKJuSEICv9UWNfXW\">全模态大模型",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box ml-2 flex-row items-center pl-1 pr-1 rounded-tag h-5 inject-style-e4f8c26f37df555fce974c5a810e8270\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 255,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"6J2AlM1r78Trn8cMi5RP2\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i3/O1CN01DLgu6T1Vf2B17sKoJ_!!6000000002679-2-tps-40-40.png\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-4 h-4\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 175,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"p49QDEAedHCcaJ95UimqP\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-subtlest ml-1 text-12 leading-20\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 777,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"22f9o5U-HzVpcNpuhxOD5\">Qwen3.5-Omni-Flash",
+      "全模态大模型，支持文本图片音视频理解交互，超长10小时音频理解，支持60多种多语言，体验自然流畅。"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:6;--mobile-row:1;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 919,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"y_iwRgsYiJDzdT-wj05H_\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%)",
+      "--image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%)"
+    ]
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 165,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"yOcWOJWUPFAjSn--KreN8\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row items-center mt-4\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 234,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"ZoSbB7kezNSMcCdGOt8B7\">",
+      "<h4 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading4 line-clamp-1 font-semibold text-18 leading-28 transition-colors hover:text-primary mobile:text-default\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 444,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"ubFCcNWecTunt8RXcj4oP\">语音识别模型",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box ml-2 flex-row items-center pl-1 pr-1 rounded-tag h-5 inject-style-e4f8c26f37df555fce974c5a810e8270\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 255,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"PgpOWN4VcJVyWQGGSNs3Q\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i3/O1CN01DLgu6T1Vf2B17sKoJ_!!6000000002679-2-tps-40-40.png\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-4 h-4\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 175,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"HAcA_lZxj2vJNxzJTsDA7\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-subtlest ml-1 text-12 leading-20\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 768,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"NDeJ7qcZlFxwEpwI94eFG\">Fun-ASR",
+      "新一代端到端语音识别大模型的实时版，基于领先的自研语音技术，具备卓越的上下文感知和高精度语音转写能力。",
+      "<div class=\"_919636c0de3715e095cfaadbf0ef4638_container pt-20 pb-20 pl-20 pr-20 items-center flex-col mobile:p-2 inject-style-d41d8cd98f00b204e9800998ecf8427e\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 828,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"O4tXbHJ-knPG9zXpaajRl\" data-homon-module=\"\" data-spm=\"J_O4tXbHJ-knPG9zXpaajRl\">",
+      "<h2 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading2 text-44 font-semibold mb-14 mobile:text-center mobile:text-26 mobile:mb-10\""
+    ],
+    "links": [],
+    "imgs": [
+      " | https://img.alicdn.com/imgextra/i4/O1CN01pLITcb1zXBttsjfZS_!!6000000006723-2-tps-720-391.png"
+    ],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 2777,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"SjFyf8FR_e8pHebgVZgLw\">",
+      "为",
+      "A",
+      "g",
+      "e",
+      "n",
+      "t",
+      "而",
+      "生",
+      "的",
+      "M",
+      "a",
+      "S",
+      "平",
+      "台",
+      "，",
+      "驱",
+      "动",
+      "I",
+      "产",
+      "力",
+      "<div class=\"_919636c0de3715e095cfaadbf0ef4638_container rounded-card-lg w-page shadow-small backdrop-blur-10 inject-style-f438601fab1967dae5c66e0c4532079e\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 637,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"Yw55FO_3VJojdGQRcahjc\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 255,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"zCYSeyg4m8adsBKuCdRDR\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i4/O1CN01CM3pZd1SXl4U31Tl5_!!6000000002257-2-tps-64-64.png\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-7 h-7\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 184,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"znTPV47O0RVjDBTj9nAGo\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 text-26 font-semibold mb-2\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 583,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"oc_6jSt7SaOUFe8RcRdOe\">千问AI平台，模型触手可及",
+      "AI native 的 MaaS 服务平台。提供简单直观的模型调用，和便捷、快速、透明的用量管理。"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--mouse-x:-1000px;--mouse-y:-1000px"
+    ]
+  },
+  {
+    "name": "Adc2025LinkButton",
+    "chars": 208,
+    "texts": [
+      "data-module-name=\"Adc2025LinkButton\" data-module-id=\"NxsR6fnWRtX1CrMg8Ein8\">前往千问 AI 平台",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 1626,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"J9Cx6Bnx9NCHUx3euBjwm\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--column-count:12;--mobile-column-count:12;--row-height:auto;--mobile-row-height:auto;--gap:0;--split-border-color:#E0E0E0;--split-border-width:1;--mobile-split-border-color:#E0E0E0;--mobile-split-border-width:1"
+    ]
+  },
+  {
+    "name": "Adc2025Grid",
+    "chars": 591,
+    "texts": [
+      "data-module-name=\"Adc2025Grid\" data-module-id=\"4sgKi4e-q43gOT4bfdCwn\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:6;--mobile-row:1;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 808,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"lAhznQiPEcZK-sEB4wWx1\">",
+      "<picture class=\"_0294c76e48b171c79fc3ddc6a811f7d6_image w-6 h-6 mb-3\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%)",
+      "--image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%)"
+    ]
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 463,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"gChoTzQMqvl7lQ6J2XaKh\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 text-18 font-semibold mb-2 text-default hover:text-primary\""
+    ],
+    "links": [],
+    "imgs": [
+      " | https://img.alicdn.com/imgextra/i3/O1CN01sM3jRs1fbVJd6c64i_!!6000000004025-2-tps-48-48.png"
+    ],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 401,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"FwNKuY0dNkAM4FV5gjpBH\">Token Plan",
+      "个人版上线，团队版降价，更低成本畅用 Qwen3.8-Max 等先进模型",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row items-center\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 169,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"aCusWwapT81_Y_cFzI8oS\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-14 mr-2 text-black hover:text-primary\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 244,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"1DxMuhXD-vy-wkvJRjnTz\">查看详情",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"text-black hover:text-primary\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 1279,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"2Tf4vfVv8szEQlwfx4UhX\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:6;--mobile-row:1;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 808,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"QjzWiV_Ai3TxiEtQwWpKh\">",
+      "<picture class=\"_0294c76e48b171c79fc3ddc6a811f7d6_image w-6 h-6 mb-3\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%)",
+      "--image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%)"
+    ]
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 461,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"9hahL0MNYubSUNAxX8RHd\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 text-18 font-semibold mb-2 text-black hover:text-primary\""
+    ],
+    "links": [],
+    "imgs": [
+      " | https://img.alicdn.com/imgextra/i4/O1CN01iInex81sUG3PyuXYk_!!6000000005769-2-tps-48-48.png"
+    ],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 404,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"JFl21pVENpzdCySvBoiKZ\">免费额度",
+      "登录即送免费 token，一个 API 调用全部模型，新用户赠千万 tokens 免费额度",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row items-center\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 169,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"tv_10FLZ3iRbC8S77ThsH\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-14 mr-2 text-black hover:text-primary\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 244,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"WCNO4O7QA6axww7nHQsa5\">查看详情",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"text-black hover:text-primary\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 1094,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"HPTCkjsC7S9i9g1kFBmB2\">",
+      "<div class=\"_919636c0de3715e095cfaadbf0ef4638_container flex-col items-center pt-20 pb-20 mobile:pt-10 mobile:pb-10\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 789,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"cRUBKTZ4VS3tFv4FV4TQv\" data-homon-module=\"\" data-spm=\"J_cRUBKTZ4VS3tFv4FV4TQv\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-col items-center adc-pre-exposure\""
+    ],
+    "links": [],
+    "imgs": [
+      " | https://img.alicdn.com/imgextra/i4/O1CN01qwyQqg1F2X1iThTdm_!!6000000000429-2-tps-720-495.png"
+    ],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 349,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"a-sVUkkjfJPE_FxlRlJKp\">",
+      "<h2 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading2 mobile:text-center text-44 font-semibold mobile:text-26 text-default inject-style-e8d1742301c72f4067b2c456f5ad593e\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 1549,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"kA75MPiiEjqM72b7XdxX6\">",
+      "完",
+      "整",
+      "的",
+      "产",
+      "品",
+      "体",
+      "系",
+      "，",
+      "为",
+      "企",
+      "业",
+      "打",
+      "造",
+      "技",
+      "术",
+      "创",
+      "新",
+      "云"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--mouse-x:-1000px;--mouse-y:-1000px"
+    ]
+  },
+  {
+    "name": "Adc2025LinkButton",
+    "chars": 203,
+    "texts": [
+      "data-module-name=\"Adc2025LinkButton\" data-module-id=\"8kCBwVOIGPjRWeGhpOtZM\">全部云产品",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 919,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"7HlVpOoZRJZs0fS5IMyQT\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box mt-14 mobile:mt-10 adc-pre-exposure\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 153,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"wrJY9VLHD-Gs55pcHnAnd\">",
+      "<div class=\"_51a830570bb116a0c1644878938979c9_container w-page adc-slideup\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025HomepageProducts",
+    "chars": 14689,
+    "texts": [
+      "data-module-name=\"Adc2025HomepageProducts\" data-module-id=\"kZ-4Xgv4AQu0FwfOgNosJ\">",
+      "精选产品",
+      "人工智能与机器学习",
+      "计算",
+      "存储",
+      "网络与CDN",
+      "安全",
+      "中间件",
+      "数据库",
+      "大数据计算",
+      "云服务器 ECS",
+      "安全可靠、弹性可伸缩的云计算服务",
+      "立即选购",
+      "免费试用",
+      "千问大模型",
+      "大模型",
+      "多元化、高性能、安全可靠的大模型服务",
+      "模型体验",
+      "查看详情",
+      "大模型服务平台百炼",
+      "大模型服务与应用平台",
+      "应用构建",
+      "域名与网站",
+      "提供智能易用的域名与建站服务",
+      "轻量应用服务器",
+      "快速构建应用程序和网站，即刻迈出上云第一步",
+      "对象存储 OSS",
+      "稳定、安全、高性价比、高性能的云存储服务",
+      "云数据库 RDS",
+      "全托管，含MySQL、PostgreSQL、SQL Server、MariaDB多引擎",
+      "短信服务",
+      "国内短信简单易用，安全可靠，秒级触达，全球覆盖200+国家和地区。",
+      "无影云电脑",
+      "易用、安全、高效的云上电脑",
+      "人工智能平台 PAI",
+      "一站式AI开发、训练和推理服务",
+      "云原生大数据计算服务 MaxCompute",
+      "面向分析的企业级SaaS模式云数据仓库",
+      "Qoder",
+      "面向真实软件的智能体编程平台",
+      "云解析DNS",
+      "覆盖公网/内网、递归/权威、移动APP等全场景解析服务",
+      "云原生数据库 PolarDB",
+      "100%兼容MySQL、PostgreSQL，兼容Oracle，支持集中和分布式",
+      "大数据开发治理平台 DataWorks",
+      "Data Agent 驱动的一站式 Data+AI 开发治理平台"
+    ],
+    "links": [
+      "云服务器 ECS 安全可靠、弹性可伸缩的云计算服务 -> https://www.aliyun.com/product/ecs",
+      "立即选购 -> https://ecs-buy.aliyun.com/buyRedirect.htm?period=1&amp;periodType=Yearly",
+      "免费试用 -> https://free.aliyun.com/?spm&amp;product=1351&amp;crowd",
+      "千问大模型 大模型 多元化、高性能、安全可靠的大模型服务 -> https://www.aliyun.com/product/tongyi",
+      "模型体验 -> https://bailian.console.aliyun.com/cn-beijing/?tab=model#/model-market",
+      "查看详情 -> https://www.aliyun.com/product/tongyi",
+      "大模型服务平台百炼 大模型 大模型服务与应用平台 -> https://www.aliyun.com/product/bailian",
+      "应用构建 -> https://bailian.console.aliyun.com/cn-beijing/?tab=app#/app-market/suggest",
+      "查看详情 -> https://www.aliyun.com/product/bailian",
+      "域名与网站 提供智能易用的域名与建站服务 -> https://wanwang.aliyun.com/",
+      "轻量应用服务器 快速构建应用程序和网站，即刻迈出上云第一步 -> https://www.aliyun.com/product/swas",
+      "对象存储 OSS 稳定、安全、高性价比、高性能的云存储服务 -> https://www.aliyun.com/product/oss",
+      "云数据库 RDS 全托管，含MySQL、PostgreSQL、SQL Server、MariaDB多引擎 -> https://www.aliyun.com/product/rds",
+      "短信服务 国内短信简单易用，安全可靠，秒级触达，全球覆盖200+国家和地区。 -> https://www.aliyun.com/product/sms",
+      "无影云电脑 易用、安全、高效的云上电脑 -> https://www.aliyun.com/product/ecs/gws",
+      "人工智能平台 PAI 大模型 一站式AI开发、训练和推理服务 -> https://www.aliyun.com/product/bigdata/learn"
+    ],
+    "imgs": [],
+    "vars": [
+      "--top-index:0",
+      "--underline-left: 0px; --underline-width: 96px;",
+      "background-size: 100% 100%; background-position: center center; --background-image: url(https://img.alicdn.com/imgextra/i3/O1CN01xX8Fae1mJpIrBnhKZ_!!6000000004934-2-tps-720-466.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i3/O1CN01BxqM4U24kXUPtb476_!!6000000007429-2-tps-188-464.png);"
+    ]
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 571,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"5H_vaebiZ_nmEXBJeSNFF\" data-homon-module=\"\" data-spm=\"J_5H_vaebiZ_nmEXBJeSNFF\">",
+      "<h2 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading2 mobile:text-center text-44 font-semibold mobile:text-26 text-default inject-style-e8d1742301c72f4067b2c456f5ad593e\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 1813,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"9VmeQqf1jhlsJyt8v8E1s\">",
+      "依",
+      "托",
+      "大",
+      "模",
+      "型",
+      "与",
+      "云",
+      "计",
+      "算",
+      "协",
+      "同",
+      "发",
+      "展",
+      "，",
+      "让",
+      "A",
+      "I",
+      "触",
+      "手",
+      "可",
+      "及"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--mouse-x:-1000px;--mouse-y:-1000px"
+    ]
+  },
+  {
+    "name": "Adc2025LinkButton",
+    "chars": 208,
+    "texts": [
+      "data-module-name=\"Adc2025LinkButton\" data-module-id=\"xFWGdbe79J1j44VF01Ief\">全部 AI 解决方案",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 919,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"NVfKjMGmbJkD0yz5EF0eD\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box mt-14 mobile:mt-10 adc-pre-exposure\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 368,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"k1q9Wd1rDhnrARC1r1WMx\">",
+      "<div class=\"b046fd3a57d8f23d94ea5b0f884cefc6_panel w-page adc-slideup mobile:w-full\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025HomepageAiSolution",
+    "chars": 11799,
+    "texts": [
+      "data-module-name=\"Adc2025HomepageAiSolution\" data-module-id=\"YTPAw4F17rF-CpqOR9rlF\">",
+      "分析 Agent 实现一键 AI 数据洞察",
+      "AI 原生的企业级智能分析 Agent，对话完成多轮深度分析，主动洞察、主动巡检、落地执行，并基于企业知识和记忆持续学习，越来越懂您的业务。",
+      "了解详情",
+      "联系 AI 专家",
+      "漫剧工坊：一站式动画创作平台",
+      "化身漫剧总导演，剧本/角色/分镜节点化可视把控，每步可审可调，自动拼接产出连贯完整长漫剧，告别AI盲盒式创作。",
+      "与 AI 智能体进行实时音视频通话",
+      "零代码接入AI视频助手，实时拟人对话+情绪识别，支持多模态场景理解，全球节点保障高清低延时通话。",
+      "10 分钟在聊天系统中增加一个 AI 助手",
+      "10分钟即可0代码构建AI助手，部署到网站、钉钉或微信公众号，通过RAG应用增强知识问答，全天候提升用户体验。",
+      "多模态数据信息提取",
+      "一键解析文本、图片、视频数据，精准抽取关键信息，批量处理成本大幅降低，开箱即用安全高效。",
+      "<div class=\"c01fe57381013ca98416487ac8617eaa_h5-panel w-page adc-slideup mobile:w-full\""
+    ],
+    "links": [
+      "分析 Agent 实现一键 AI 数据洞察 -> https://www.aliyun.com/solution/tech-solution/quick-bi",
+      "了解详情 -> https://www.aliyun.com/solution/tech-solution/quick-bi",
+      "联系 AI 专家 -> https://smartservice.console.aliyun.com/service/pre-sales-chat?from=ai&amp;displayMode=wid",
+      "漫剧工坊：一站式动画创作平台 -> https://www.aliyun.com/solution/tech-solution/use-bailian-to-intelligently-create-comics",
+      "了解详情 -> https://www.aliyun.com/solution/tech-solution/use-bailian-to-intelligently-create-comics",
+      "与 AI 智能体进行实时音视频通话 -> https://www.aliyun.com/solution/tech-solution/real-time-interaction",
+      "了解详情 -> https://www.aliyun.com/solution/tech-solution/real-time-interaction",
+      "10 分钟在聊天系统中增加一个 AI 助手 -> https://www.aliyun.com/solution/tech-solution/build-a-chatbot-for-your-website-or-chat-sys",
+      "了解详情 -> https://www.aliyun.com/solution/tech-solution/build-a-chatbot-for-your-website-or-chat-sys",
+      "多模态数据信息提取 -> https://www.aliyun.com/solution/tech-solution/information-extraction",
+      "了解详情 -> https://www.aliyun.com/solution/tech-solution/information-extraction"
+    ],
+    "imgs": [
+      " | https://img.alicdn.com/imgextra/i4/O1CN014vlOHxpHyII5y65i_!!6000000006912-0-tps-2940-1838.jpg",
+      " | https://img.alicdn.com/imgextra/i4/O1CN014vlOHxpHyII5y65i_!!6000000006912-0-tps-2940-1838.jpg",
+      " | https://img.alicdn.com/imgextra/i2/O1CN01nv8D491fODp3CFIiB_!!6000000003996-2-tps-1440-900.png",
+      " | https://img.alicdn.com/imgextra/i4/O1CN01BCjX461OL9d3GxAs6_!!6000000001688-2-tps-210-210.png",
+      " | https://img.alicdn.com/imgextra/i2/O1CN01nv8D491fODp3CFIiB_!!6000000003996-2-tps-1440-900.png",
+      " | https://img.alicdn.com/imgextra/i4/O1CN015NkYJB1dOYoKaMtut_!!6000000003726-2-tps-2880-1800.png",
+      " | https://img.alicdn.com/imgextra/i4/O1CN01BCjX461OL9d3GxAs6_!!6000000001688-2-tps-210-210.png",
+      " | https://img.alicdn.com/imgextra/i4/O1CN015NkYJB1dOYoKaMtut_!!6000000003726-2-tps-2880-1800.png",
+      " | https://img.alicdn.com/imgextra/i4/6000000007816/O1CN01GLd1tN27bmigoTGCO_!!6000000007816-0-tbvideo.jpg",
+      " | https://img.alicdn.com/imgextra/i4/O1CN01BCjX461OL9d3GxAs6_!!6000000001688-2-tps-210-210.png",
+      " | https://img.alicdn.com/imgextra/i4/6000000007816/O1CN01GLd1tN27bmigoTGCO_!!6000000007816-0-tbvideo.jpg",
+      " | https://img.alicdn.com/imgextra/i4/O1CN013pxjMn1hLahqZ9rzn_!!6000000004261-2-tps-2880-1800.png"
+    ],
+    "vars": []
+  },
+  {
+    "name": "Adc2025HomepageAiSolution",
+    "chars": 12868,
+    "texts": [
+      "data-module-name=\"Adc2025HomepageAiSolution\" data-module-id=\"YTPAw4F17rF-CpqOR9rlF\">",
+      "分析 Agent 实现一键 AI 数据洞察",
+      "AI 原生的企业级智能分析 Agent，对话完成多轮深度分析，主动洞察、主动巡检、落地执行，并基于企业知识和记忆持续学习，越来越懂您的业务。",
+      "了解详情",
+      "联系 AI 专家",
+      "漫剧工坊：一站式动画创作平台",
+      "化身漫剧总导演，剧本/角色/分镜节点化可视把控，每步可审可调，自动拼接产出连贯完整长漫剧，告别AI盲盒式创作。",
+      "与 AI 智能体进行实时音视频通话",
+      "零代码接入AI视频助手，实时拟人对话+情绪识别，支持多模态场景理解，全球节点保障高清低延时通话。",
+      "10 分钟在聊天系统中增加一个 AI 助手",
+      "10分钟即可0代码构建AI助手，部署到网站、钉钉或微信公众号，通过RAG应用增强知识问答，全天候提升用户体验。",
+      "多模态数据信息提取",
+      "一键解析文本、图片、视频数据，精准抽取关键信息，批量处理成本大幅降低，开箱即用安全高效。"
+    ],
+    "links": [
+      "分析 Agent 实现一键 AI 数据洞察 -> https://www.aliyun.com/solution/tech-solution/quick-bi",
+      "了解详情 -> https://www.aliyun.com/solution/tech-solution/quick-bi",
+      "联系 AI 专家 -> https://smartservice.console.aliyun.com/service/pre-sales-chat?from=ai&amp;displayMode=wid",
+      "漫剧工坊：一站式动画创作平台 -> https://www.aliyun.com/solution/tech-solution/use-bailian-to-intelligently-create-comics",
+      "了解详情 -> https://www.aliyun.com/solution/tech-solution/use-bailian-to-intelligently-create-comics",
+      "与 AI 智能体进行实时音视频通话 -> https://www.aliyun.com/solution/tech-solution/real-time-interaction",
+      "了解详情 -> https://www.aliyun.com/solution/tech-solution/real-time-interaction",
+      "10 分钟在聊天系统中增加一个 AI 助手 -> https://www.aliyun.com/solution/tech-solution/build-a-chatbot-for-your-website-or-chat-sys",
+      "了解详情 -> https://www.aliyun.com/solution/tech-solution/build-a-chatbot-for-your-website-or-chat-sys",
+      "多模态数据信息提取 -> https://www.aliyun.com/solution/tech-solution/information-extraction",
+      "了解详情 -> https://www.aliyun.com/solution/tech-solution/information-extraction"
+    ],
+    "imgs": [
+      " | https://img.alicdn.com/imgextra/i4/O1CN014vlOHxpHyII5y65i_!!6000000006912-0-tps-2940-1838.jpg",
+      " | https://img.alicdn.com/imgextra/i4/O1CN014vlOHxpHyII5y65i_!!6000000006912-0-tps-2940-1838.jpg",
+      " | https://img.alicdn.com/imgextra/i2/O1CN01nv8D491fODp3CFIiB_!!6000000003996-2-tps-1440-900.png",
+      " | https://img.alicdn.com/imgextra/i4/O1CN01BCjX461OL9d3GxAs6_!!6000000001688-2-tps-210-210.png",
+      " | https://img.alicdn.com/imgextra/i2/O1CN01nv8D491fODp3CFIiB_!!6000000003996-2-tps-1440-900.png",
+      " | https://img.alicdn.com/imgextra/i4/O1CN015NkYJB1dOYoKaMtut_!!6000000003726-2-tps-2880-1800.png",
+      " | https://img.alicdn.com/imgextra/i4/O1CN01BCjX461OL9d3GxAs6_!!6000000001688-2-tps-210-210.png",
+      " | https://img.alicdn.com/imgextra/i4/O1CN015NkYJB1dOYoKaMtut_!!6000000003726-2-tps-2880-1800.png",
+      " | https://img.alicdn.com/imgextra/i4/6000000007816/O1CN01GLd1tN27bmigoTGCO_!!6000000007816-0-tbvideo.jpg",
+      " | https://img.alicdn.com/imgextra/i4/O1CN01BCjX461OL9d3GxAs6_!!6000000001688-2-tps-210-210.png",
+      " | https://img.alicdn.com/imgextra/i4/6000000007816/O1CN01GLd1tN27bmigoTGCO_!!6000000007816-0-tbvideo.jpg",
+      " | https://img.alicdn.com/imgextra/i4/O1CN013pxjMn1hLahqZ9rzn_!!6000000004261-2-tps-2880-1800.png"
+    ],
+    "vars": [
+      "background-size: 100% 100%; background-position: center center; --background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01BkX6jX287qUYf3d60_!!6000000007886-2-tps-720-407.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i1/O1CN019iEFE323uKKw66RvC_!!6000000007315-2-tps-188-588.png);"
+    ]
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 405,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"yLCzcwNsKZNOUjxe6pk8L\" data-homon-module=\"\" data-spm=\"J_yLCzcwNsKZNOUjxe6pk8L\">",
+      "<h2 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading2 mobile:text-center text-44 font-semibold mobile:text-26 text-default inject-style-e8d1742301c72f4067b2c456f5ad593e\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 1732,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"g_rlUkbLEamIxYsUBwUyv\">",
+      "全",
+      "方",
+      "位",
+      "云",
+      "计",
+      "算",
+      "和",
+      "A",
+      "I",
+      "超",
+      "值",
+      "权",
+      "益",
+      "，",
+      "助",
+      "力",
+      "上",
+      "创",
+      "新"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--mouse-x:-1000px;--mouse-y:-1000px"
+    ]
+  },
+  {
+    "name": "Adc2025LinkButton",
+    "chars": 202,
+    "texts": [
+      "data-module-name=\"Adc2025LinkButton\" data-module-id=\"5rlpJJQyXt4VrtK0H0vUy\">全部权益",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 1137,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"iUao_itXxHADASFwtBCuC\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--column-count:12;--mobile-column-count:12;--row-height:217px;--mobile-row-height:auto;--gap:1;--split-border-color:transparent;--split-border-width:0;--mobile-split-border-color:transparent;--mobile-split-border-width:0"
+    ]
+  },
+  {
+    "name": "Adc2025Grid",
+    "chars": 571,
+    "texts": [
+      "data-module-name=\"Adc2025Grid\" data-module-id=\"uYO7Rd6N6MfNojMFYxBMI\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box inject-style-5d286f2e47bec5a2a07f20a46bb7b21d\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:2;--col:6;--mobile-row:2;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 525,
+    "texts": [],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01pCYblI1FME3lkLMyX_!!6000000000472-2-tps-1736-912.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i2/O1CN019ZKHFl1QD1sekBV1n_!!6000000001941-2-tps-2048-912.png);"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 179,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"p5OmmMFum6nEbfu1pmVcs\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row justify-between items-center ml-6 mr-6\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 262,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"VWnA6SZVk7y-cq7GE4e-1\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 539,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"FUVYEgDaGuC0bgeVzFefQ\">Token Plan 首发 Qwen-3.8"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 247,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"zYgqwF7LDgia9F7TbYwId\">",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"hover:text-primary transition-colors mobile:text-default\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 963,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"fRuWb9_UAVKZ6lamv9vNS\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body ml-6 mr-6 mt-2 text-14 line-clamp-1 leading-24 mobile:text-default text-subtle\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 554,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"qTP0i1VycayPbnHxFOi0l\">多模型共享额度，低至 39 元起"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--column-count:12;--mobile-column-count:12;--row-height:164px;--mobile-row-height:164px;--gap:0;--split-border-color:#E0E0E0;--split-border-width:1;--mobile-split-border-color:#E0E0E0;--mobile-split-border-width:1"
+    ]
+  },
+  {
+    "name": "Adc2025Grid",
+    "chars": 393,
+    "texts": [
+      "data-module-name=\"Adc2025Grid\" data-module-id=\"aZkQDSaWG8aaNwHIGJ-4s\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:6;--mobile-row:1;--mobile-col:6"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 1019,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"R-XQrgcFiMzQ6UyOGazB9\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i4/O1CN01G1k2Ch28hZNttd7SB_!!6000000007964-55-tps-32-32.svg\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-8 h-8\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);background-size:contain;background-position:center",
+      "--image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);background-size:contain;background-position:center"
+    ]
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 232,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"SFJvE7oS_Qh7nZS0ZDGcW\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 hover:text-primary transition-colors font-semibold text-default text-18 mt-6 line-clamp-1\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 685,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"O-KnWzLFSzmmLniF2899j\">Wan3.0 重磅发布",
+      "原生 30 秒，按秒计费，创作更具性价比"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:6;--mobile-row:1;--mobile-col:6"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 1019,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"bJgaWB6o5I3xEy-pveL_O\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i1/O1CN01hQ5mZP1iwWIm650wh_!!6000000004477-55-tps-32-32.svg\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-8 h-8\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);background-size:contain;background-position:center",
+      "--image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);background-size:contain;background-position:center"
+    ]
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 232,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"b2ywY7CPUASROsbx2jy_x\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 hover:text-primary transition-colors font-semibold text-default text-18 mt-6 line-clamp-1\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 693,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"7Gd28jJVesHj9lJlZrIFe\">大模型优惠，首购低至 4.5 折",
+      "可抵扣千问 3.5，支持千问、万相等阿里云全量模型"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:6;--mobile-row:1;--mobile-col:6"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 1019,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"KXRit4LJ5y5zXg7fAwG99\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i2/O1CN01ENJI4n1RVBBxwq7aO_!!6000000002116-55-tps-32-32.svg\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-8 h-8\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);background-size:contain;background-position:center",
+      "--image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);background-size:contain;background-position:center"
+    ]
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 232,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"QK-qkosz4wdt_oE-cXSgo\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 hover:text-primary transition-colors font-semibold text-default text-18 mt-6 line-clamp-1\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 679,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"YEwUiGGhmYs4oh1jkKr6n\">学生免费领取 300 元抵扣金",
+      "可抵扣大模型、计算、存储等核心产品"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:6;--mobile-row:1;--mobile-col:6"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 1019,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"Sa27gndlbgTgYs346fPVz\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i4/O1CN01G1k2Ch28hZNttd7SB_!!6000000007964-55-tps-32-32.svg\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-8 h-8\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);background-size:contain;background-position:center",
+      "--image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);background-size:contain;background-position:center"
+    ]
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 232,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"alC2AOkYGB97Faqb6CvdQ\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 hover:text-primary transition-colors font-semibold text-default text-18 mt-6 line-clamp-1\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 746,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"mryZj3U-DV2a7vKExXCZL\">AI 建站首月 9.9 元",
+      "自带数据库，免备案即开即用",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box inject-style-b0eeaf6750de7d4149901d2b032fc4f6\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:2;--col:3;--mobile-row:2;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 447,
+    "texts": [
+      "<a href=\"https://free.aliyun.com/\" target=\"_blank\" class=\"a59381a17d196d9b4cc3a57197111b93_box group/card pt-6 pb-8\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01ofVc7o1wHfb9SEqoD_!!6000000006283-2-tps-844-912.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01ofVc7o1wHfb9SEqoD_!!6000000006283-2-tps-844-912.png);"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 179,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"w2JPkyj1NIU-aw852slLV\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row justify-between items-center ml-6 mr-6\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 262,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"6snBmpb-nrZFhAgChLKDC\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 519,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"ayOczJPBNatg3QZmceXjm\">160+ 产品免费试用"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 247,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"cg-G18IzyuboO9ikPTz4b\">",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"transition-colors hover:text-primary mobile:text-default\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 963,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"IKUrO5L44Y2S0_cHTYFZt\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body ml-6 mr-6 mt-2 line-clamp-1 leading-24 text-14 mobile:text-default text-subtle\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 537,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"cNJer8HZmyqdKWL57RFE-\">助您快速开启云上实践之旅"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--column-count:12;--mobile-column-count:12;--row-height:164px;--mobile-row-height:164px;--gap:0;--split-border-color:#E0E0E0;--split-border-width:1;--mobile-split-border-color:#E0E0E0;--mobile-split-border-width:1"
+    ]
+  },
+  {
+    "name": "Adc2025Grid",
+    "chars": 406,
+    "texts": [
+      "data-module-name=\"Adc2025Grid\" data-module-id=\"Q7Vu1UOkOYYWVGKygRLv5\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:12;--mobile-row:1;--mobile-col:6"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 1019,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"xxJMhqynMs-AJuryVQZ7Q\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i1/O1CN01qejU5P1jFkwCiwREQ_!!6000000004519-55-tps-32-32.svg\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-8 h-8\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);background-size:contain;background-position:center",
+      "--image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);background-size:contain;background-position:center"
+    ]
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 232,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"_nYI4HdhPkfBmdas7XFbC\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 hover:text-primary transition-colors font-semibold text-default text-18 mt-6 line-clamp-1\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 686,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"EE7SKZByWbqoJGeev_9OP\">长效普惠云服务器",
+      "ECS 2 核 2G 仅需 99 元/年"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:12;--mobile-row:1;--mobile-col:6"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 1019,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"rDzBKxZzS-Ag6ZdCBsW0M\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i4/O1CN015aZfkC1s2mFrZfNj8_!!6000000005709-55-tps-32-32.svg\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-8 h-8\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.0) 0%,rgba(0,98,255,.0) 100%);background-size:contain;background-position:center",
+      "--image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);--mobile-image:linear-gradient(253deg,rgba(55,0,255,.05) 0%,rgba(0,98,255,.05) 100%);background-size:contain;background-position:center"
+    ]
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 232,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"LERETYgDZykQ7DMMbpQYA\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 hover:text-primary transition-colors font-semibold text-default text-18 mt-6 line-clamp-1\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 1065,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"so8lb4OGaTFu3NCIgjq3o\">QoderCN × 百炼套餐",
+      "代码写更快，模型跑不停"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:3;--mobile-row:1;--mobile-col:6",
+      "background-size: cover; background-position: center center; --background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01CAqUcd1U9bNaoP4Dp_!!6000000002475-2-tps-912-432.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01CAqUcd1U9bNaoP4Dp_!!6000000002475-2-tps-912-432.png);"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 285,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"v5xRTfy0IPcgGK-DEPQ_g\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row justify-end inject-style-5e5628efde862b5d494fa278142c4220\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 626,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"8XytzZeBg4-a5YLCDhNMp\">",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"text-white transition-colors hover:text-primary\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 949,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"8YndPAfOPrireBdv1cY6H\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box mt-3 items-baseline mobile:flex-col mobile:gap-0 flex-col gap-0\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 206,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"VUEIBdKNPdW8re21jYs9L\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 text-44 font-normal leading-60 text-white mobile:text-26 mobile:leading-36\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 950,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"sRKGMjrPq3irxoHQJuK-c\">50+",
+      "技术解决方案免费试用",
+      "云上 AI 方案快速验证"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:3;--mobile-row:1;--mobile-col:6",
+      "background-size:cover;background-position:center;--background-image:linear-gradient(305deg, #1366EC 24%, #4588F7 99%);--mobile-background-image:linear-gradient(305deg, #1366EC 24%, #4588F7 99%)"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 156,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"Fuj_KEObrAhLUFKlgog22\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row justify-between\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 259,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"DWqDHLgOpfVGftU0b5CKZ\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 294,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"Roap5p2ODm9r9W16BwUIo\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 238,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"0bpVN-5cQFHQzU8mYb9RH\">",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"text-white transition-colors hover:text-primary\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 907,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"avl55vNCSprH3h8G7ji0O\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box bg-black bg-opacity-0\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 207,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"L-TcYmlLHHaWfpL7ax-0_\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 text-white line-clamp-1 text-44 leading-60 mobile:text-26 mobile:leading-36\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 830,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"oeIiUYTNDMpdC98bbcBx9\">30+",
+      "AI 产品，零成本构建 AI 应用"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "background-size: 100% 100%; background-position: center center; --background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01Q9mih01dmpqiwcyYP_!!6000000003779-2-tps-720-753.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01SGLfv31SBm1bJVNr9_!!6000000002209-2-tps-188-809.png);"
+    ]
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 571,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"YMAyw_LywPh6pBkWM5zJH\" data-homon-module=\"\" data-spm=\"J_YMAyw_LywPh6pBkWM5zJH\">",
+      "<h2 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading2 mobile:text-center text-44 font-semibold mobile:text-26 text-default inject-style-e8d1742301c72f4067b2c456f5ad593e\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 1636,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"2WJVl58JoIO087nOeuahj\">",
+      "A",
+      "I",
+      "赋",
+      "能",
+      "千",
+      "行",
+      "百",
+      "业",
+      "，",
+      "与",
+      "阿",
+      "里",
+      "云",
+      "一",
+      "起",
+      "开",
+      "拓",
+      "创",
+      "新"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--mouse-x:-1000px;--mouse-y:-1000px"
+    ]
+  },
+  {
+    "name": "Adc2025LinkButton",
+    "chars": 204,
+    "texts": [
+      "data-module-name=\"Adc2025LinkButton\" data-module-id=\"DmZohOc_QtzOLQjE7dv1l\">全部客户案例",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 889,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"VZpjpmeawPo_AzHJC11D6\">",
+      "<div class=\"_0c36cf6f988ed417669b251aa2007eb8_pc mt-14\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025UseTerminal",
+    "chars": 278,
+    "texts": [
+      "data-module-name=\"Adc2025UseTerminal\" data-module-id=\"OyTUV4OnH8fWwtOVK8ODv\">",
+      "<div class=\"_8883dfbfe51f87e94072304eb460db34_grid mt-4\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Grid",
+    "chars": 633,
+    "texts": [],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--column-count: 3; --mobile-column-count: 3; --row-height: 56px; --mobile-row-height: 56px; --gap: 0; --split-border-color: #E0E0E0; --split-border-width: 1; --mobile-split-border-color: #E0E0E0; --mobile-split-border-width: 1;",
+      "--row: 1; --col: 1; --mobile-row: 1; --mobile-col: 1;"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 711,
+    "texts": [],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "background-size: contain; background-position: center center; --background-image: url(https://img.alicdn.com/imgextra/i4/O1CN01L8Jtxd1kLzx4171Rz_!!6000000004668-2-tps-320-80.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i4/O1CN01L8Jtxd1kLzx4171Rz_!!6000000004668-2-tps-320-80.png);",
+      "--row: 1; --col: 1; --mobile-row: 1; --mobile-col: 1;"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 713,
+    "texts": [],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "background-size: contain; background-position: center center; --background-image: url(https://img.alicdn.com/imgextra/i1/O1CN01hnihh41Px01BjWAD0_!!6000000001906-2-tps-320-80.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i1/O1CN01hnihh41Px01BjWAD0_!!6000000001906-2-tps-320-80.png);",
+      "--row: 1; --col: 1; --mobile-row: 1; --mobile-col: 1;"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 727,
+    "texts": [],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "background-size: contain; background-position: center center; --background-image: url(https://img.alicdn.com/imgextra/i1/O1CN01YkXcIj1uDQhQbkEQ0_!!6000000006003-2-tps-320-80.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i1/O1CN01YkXcIj1uDQhQbkEQ0_!!6000000006003-2-tps-320-80.png);",
+      "--row: 1; --col: 1; --mobile-row: 1; --mobile-col: 1;"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 708,
+    "texts": [],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "background-size: contain; background-position: center center; --background-image: url(https://img.alicdn.com/imgextra/i4/O1CN01Goihkn1vvgaRtmMW0_!!6000000006235-2-tps-320-80.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i4/O1CN01Goihkn1vvgaRtmMW0_!!6000000006235-2-tps-320-80.png);",
+      "--row: 1; --col: 1; --mobile-row: 1; --mobile-col: 1;"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 710,
+    "texts": [],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "background-size: contain; background-position: center center; --background-image: url(https://img.alicdn.com/imgextra/i1/O1CN01ZVrVnK1WpOkt4OIRk_!!6000000002837-2-tps-320-80.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i1/O1CN01ZVrVnK1WpOkt4OIRk_!!6000000002837-2-tps-320-80.png);",
+      "--row: 1; --col: 1; --mobile-row: 1; --mobile-col: 1;"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 709,
+    "texts": [],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "background-size: contain; background-position: center center; --background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01J4RfMu1Hr1viXCndK_!!6000000000810-2-tps-320-80.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01J4RfMu1Hr1viXCndK_!!6000000000810-2-tps-320-80.png);",
+      "--row: 1; --col: 1; --mobile-row: 1; --mobile-col: 1;"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 715,
+    "texts": [],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "background-size: contain; background-position: center center; --background-image: url(https://img.alicdn.com/imgextra/i3/O1CN01vvCSoi1Rh5UPV1Ptj_!!6000000002142-2-tps-320-80.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i3/O1CN01vvCSoi1Rh5UPV1Ptj_!!6000000002142-2-tps-320-80.png);",
+      "--row: 1; --col: 1; --mobile-row: 1; --mobile-col: 1;"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 706,
+    "texts": [],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "background-size: contain; background-position: center center; --background-image: url(https://img.alicdn.com/imgextra/i1/O1CN019663Yd1t347ZShjYk_!!6000000005845-2-tps-320-80.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i1/O1CN019663Yd1t347ZShjYk_!!6000000005845-2-tps-320-80.png);",
+      "--row: 1; --col: 1; --mobile-row: 1; --mobile-col: 1;"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 711,
+    "texts": [],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "background-size: contain; background-position: center center; --background-image: url(https://img.alicdn.com/imgextra/i3/O1CN01h1KBfH1mOrf14ozsd_!!6000000004945-2-tps-320-80.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i3/O1CN01h1KBfH1mOrf14ozsd_!!6000000004945-2-tps-320-80.png);",
+      "--row: 1; --col: 1; --mobile-row: 1; --mobile-col: 1;"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 712,
+    "texts": [],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "background-size: contain; background-position: center center; --background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01YMtUCL1SIdy1GKWWX_!!6000000002224-2-tps-320-80.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i2/O1CN01YMtUCL1SIdy1GKWWX_!!6000000002224-2-tps-320-80.png);",
+      "--row: 1; --col: 1; --mobile-row: 1; --mobile-col: 1;"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 719,
+    "texts": [],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "background-size: contain; background-position: center center; --background-image: url(https://img.alicdn.com/imgextra/i3/O1CN015YEhxG1lYeVhwICEP_!!6000000004831-2-tps-320-80.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i3/O1CN015YEhxG1lYeVhwICEP_!!6000000004831-2-tps-320-80.png);",
+      "--row: 1; --col: 1; --mobile-row: 1; --mobile-col: 1;"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 749,
+    "texts": [],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "background-size: contain; background-position: center center; --background-image: url(https://img.alicdn.com/imgextra/i3/O1CN015mWfwB25TQItUy8ov_!!6000000007527-2-tps-320-80.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i3/O1CN015mWfwB25TQItUy8ov_!!6000000007527-2-tps-320-80.png);",
+      "--column-count:12;--mobile-column-count:12;--row-height:302px;--mobile-row-height:auto;--gap:1;--split-border-color:transparent;--split-border-width:0;--mobile-split-border-color:transparent;--mobile-split-border-width:0"
+    ]
+  },
+  {
+    "name": "Adc2025Grid",
+    "chars": 464,
+    "texts": [
+      "data-module-name=\"Adc2025Grid\" data-module-id=\"bubiu5dmKBGmVG8dal87e\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:2;--col:6;--mobile-row:2;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 131,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"1rI6VYYB0FuDunFdfZEhQ\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 188,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"AqrB4QE1ZrOfNp2f-IWc0\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body pl-2 pr-2 bg-info rounded-tag leading-24 text-primary text-12\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 404,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"ADtquTgzcQ6JlI6r65ifF\">传媒"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 237,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"3bdhVqqVH3Xozd5yNbFg-\">阿里云持续运用 AI 驱动的云计算技术，全面支持奥林匹克运动会的数字化转型——涵盖奥运会自身运营、转播服务、电力需求优化，以及历史档案的修复与保存。",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 168,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"CGOJm9ptcQSHbe8_e88D-\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body mt-1 leading-24 text-subtlest mobile:mt-4\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 389,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"DDg8N2F0fNWpNTCxu88N6\">巴黎奥运会"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 513,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"EbxTx3XU-zhH48RBzarCa\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:6;--mobile-row:1;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 370,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"XUF06YpZX7rNwLHqv9gsO\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--column-count:12;--mobile-column-count:12;--row-height:254px;--mobile-row-height:132px;--gap:1;--split-border-color:transparent;--split-border-width:0;--mobile-split-border-color:transparent;--mobile-split-border-width:0"
+    ]
+  },
+  {
+    "name": "Adc2025Grid",
+    "chars": 268,
+    "texts": [
+      "data-module-name=\"Adc2025Grid\" data-module-id=\"RimadZWHkuLYbuhfLthQ7\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box h-full flex-col justify-between\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:6;--mobile-row:1;--mobile-col:6"
+    ]
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 188,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"dORP1dRKFWj_1aXXxStSX\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body pl-2 pr-2 bg-info rounded-tag leading-24 text-primary text-12\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 149,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"xScxzqUGL0ZbQ3ogWkE12\">汽车",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 282,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"saVzs5enwqaeQJDqdnJal\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 187,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"5CRUpu8HYhaCgQxclqFxq\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body mt-3 mobile:line-clamp-2 text-subtlest leading-24\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 531,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"3m_huIGXDEEjAJc5dxpB0\">阿里云服务小鹏汽车百日完成数字员工构建，通过 AI 深度集成企业办公全流程，AI 全栈能力助力小鹏汽车办公进入“数字员工协同时代”。"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:6;--mobile-row:1;--mobile-col:6"
+    ]
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 555,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"5q579jC2pjcVn5WyjewO_\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:3;--mobile-row:1;--mobile-col:6"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 192,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"musDFnJY9CdtWCDqTKG5o\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body pl-2 pr-2 bg-info rounded-tag leading-24 text-primary text-12\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 151,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"6TTM4MfF5DohL6vZHRxIM\">信息技术",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 320,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"eRw8e6Nhgwl3fEcEtDhNZ\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 200,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"hb4WATp8ep6AChYJiJrnu\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body mt-3 mobile:line-clamp-2 leading-24 text-subtlest line-clamp-4\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 605,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"WYWYoGbIKQVbmqEPV71Ze\">月之暗面 Kimi 大模型基于阿里云ACK 实现海量数据预处理。月之暗面在数据处理能力、资源利用效率和运维管理维度实现了全方位升级。"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:3;--mobile-row:1;--mobile-col:6"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 192,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"OPXwGsusnY4CXhmYF9y_p\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body pl-2 pr-2 bg-info rounded-tag leading-24 text-primary text-12\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 149,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"NXB_afEMGPT1IbzYogpXI\">零售",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 319,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"uBkURSt80tSlGtZkYh5-V\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 200,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"j_oPw0hbJmXhTukOEOkR_\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body mt-3 mobile:line-clamp-2 leading-24 text-subtlest line-clamp-4\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 631,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"iMx_hJBLlMPWsUa1cOhn9\">森马基于阿里云函数计算，快速实现传统服装行业与 AI “碰撞”，在多场景下以 AIGC 实现生产提效，引领行业数字化、智能化转型的新风尚。"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:3;--mobile-row:1;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 192,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"iSf86As2dhY7Rjmd5KLU2\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body pl-2 pr-2 bg-info rounded-tag leading-24 text-primary text-12\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 149,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"FJDOXHNGqwdxMGEMEmdoS\">金融",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 331,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"S8exrpHI_WFPawnStXDPf\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 204,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"SV8o6AgBd7ky0CenxaLg_\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body mt-3 mobile:line-clamp-2 leading-24 text-subtlest\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 554,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"I5z3lQCAaQe2MSOOhjOTP\">通过使用通义灵码，中华财险显著提升了研发团队的编码效率，近 60% 员工采纳该工具，不仅减少人工错误，还增强了团队的创新能力。"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:9;--mobile-row:2;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 367,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"DdsCbTRZArzXPG1DsLr7I\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--column-count:9;--mobile-column-count:1;--row-height:254px;--mobile-row-height:auto;--gap:1;--split-border-color:transparent;--split-border-width:0;--mobile-split-border-color:transparent;--mobile-split-border-width:0"
+    ]
+  },
+  {
+    "name": "Adc2025Grid",
+    "chars": 260,
+    "texts": [
+      "data-module-name=\"Adc2025Grid\" data-module-id=\"OBmEDh9c72O6nPd2l8IzK\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:6;--mobile-row:1;--mobile-col:6"
+    ]
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 188,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"EQJTYqaWvBwl-c7v_N4O5\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body pl-2 pr-2 bg-info rounded-tag leading-24 text-primary text-12\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 633,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"28L6XY9nBhXAdion3zWh7\">传媒",
+      "阿里云以全球云基础设施和千问大模型，支持中央广播电视总台2025年春节联欢晚会，同时满足8K电视大屏、移动小屏等多终端需求。",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body leading-24 text-subtlest mobile:mt-4\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 501,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"rWTajKe84bEHqxIm1d0qh\">中央广播电视总台2025年春节联欢晚会"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:3;--mobile-row:1;--mobile-col:6"
+    ]
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 611,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"tHVGoQjqEK8iVm2vqZrHs\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "background-size: 100% 100%; background-position: center center; --background-image: url(https://img.alicdn.com/imgextra/i4/O1CN01LHqvIb23BRWX0XmW2_!!6000000007217-2-tps-720-611.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i4/O1CN01XIbtb31kNpXIyKdC0_!!6000000004672-2-tps-188-418.png);"
+    ]
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 405,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"NH2ty0stF5Wqnzx2w-RiC\" data-homon-module=\"\" data-spm=\"J_NH2ty0stF5Wqnzx2w-RiC\">",
+      "<h2 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading2 mobile:text-center text-44 font-semibold mobile:text-26 text-default inject-style-e8d1742301c72f4067b2c456f5ad593e\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 1470,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"qRix-ZCcVX3xeiBKPXHtk\">",
+      "安",
+      "全",
+      "合",
+      "规",
+      "、",
+      "遍",
+      "布",
+      "球",
+      "的",
+      "云",
+      "计",
+      "算",
+      "基",
+      "础",
+      "设",
+      "施"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--column-count:12;--mobile-column-count:12;--row-height:auto;--mobile-row-height:auto;--gap:1;--split-border-color:transparent;--split-border-width:0;--mobile-split-border-color:transparent;--mobile-split-border-width:0"
+    ]
+  },
+  {
+    "name": "Adc2025Grid",
+    "chars": 291,
+    "texts": [
+      "data-module-name=\"Adc2025Grid\" data-module-id=\"UADMEISFXhwjqp969cFW3\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:3;--mobile-row:1;--mobile-col:6"
+    ]
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 174,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"BQDxTnon099g2WFEMXTjK\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 text-gradient-ai mobile:text-14 mobile:h-8\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 675,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"7wbe7qsryHJMh0Zvt3jzM\">",
+      "31",
+      "个",
+      "全球公共云地域",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 text-gradient-ai mobile:text-14 mobile:h-8\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:3;--mobile-row:1;--mobile-col:6"
+    ]
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 662,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"B9OVqPUMrK_hN6z3-Bsbe\">",
+      "107",
+      "个",
+      "全球公共云可用区",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 text-gradient-ai mobile:text-14 mobile:h-8\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:3;--mobile-row:1;--mobile-col:6"
+    ]
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 659,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"cOGewSq70TYSOwgNzzKUg\">",
+      "3200",
+      "+",
+      "边缘节点",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 text-gradient-ai mobile:text-14 mobile:h-8\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:3;--mobile-row:1;--mobile-col:6"
+    ]
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 679,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"ebEhRvE_6sOKtBXC8ll__\">",
+      "180+",
+      "Tbps",
+      "全网输出带宽"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--mouse-x:-1000px;--mouse-y:-1000px"
+    ]
+  },
+  {
+    "name": "Adc2025LinkButton",
+    "chars": 208,
+    "texts": [
+      "data-module-name=\"Adc2025LinkButton\" data-module-id=\"iL2H2b8j6g4vYReFIqcIn\">了解更多全球基础设施",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 1148,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"XCPYnXfuVqi-c-9O9w4Wu\">",
+      "<div class=\"a0429c441086f32d8a78d24651598eff_container adc-slideup delay-800 overflow-hidden inject-style-85e6dc6d52f403b4a73503bca2ab7f43\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025HomepageInfrastructure",
+    "chars": 832,
+    "texts": [
+      "data-module-name=\"Adc2025HomepageInfrastructure\" data-module-id=\"JatGeFu4ftDMRu6VVHRR7\">"
+    ],
+    "links": [],
+    "imgs": [
+      "基础设施地图 | https://img.alicdn.com/imgextra/i4/O1CN01PHkcER1QfQSbMUrXS_!!6000000002003-2-tps-2976-1280.png"
+    ],
+    "vars": [
+      "--column-count:12;--mobile-column-count:12;--row-height:auto;--mobile-row-height:auto;--gap:1;--split-border-color:transparent;--split-border-width:0;--mobile-split-border-color:transparent;--mobile-split-border-width:0"
+    ]
+  },
+  {
+    "name": "Adc2025Grid",
+    "chars": 258,
+    "texts": [
+      "data-module-name=\"Adc2025Grid\" data-module-id=\"lZGTqyGYKa4be5EK-sne_\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-col items-center\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:2;--mobile-row:1;--mobile-col:4"
+    ]
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 259,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"6ZhyRFhGbamdzEY2b4VKa\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 187,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"2HdEzPYPp2dJCEmOkBLPv\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-center mt-4 text-12 leading-20 text-subtlest\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 316,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"q0Aki3bkqrb0MquIP4Sis\">ISO 27001 信息安全管理体系",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-col items-center\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:2;--mobile-row:1;--mobile-col:4"
+    ]
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 259,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"BRgTNBo009MYQM-kF3CcO\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 187,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"xLONgmhGEib1sOo-B2eGE\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-center mt-4 text-12 leading-20 text-subtlest\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 316,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"bGF_MoaWy4-IKE3hC6A1j\">ISO 27701 隐私信息管理体系",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-col items-center\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:2;--mobile-row:1;--mobile-col:4"
+    ]
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 259,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"3ta8cNFIHjHzqvXBEoiNv\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 187,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"yVvvAO6jO8ksqqjiOpwqy\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-center mt-4 text-12 leading-20 text-subtlest\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 316,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"3EBfeDJRxo7o7qKNYkf8l\">SOC1/2/3报告 第三方审计报告",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-col items-center\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:2;--mobile-row:1;--mobile-col:4"
+    ]
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 259,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"F1Ji9E4Im5cWrp6LzLTSt\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 187,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"--chI3jIx77DN9WNvXTpK\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-center mt-4 text-12 leading-20 text-subtlest\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 310,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"ZH0R2JIK6KVHP3-MDg6zZ\">工信部云计算服务能力评估",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-col items-center\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:2;--mobile-row:1;--mobile-col:4"
+    ]
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 259,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"x_GVObKpWeqbTbR9toRM_\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 187,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"eDVwJdHdrbflHxK1rcReY\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-center mt-4 text-12 leading-20 text-subtlest\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 317,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"Xh8t-BpMMU4r3Lo4uH-fn\">PCI DSS 支付卡产业数据安全标准",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-col items-center\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:2;--mobile-row:1;--mobile-col:4"
+    ]
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 259,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"7xm-lXZuDsRwOoetasxM2\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 187,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"w27WAHcRmqbSVRa2hedB0\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-center mt-4 text-12 leading-20 text-subtlest\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 324,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"B-mtEVaNRrnEOmfxzoejd\">公安部网络安全等级保护",
+      "<div class=\"_919636c0de3715e095cfaadbf0ef4638_container overflow-hidden adc-pre-exposure\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 982,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"TVskwE9yMyuotDL0ib6sR\">"
+    ],
+    "links": [],
+    "imgs": [
+      " | https://img.alicdn.com/imgextra/i2/O1CN019QTGeU1KFQFuLHMEY_!!6000000001134-2-tps-720-557.png"
+    ],
+    "vars": [
+      "--column-count:12;--mobile-column-count:12;--row-height:193px;--mobile-row-height:auto;--gap:1;--split-border-color:transparent;--split-border-width:0;--mobile-split-border-color:transparent;--mobile-split-border-width:0"
+    ]
+  },
+  {
+    "name": "Adc2025Grid",
+    "chars": 943,
+    "texts": [
+      "data-module-name=\"Adc2025Grid\" data-module-id=\"oaZdiIwbf3ugC-7DUZVlq\" data-homon-module=\"\" data-spm=\"J_oaZdiIwbf3ugC-7DUZVlq\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:2;--col:4;--mobile-row:1;--mobile-col:12",
+      "background-size: cover; background-position: right bottom; --background-image: url(https://img.alicdn.com/imgextra/i4/O1CN01AFTAK428fHP93ePNh_!!6000000007959-2-tps-570-411.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i4/O1CN01AFTAK428fHP93ePNh_!!6000000007959-2-tps-570-411.png);"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 201,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"5D1n06Yt2VVtIj9FATSnU\">",
+      "<h2 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading2 transition-colors text-white text-32 font-semibold mobile:text-26\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 288,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"KdO8Rf4tcKt0nofWAtn6z\">立即体验",
+      "在阿里云上创造未来",
+      "<button class=\"_423699996bedf83b3ad1dca4c2e49da7_button _423699996bedf83b3ad1dca4c2e49da7_has-icon bg-glass-button text-default hover:text-primary hover:transition-colors\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025LinkButton",
+    "chars": 202,
+    "texts": [
+      "data-module-name=\"Adc2025LinkButton\" data-module-id=\"UFTDdqQHKGolvPH9lFHjX\">免费体验",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 1461,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"RQ6H-bkWNoKb-YS34MAAc\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:4;--mobile-row:1;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 156,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"_x31cr9H15a9hOaWGMm47\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row justify-between\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 256,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"hP1Px2xykGehhCOvLfAG_\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i2/O1CN01evxuGS24GJLOpGjtB_!!6000000007363-55-tps-32-32.svg\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-7 h-7\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 209,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"WTVZEKXv7NqWjVIcQRpCO\">",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"text-20\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 976,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"i2kV9P8fjMkXBFz6Wyrc0\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 mt-3 hover:text-primary transition-colors font-semibold text-default mobile:text-16 mobile:leading-24\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 926,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"nXW4rJayEoc3r2DnfTBJs\">全天候高效服务",
+      "7x24 小时为您提供专业服务"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:4;--mobile-row:1;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 156,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"PB7Zl7jcqPFuJ9EuM58gy\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row justify-between\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 256,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"U2RgHhUvwnshrmhTNjLxF\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i2/O1CN01reLEc225LBAbM5BPs_!!6000000007509-55-tps-32-32.svg\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-7 h-7\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 209,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"qySA5jyXFdxm3Sjx15r0m\">",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"text-20\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 976,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"CMmMESvBrxAqbaENS4cVd\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 mt-3 hover:text-primary transition-colors font-semibold text-default mobile:text-16 mobile:leading-24\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 891,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"QjHyVnFC6EoNxDDJQwTBP\">专属贴身服务",
+      "1v1 极速响应、专属保障的贴身服务"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:4;--mobile-row:1;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 156,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"NJP3bxIqUZgzB9AxuTca3\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row justify-between\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 256,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"-5RwBWFRV2WxMBOAB-G7q\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i1/O1CN01jWUcSM23pkN9g0EPN_!!6000000007305-55-tps-32-32.svg\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-7 h-7\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 209,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"Fxrtt9ws5zYGdxybsO88k\">",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"text-20\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 976,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"tJXO2b8ptnVFKCEzLIimu\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 mt-3 hover:text-primary transition-colors font-semibold text-default mobile:text-16 mobile:leading-24\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 848,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"Qp9c5V-0k4sJi6OGH3OVP\">多渠道无忧服务",
+      "多种查询、诊断等服务工具，快速解决常见问题"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "--row:1;--col:4;--mobile-row:1;--mobile-col:12"
+    ]
+  },
+  {
+    "name": "Adc2025LinkBox",
+    "chars": 156,
+    "texts": [
+      "data-module-name=\"Adc2025LinkBox\" data-module-id=\"YMk7rXQkuIw6x7wXVrH8Q\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row justify-between\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 256,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"DmnTnBSmF3M2Ibbx87QlA\">",
+      "<img src=\"https://img.alicdn.com/imgextra/i3/O1CN01HeO8dA1NfTd2ftIXx_!!6000000001597-55-tps-32-32.svg\" loading=\"lazy\" class=\"_0294c76e48b171c79fc3ddc6a811f7d6_only-image w-7 h-7\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 209,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"8EPOM4KS0G3M1CX7G1NyU\">",
+      "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 18 18\" class=\"text-20\" fill=\"currentColor\" width=\"1em\" height=\"1em\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 976,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"I0cdKFiFaUAgLW3LHA0oh\">",
+      "<h3 class=\"eb0bd3f89f8414f459f6064c9ea56afa_heading3 mt-3 hover:text-primary transition-colors font-semibold text-default mobile:text-16 mobile:leading-24\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 421,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"-Bs3yTYCWVO4xjgLlJjb3\">专业上云服务",
+      "上云全周期的技术咨询与实施服务",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row justify-between pt-20 pb-20\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 555,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"UnClmrPv3WP2blT0qMgwn\" data-homon-module=\"\" data-spm=\"J_UnClmrPv3WP2blT0qMgwn\">"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": [
+      "background-size: cover; --background-image: url(https://img.alicdn.com/imgextra/i3/O1CN01ncv2TokLGSC5gTAm_!!6000000002157-2-tps-2800-800.png); --mobile-background-image: url(https://img.alicdn.com/imgextra/i4/O1CN01dPEk7h1mVHFQZtZEU_!!6000000004959-2-tps-686-820.png);"
+    ]
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 194,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"fG_g87n2HVyg_A_f_YB_4\">",
+      "<picture class=\"_0294c76e48b171c79fc3ddc6a811f7d6_image h-32 ml-auto mr-auto mobile:h-20\" style=\"object-fit:contain\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Image",
+    "chars": 468,
+    "texts": [
+      "data-module-name=\"Adc2025Image\" data-module-id=\"VzDD4gUMG7mLXSiVHcsra\">",
+      "<div class=\"ea4f4df750a374c5794e9a13cfaf064b_box flex-row justify-center gap-6 mt-8 mobile:flex-col mobile:gap-5\""
+    ],
+    "links": [],
+    "imgs": [
+      " | https://img.alicdn.com/imgextra/i4/O1CN01XKfBR3fma9L29BMQ_!!6000000000851-2-tps-1058-240.png"
+    ],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Box",
+    "chars": 221,
+    "texts": [
+      "data-module-name=\"Adc2025Box\" data-module-id=\"hVJfxukNj1vs2U459knab\">",
+      "<a class=\"_119d758a100132b1cfcf799b9c59949e_link flex-row justify-between pt-1 pb-1\" href=\"https://www.aliyun.com/analyst-reports/idc-fms-2026\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Aliyun2025UnderlineLink",
+    "chars": 202,
+    "texts": [
+      "data-module-name=\"Aliyun2025UnderlineLink\" data-module-id=\"4iIe_SrqbiDCPAcKx9JXA\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-white text-16 mobile:text-14 opacity-80 hover:opacity-100\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 320,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"vYTLiC6wcAtsXZBSh0kZa\">千问大模型，全球基础模型软件领导者"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 965,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"vdSdmgjOwayOJx4Rony7O\">",
+      "<a class=\"_119d758a100132b1cfcf799b9c59949e_link flex-row justify-between pt-1 pb-1\" href=\"https://www.aliyun.com/analyst-reports/frost-fsai-2025\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Aliyun2025UnderlineLink",
+    "chars": 202,
+    "texts": [
+      "data-module-name=\"Aliyun2025UnderlineLink\" data-module-id=\"G1aRr5YNKJTXn3K910Qz8\">",
+      "<p class=\"eb0bd3f89f8414f459f6064c9ea56afa_body text-white text-16 mobile:text-14 opacity-80 hover:opacity-100\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025Typography",
+    "chars": 325,
+    "texts": [
+      "data-module-name=\"Adc2025Typography\" data-module-id=\"grGQksQr7zItMEgaF5zBh\">中国 AI 云市场份额领先，超过2-4名总和"
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Adc2025IconArrowUpOutlined",
+    "chars": 965,
+    "texts": [
+      "data-module-name=\"Adc2025IconArrowUpOutlined\" data-module-id=\"GdaMVnY5ABfYxhT-BVYpW\">",
+      "<div class=\"_18a32969382a277c44015217fbc5cb5a_box\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "LowcodeNormalPage",
+    "chars": 156,
+    "texts": [
+      "data-module-name=\"LowcodeNormalPage\" data-module-id=\"sNBy12KbB5Kfn_hu-NN3w\"><footer class=\"_49ada0cd752f65901c49f2eed0d6c3d5_container\" aria-label=\"PC 端页尾\""
+    ],
+    "links": [],
+    "imgs": [],
+    "vars": []
+  },
+  {
+    "name": "Ace2024GlobalFooter",
+    "chars": 28440,
+    "texts": [
+      "data-module-name=\"Ace2024GlobalFooter\" data-module-id=\"4NWEMkQ5nDwOgLi8EJmHs\" data-homon-module=\"\" data-spm=\"J_4NWEMkQ5nDwOgLi8EJmHs\">",
+      "关注我们：",
+      "新浪微博",
+      "联系我们",
+      "文档",
+      "|",
+      "开发者社区",
+      "天池大赛",
+      "培训与认证",
+      "法律声明及隐私权政策",
+      "Cookies政策",
+      "© 2009-现在 Aliyun.com 版权所有",
+      "增值电信业务经营许可证：",
+      "浙B2-20080101",
+      "域名注册服务机构许可：",
+      "浙D3-20210002",
+      "浙公网安备 33010602009975号",
+      "浙B2-20080101-4"
+    ],
+    "links": [
+      "新浪微博 -> https://weibo.com/u/1644971875",
+      "联系我们 -> https://www.aliyun.com/contact",
+      "文档 -> https://help.aliyun.com/",
+      "开发者社区 -> https://developer.aliyun.com/",
+      "天池大赛 -> https://tianchi.aliyun.com/",
+      "培训与认证 -> https://edu.aliyun.com/",
+      "法律声明及隐私权政策 -> http://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud2019021",
+      "Cookies政策 -> https://terms.alicdn.com/legal-agreement/terms/platform_service/20220906101446934/20220906",
+      "浙B2-20080101 -> http://beian.miit.gov.cn/",
+      "浙D3-20210002 -> https://domain.miit.gov.cn/域名注册服务机构/互联网域名/阿里云计算有限公司 ",
+      "https://zzlz.gsxt.gov.cn/businessCheck/verifKey.do?showType=p&amp;serial=91330106673959654",
+      "浙公网安备 33010602009975号 -> http://www.beian.gov.cn/portal/registerSystemInfo",
+      "浙B2-20080101-4 -> https://beian.miit.gov.cn/"
+    ],
+    "imgs": [
+      "阿里云 | https://img.alicdn.com/tfs/TB13DzOjXP7gK0jSZFjXXc5aXXa-212-48.png",
+      " | //gw.alicdn.com/tfs/TB1GxwdSXXXXXa.aXXXXXXXXXXX-65-70.gif",
+      " | //img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png"
+    ],
+    "vars": [
+      "--size: 10;"
+    ]
+  }
+]

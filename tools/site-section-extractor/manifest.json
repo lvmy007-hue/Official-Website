@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "官网板块提取",
+  "description": "打开下拉并逐页提取板块，保存为一个 JSON。",
+  "version": "1.4.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "提取当前页板块",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["scripting", "downloads", "tabs"],
+  "host_permissions": ["http://*/*", "https://*/*"]
+}

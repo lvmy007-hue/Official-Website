@@ -44,6 +44,17 @@ model Tenant {
   fbaReturns FbaReturnCase[]
   auditEvents AuditEvent[]
   reportJobs FbaReportJob[]
+  adsProfiles AdsProfile[]
+  adsCampaigns AdsCampaign[]
+  adsReportJobs AdsReportJob[]
+  orderItems OrderItem[]
+  fbaSettlements FbaSettlement[]
+  fbaFinancialTransactions FbaFinancialTransaction[]
+  adMetrics AdsMetric[]
+  suppliers Supplier[]
+  purchaseOrders PurchaseOrder[]
+  warehouses Warehouse[]
+  inventoryMovements InventoryMovement[]
 }
 model Role {
   id String @id @default(cuid())
@@ -81,6 +92,7 @@ model Session {
   ipHash String?
   expiresAt DateTime
   revokedAt DateTime?
+  lastSeenAt DateTime @default(now())
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   createdAt DateTime @default(now())
   @@index([userId, revokedAt])
@@ -119,15 +131,19 @@ model SellerAccount {
   fbaFeeEvents FbaFeeEvent[]
   fbaReturns FbaReturnCase[]
   reportJobs FbaReportJob[]
+  orderItems OrderItem[]
+  fbaSettlements FbaSettlement[]
+  fbaFinancialTransactions FbaFinancialTransaction[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  @@unique([provider, sellerId, logicalRegion])
+  @@unique([tenantId, provider, sellerId, logicalRegion])
   @@index([tenantId, logicalRegion])
 }
 model PlatformConnection {
   id String @id @default(cuid())
   tenantId String
   sellerAccountId String?
+  adsProfileId String?
   provider String
   state String @default("NOT_CONFIGURED")
   externalAccountId String?
@@ -139,12 +155,14 @@ model PlatformConnection {
   lastErrorCode String?
   tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
   sellerAccount SellerAccount? @relation(fields: [sellerAccountId], references: [id], onDelete: Cascade)
+  adsProfile AdsProfile? @relation(fields: [adsProfileId], references: [id], onDelete: SetNull)
   oauthStates OAuthState[]
   healthChecks ConnectionHealth[]
   syncJobs SyncJob[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   @@index([tenantId, provider, state])
+  @@index([tenantId, adsProfileId])
 }
 model OAuthState {
   id String @id @default(cuid())
@@ -187,12 +205,17 @@ model Order {
   itemCount Int?
   sourceUpdatedAt DateTime
   sourceRecordId String
+  piiCiphertext String?
+  shippedAt DateTime?
+  piiExpiresAt DateTime?
   tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
   sellerAccount SellerAccount @relation(fields: [sellerAccountId], references: [id], onDelete: Cascade)
+  items OrderItem[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   @@unique([sellerAccountId, amazonOrderId])
   @@index([tenantId, purchaseDate])
+  @@index([piiExpiresAt])
 }
 model InventorySnapshot {
   id String @id @default(cuid())
@@ -220,6 +243,7 @@ model SyncJob {
   attempts Int @default(0)
   failureCode String?
   requestId String
+  context Json?
   startedAt DateTime?
   finishedAt DateTime?
   createdAt DateTime @default(now())
@@ -248,6 +272,9 @@ model ContactRequest {
   company String
   email String
   message String
+  phone String?
+  topic String?
+  storeBand String?
   status String @default("NEW")
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -321,6 +348,7 @@ model FbaInboundPlan {
   name String
   status String @default("DRAFT")
   sourceAddress String
+  items Json?
   placementOption String?
   totalUnits Int @default(0)
   shipmentCount Int @default(0)
@@ -367,12 +395,14 @@ model FbaFeeEvent {
   currency String @default("USD")
   postedAt DateTime
   description String?
+  sourceEventId String?
   sourceUpdatedAt DateTime
   createdAt DateTime @default(now())
   tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
   sellerAccount SellerAccount @relation(fields: [sellerAccountId], references: [id], onDelete: Cascade)
   @@index([tenantId, postedAt, eventType])
   @@index([sellerAccountId, settlementId])
+  @@unique([sellerAccountId, sourceEventId])
 }
 
 model FbaReturnCase {
@@ -424,4 +454,265 @@ model FbaReportJob {
   @@index([tenantId, createdAt])
   @@index([tenantId, status])
   @@index([sellerAccountId, reportType])
+}
+
+model AdsProfile {
+  id String @id @default(cuid())
+  tenantId String
+  profileId String
+  accountId String?
+  marketplaceId String @default("ATVPDKIKX0DER")
+  countryCode String @default("US")
+  currencyCode String @default("USD")
+  timezone String?
+  displayName String?
+  status String @default("ACTIVE")
+  sourceUpdatedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  connections PlatformConnection[]
+  campaigns AdsCampaign[]
+  reports AdsReportJob[]
+  metrics AdsMetric[]
+  @@unique([tenantId, profileId])
+  @@index([tenantId, marketplaceId, status])
+}
+
+model AdsCampaign {
+  id String @id @default(cuid())
+  tenantId String
+  adsProfileId String
+  externalCampaignId String
+  adProduct String
+  name String
+  state String
+  budget Decimal? @db.Decimal(20, 6)
+  currency String @default("USD")
+  startDate DateTime?
+  endDate DateTime?
+  sourceUpdatedAt DateTime
+  raw Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  adsProfile AdsProfile @relation(fields: [adsProfileId], references: [id], onDelete: Cascade)
+  @@unique([adsProfileId, externalCampaignId, adProduct])
+  @@index([tenantId, state, sourceUpdatedAt])
+}
+
+model AdsReportJob {
+  id String @id @default(cuid())
+  tenantId String
+  adsProfileId String
+  reportType String
+  adProduct String @default("SPONSORED_PRODUCTS")
+  status String @default("PENDING")
+  externalReportId String?
+  downloadUrl String?
+  fromDate DateTime?
+  toDate DateTime?
+  expiresAt DateTime?
+  failureCode String?
+  requestId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  adsProfile AdsProfile @relation(fields: [adsProfileId], references: [id], onDelete: Cascade)
+  @@index([tenantId, status, createdAt])
+  metrics AdsMetric[]
+  @@index([adsProfileId, reportType])
+}
+
+
+model OrderItem {
+  id String @id @default(cuid())
+  tenantId String
+  sellerAccountId String
+  orderId String
+  amazonOrderId String
+  orderItemId String
+  asin String?
+  sellerSku String?
+  title String?
+  quantityOrdered Int @default(0)
+  quantityShipped Int @default(0)
+  itemPrice Decimal? @db.Decimal(20, 6)
+  currency String @default("USD")
+  fulfillmentNetwork String?
+  condition String?
+  sourceUpdatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  sellerAccount SellerAccount @relation(fields: [sellerAccountId], references: [id], onDelete: Cascade)
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  @@unique([sellerAccountId, orderItemId])
+  @@index([tenantId, amazonOrderId])
+  @@index([sellerAccountId, sellerSku])
+}
+
+model FbaSettlement {
+  id String @id @default(cuid())
+  tenantId String
+  sellerAccountId String
+  marketplaceId String @default("ATVPDKIKX0DER")
+  externalSettlementId String
+  settlementStartDate DateTime?
+  settlementEndDate DateTime?
+  depositDate DateTime?
+  totalAmount Decimal? @db.Decimal(20, 6)
+  currency String @default("USD")
+  status String @default("RECEIVED")
+  sourceUpdatedAt DateTime
+  raw Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  sellerAccount SellerAccount @relation(fields: [sellerAccountId], references: [id], onDelete: Cascade)
+  transactions FbaFinancialTransaction[]
+  @@unique([sellerAccountId, externalSettlementId])
+  @@index([tenantId, depositDate])
+}
+
+model FbaFinancialTransaction {
+  id String @id @default(cuid())
+  tenantId String
+  sellerAccountId String
+  settlementId String?
+  marketplaceId String @default("ATVPDKIKX0DER")
+  externalTransactionId String
+  amazonOrderId String?
+  transactionType String?
+  transactionStatus String?
+  amount Decimal @db.Decimal(20, 6)
+  currency String @default("USD")
+  postedAt DateTime
+  description String?
+  raw Json?
+  sourceUpdatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  sellerAccount SellerAccount @relation(fields: [sellerAccountId], references: [id], onDelete: Cascade)
+  settlement FbaSettlement? @relation(fields: [settlementId], references: [id], onDelete: SetNull)
+  @@unique([sellerAccountId, externalTransactionId])
+  @@index([tenantId, postedAt, transactionType])
+}
+
+model AdsMetric {
+  id String @id @default(cuid())
+  tenantId String
+  adsProfileId String
+  reportJobId String?
+  reportDate DateTime
+  adProduct String @default("SPONSORED_PRODUCTS")
+  externalCampaignId String?
+  campaignName String?
+  impressions Int @default(0)
+  clicks Int @default(0)
+  cost Decimal? @db.Decimal(20, 6)
+  sales Decimal? @db.Decimal(20, 6)
+  purchases Int @default(0)
+  currency String @default("USD")
+  raw Json?
+  sourceUpdatedAt DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  adsProfile AdsProfile @relation(fields: [adsProfileId], references: [id], onDelete: Cascade)
+  reportJob AdsReportJob? @relation(fields: [reportJobId], references: [id], onDelete: SetNull)
+  @@unique([adsProfileId, reportDate, adProduct, externalCampaignId])
+  @@index([tenantId, reportDate])
+}
+
+model Supplier {
+  id String @id @default(cuid())
+  tenantId String
+  code String
+  name String
+  contactName String?
+  email String?
+  phone String?
+  currency String @default("USD")
+  status String @default("ACTIVE")
+  notes String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  purchaseOrders PurchaseOrder[]
+  @@unique([tenantId, code])
+  @@index([tenantId, status])
+}
+
+model PurchaseOrder {
+  id String @id @default(cuid())
+  tenantId String
+  supplierId String
+  number String
+  status String @default("DRAFT")
+  currency String @default("USD")
+  totalAmount Decimal? @db.Decimal(20, 6)
+  expectedDate DateTime?
+  notes String?
+  createdById String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  supplier Supplier @relation(fields: [supplierId], references: [id], onDelete: Restrict)
+  lines PurchaseOrderLine[]
+  @@unique([tenantId, number])
+  @@index([tenantId, status, createdAt])
+}
+
+model PurchaseOrderLine {
+  id String @id @default(cuid())
+  purchaseOrderId String
+  sellerSku String
+  asin String?
+  title String?
+  quantity Int @default(0)
+  receivedQuantity Int @default(0)
+  unitCost Decimal? @db.Decimal(20, 6)
+  currency String @default("USD")
+  purchaseOrder PurchaseOrder @relation(fields: [purchaseOrderId], references: [id], onDelete: Cascade)
+  @@index([purchaseOrderId, sellerSku])
+}
+
+model Warehouse {
+  id String @id @default(cuid())
+  tenantId String
+  code String
+  name String
+  countryCode String @default("US")
+  kind String @default("FBA")
+  status String @default("ACTIVE")
+  address Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  movements InventoryMovement[]
+  @@unique([tenantId, code])
+  @@index([tenantId, kind, status])
+}
+
+model InventoryMovement {
+  id String @id @default(cuid())
+  tenantId String
+  sellerAccountId String?
+  warehouseId String?
+  sellerSku String
+  asin String?
+  movementType String
+  quantity Int
+  referenceType String?
+  referenceId String?
+  occurredAt DateTime
+  notes String?
+  raw Json?
+  createdAt DateTime @default(now())
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  warehouse Warehouse? @relation(fields: [warehouseId], references: [id], onDelete: SetNull)
+  @@index([tenantId, sellerSku, occurredAt])
+  @@index([tenantId, movementType, occurredAt])
 }

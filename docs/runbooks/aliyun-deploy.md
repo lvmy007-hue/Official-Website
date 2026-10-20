@@ -6,7 +6,7 @@
 
 本地 `docker-compose.yml` 为了方便先进入 ERP，明确开启了 `APP_MODE=development` + `LOCAL_NO_AUTH=true`，并自动创建一个真实但为空业务数据的本地企业工作区；它只用于本机 UI/接口联调，不会生成订单、库存、广告或 FBA 假数据。阿里云使用 `docker-compose.aliyun.yml`，保持生产 JWT、租户和权限校验。
 
-接入 Amazon.com FBA 前还需完成 Amazon Developer Central / Seller Central 应用审批，并配置 `AMAZON_SP_APPLICATION_ID`、LWA Client ID/Secret、回调地址、`AMAZON_SP_API_ENDPOINT=https://sellingpartnerapi-na.amazon.com`、`AMAZON_SP_API_REGION=us-east-1`、AWS SigV4 的 `AWS_ACCESS_KEY_ID/AWS_SECRET_ACCESS_KEY` 和 Amazon Ads 凭证。生产前端固定使用服务端 API；缺少外部授权时，页面只显示“未连接/不可用”并保留失败原因，不会把演示数据写成“已同步”。当前 Worker 已具备 LWA refresh-token 解密、Inventory/Orders/Reports 的真实请求入口；Inbound、Finances、Returns、Catalog 等数据域仍需按官方 schema 完成归一化 importer 后才能在生产打开。
+接入 Amazon.com FBA 前还需完成 Amazon Developer Central / Seller Central 应用审批，并配置 `AMAZON_SP_APPLICATION_ID`、LWA Client ID/Secret、回调地址、`AMAZON_SP_API_ENDPOINT=https://sellingpartnerapi-na.amazon.com`、`AMAZON_SP_API_REGION=us-east-1`、AWS SigV4 的 `AWS_ACCESS_KEY_ID/AWS_SECRET_ACCESS_KEY` 和 Amazon Ads 凭证。生产前端固定使用服务端 API；缺少外部授权时，页面只显示“未连接/不可用”并保留失败原因，不会把演示数据写成“已同步”。当前 Worker 已具备 LWA refresh-token 解密、Inventory、Orders、Order Items、Inbound Plan/Shipment、Finances、Returns、Catalog Reports、Settlement Reports、Orders Reports 以及 Amazon Ads Profile/Campaign/Report 的真实请求和归一化写入入口。
 
 首次启动：
 

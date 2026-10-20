@@ -50,6 +50,20 @@ services:
       AMAZON_SP_API_APPROVED: ${AMAZON_SP_API_APPROVED:-false}
       AMAZON_SP_APPLICATION_ID: ${AMAZON_SP_APPLICATION_ID:-}
       AMAZON_SP_AUTH_URL: ${AMAZON_SP_AUTH_URL:-https://sellercentral.amazon.com/apps/authorize/consent}
+      AMAZON_SP_LWA_CLIENT_ID: ${AMAZON_SP_LWA_CLIENT_ID:-}
+      AMAZON_SP_LWA_CLIENT_SECRET: ${AMAZON_SP_LWA_CLIENT_SECRET:-}
+      AMAZON_SP_LWA_TOKEN_URL: ${AMAZON_SP_LWA_TOKEN_URL:-https://api.amazon.com/auth/o2/token}
+      AMAZON_SP_API_ENDPOINT: ${AMAZON_SP_API_ENDPOINT:-https://sellingpartnerapi-na.amazon.com}
+      AMAZON_SP_API_REGION: ${AMAZON_SP_API_REGION:-us-east-1}
+      AMAZON_SP_REDIRECT_URI: ${AMAZON_SP_REDIRECT_URI:-https://dzanx.com/api/v1/sp-api/oauth/callback}
+      AMAZON_SP_SUCCESS_REDIRECT: ${AMAZON_SP_SUCCESS_REDIRECT:-/app/connections}
+      AMAZON_ADS_API_APPROVED: ${AMAZON_ADS_API_APPROVED:-false}
+      AMAZON_ADS_API_ENDPOINT: ${AMAZON_ADS_API_ENDPOINT:-https://advertising-api.amazon.com}
+      AMAZON_ADS_CLIENT_ID: ${AMAZON_ADS_CLIENT_ID:-}
+      AMAZON_ADS_CLIENT_SECRET: ${AMAZON_ADS_CLIENT_SECRET:-}
+      AMAZON_ADS_LWA_TOKEN_URL: ${AMAZON_ADS_LWA_TOKEN_URL:-https://api.amazon.com/auth/o2/token}
+      AMAZON_ADS_REDIRECT_URI: ${AMAZON_ADS_REDIRECT_URI:-https://dzanx.com/api/v1/ads/oauth/callback}
+      AMAZON_ADS_SUCCESS_REDIRECT: ${AMAZON_ADS_SUCCESS_REDIRECT:-/app/connections}
     healthcheck: { test: ["CMD-SHELL", "wget -q -O - http://127.0.0.1:4000/api/v1/health >/dev/null"], interval: 10s, timeout: 5s, start_period: 20s, retries: 12 }
     depends_on: { postgres: { condition: service_healthy }, redis: { condition: service_healthy }, migrate: { condition: service_completed_successfully } }
   worker:
@@ -61,6 +75,21 @@ services:
       MOCK_CONNECTOR: "false"
       DATABASE_URL: ${DATABASE_URL:?DATABASE_URL is required}
       REDIS_URL: ${REDIS_URL:-redis://redis:6379}
+      TOKEN_ENCRYPTION_KEY: ${TOKEN_ENCRYPTION_KEY:?TOKEN_ENCRYPTION_KEY is required}
+      AMAZON_SP_LWA_CLIENT_ID: ${AMAZON_SP_LWA_CLIENT_ID:-}
+      AMAZON_SP_LWA_CLIENT_SECRET: ${AMAZON_SP_LWA_CLIENT_SECRET:-}
+      AMAZON_SP_LWA_TOKEN_URL: ${AMAZON_SP_LWA_TOKEN_URL:-https://api.amazon.com/auth/o2/token}
+      AMAZON_SP_API_ENDPOINT: ${AMAZON_SP_API_ENDPOINT:-https://sellingpartnerapi-na.amazon.com}
+      AMAZON_SP_API_REGION: ${AMAZON_SP_API_REGION:-us-east-1}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-}
+      AWS_SESSION_TOKEN: ${AWS_SESSION_TOKEN:-}
+      AMAZON_ADS_API_ENDPOINT: ${AMAZON_ADS_API_ENDPOINT:-https://advertising-api.amazon.com}
+      AMAZON_ADS_CLIENT_ID: ${AMAZON_ADS_CLIENT_ID:-}
+      AMAZON_ADS_CLIENT_SECRET: ${AMAZON_ADS_CLIENT_SECRET:-}
+      AMAZON_ADS_LWA_TOKEN_URL: ${AMAZON_ADS_LWA_TOKEN_URL:-https://api.amazon.com/auth/o2/token}
+      AMAZON_ADS_CAMPAIGNS_PATH: ${AMAZON_ADS_CAMPAIGNS_PATH:-/sp/campaigns/list}
+      AMAZON_ADS_REPORTS_PATH: ${AMAZON_ADS_REPORTS_PATH:-/reporting/reports}
     depends_on: { postgres: { condition: service_healthy }, redis: { condition: service_healthy }, migrate: { condition: service_completed_successfully } }
   web:
     build:

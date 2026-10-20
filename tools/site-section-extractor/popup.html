@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body { width: 360px; margin: 0; padding: 14px; font: 13px/1.5 "Segoe UI", sans-serif; color: #1f2329; }
+    h1 { margin: 0 0 8px; font-size: 15px; }
+    p { margin: 0 0 12px; color: #4e5969; }
+    button { width: 100%; height: 36px; margin: 0 0 8px; border: 0; border-radius: 6px; background: #2b63f0; color: #fff; font-weight: 650; cursor: pointer; }
+    button.line { background: #fff; color: #2b63f0; border: 1px solid #c9d7fb; }
+    #status { min-height: 36px; color: #4e5969; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>提取整站板块</h1>
+  <p>先在扩展程序页点「重新加载」，确认版本是 1.4.0。从首页点下面的按钮：会打开每个下拉，再进入导航里的其他页面，最后把一个 JSON 下载到浏览器下载栏。</p>
+  <button id="full" type="button">打开下拉并提取各页面</button>
+  <button id="view" class="line" type="button">只提取当前屏幕</button>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

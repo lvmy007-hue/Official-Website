@@ -1,41 +1,359 @@
-import { useState } from 'react'
-import type { FormEvent, ReactNode } from 'react'
-import { IconArrowRight, IconCheckCircle, IconFile, IconSettings, IconStorage, IconUser } from '@arco-design/web-react/icon'
+import { useEffect, useId, useRef, useState } from 'react'
+import type { FormEvent } from 'react'
+import { IconArrowRight } from '@arco-design/web-react/icon'
 import { Message } from '@arco-design/web-react'
 import { apiFetch } from './api'
+import { SiteLink } from './site-link'
+import { company, spApiRoles } from './site-company'
+import { guides, press } from './site-commercial'
+import { productPageBody } from './ProductDetailPages'
+import { OfficialHome } from './OfficialHome'
+import {
+  legalBanner,
+  navProduct,
+  navSolutions,
+  pageMeta,
+  privacySections,
+  securitySections,
+  termsSections,
+  type PublicPage,
+} from './public-site-content'
 import './production-website.css'
+import './site-public.css'
 
-type WebsitePage = 'home' | 'product' | 'solutions' | 'about' | 'news' | 'resources' | 'contact'
+type WebsitePage = PublicPage
 
-function nav(path: string) { window.history.pushState({}, '', path); window.dispatchEvent(new PopStateEvent('popstate')) }
+function usePageMeta(page: WebsitePage) {
+  useEffect(() => {
+    const meta = pageMeta[page]
+    document.title = meta.title
+    document.documentElement.lang = 'zh-CN'
+    let description = document.querySelector('meta[name="description"]')
+    if (!description) {
+      description = document.createElement('meta')
+      description.setAttribute('name', 'description')
+      document.head.appendChild(description)
+    }
+    description.setAttribute('content', meta.description)
+    let canonical = document.querySelector('link[rel="canonical"]')
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.setAttribute('rel', 'canonical')
+      document.head.appendChild(canonical)
+    }
+    canonical.setAttribute('href', meta.canonical)
+    let alternate = document.querySelector('link[rel="alternate"][hreflang="zh-CN"]')
+    if (!alternate) {
+      alternate = document.createElement('link')
+      alternate.setAttribute('rel', 'alternate')
+      alternate.setAttribute('hreflang', 'zh-CN')
+      document.head.appendChild(alternate)
+    }
+    alternate.setAttribute('href', meta.canonical)
+  }, [page])
+}
 
-const productModules = [
-  { number: '01', title: 'Amazon FBA 运营', text: '商品、库存、Inbound、订单、退货和费用以真实业务对象组织。', icon: <IconStorage />, path: '/app/overview' },
-  { number: '02', title: '供应链与履约', text: '补货、采购、FBA 货件、FC 接收和差异处理进入同一条执行链。', icon: <IconFile />, path: '/app/supply-chain' },
-  { number: '03', title: '财务与利润', text: 'Settlement、FBA 费用、退款、广告成本和产品成本按对象归因。', icon: <IconStorage />, path: '/app/finance' },
-  { number: '04', title: '连接与治理', text: 'Seller、Ads、主体、成员、权限、同步与审计都有明确状态。', icon: <IconSettings />, path: '/app/connections' },
-]
+function Header({ page }: { page: WebsitePage }) {
+  const [desktopMenu, setDesktopMenu] = useState<'product' | 'solutions' | 'resources' | 'about' | null>(null)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const menuId = useId()
+  const drawerRef = useRef<HTMLDivElement>(null)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
 
-function Header({ page }: { page: WebsitePage }) { return <header className="prod-header"><button className="prod-brand" onClick={() => nav('/')}><span className="brand-mark">N</span><span><b>NOVA ERP</b><small>OPERATING SYSTEM FOR COMMERCE</small></span></button><nav><button className={page === 'product' ? 'active' : ''} onClick={() => nav('/product')}>产品</button><button className={page === 'solutions' ? 'active' : ''} onClick={() => nav('/solutions')}>解决方案</button><button className={page === 'about' ? 'active' : ''} onClick={() => nav('/about')}>关于我们</button><button className={page === 'news' ? 'active' : ''} onClick={() => nav('/news')}>动态</button><button className={page === 'resources' ? 'active' : ''} onClick={() => nav('/resources')}>资源</button></nav><div className="prod-header-actions"><button className="prod-login" onClick={() => nav('/login')}>登录 ERP</button><button className="prod-primary" onClick={() => nav('/contact')}>联系团队 <IconArrowRight /></button></div></header> }
+  useEffect(() => {
+    if (!mobileOpen) return
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    const previouslyFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null
+    drawerRef.current?.querySelector<HTMLElement>('button, a')?.focus()
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setMobileOpen(false)
+      if (event.key !== 'Tab' || !drawerRef.current) return
+      const items = [...drawerRef.current.querySelectorAll<HTMLElement>('button, a')].filter(item => !item.hasAttribute('disabled'))
+      if (!items.length) return
+      const first = items[0]
+      const last = items[items.length - 1]
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus() }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus() }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => {
+      document.body.style.overflow = previousOverflow
+      window.removeEventListener('keydown', onKey)
+      previouslyFocused?.focus()
+    }
+  }, [mobileOpen])
 
-function Footer() { return <footer className="prod-footer"><div className="prod-footer-main"><div><button className="prod-brand" onClick={() => nav('/')}><span className="brand-mark">N</span><span><b>NOVA ERP</b><small>OPERATING SYSTEM FOR COMMERCE</small></span></button><p>面向跨境企业团队的经营操作系统。</p></div><div><b>产品</b><button onClick={() => nav('/product')}>FBA 运营</button><button onClick={() => nav('/solutions')}>供应链与财务</button><button onClick={() => nav('/app/advertising')}>Amazon Ads</button></div><div><b>公司</b><button onClick={() => nav('/about')}>关于我们</button><button onClick={() => nav('/news')}>产品动态</button><button onClick={() => nav('/contact')}>联系团队</button></div><div><b>工作台</b><button onClick={() => nav('/login')}>登录 ERP</button><button onClick={() => nav('/resources')}>资源中心</button></div></div><div className="prod-footer-bottom"><span>© 2026 NOVA ERP</span><span>Amazon.com FBA · Enterprise Operations</span><span>Privacy · Terms · Security</span></div></footer> }
+  useEffect(() => {
+    if (!desktopMenu) return
+    const onKey = (event: KeyboardEvent) => { if (event.key === 'Escape') setDesktopMenu(null) }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [desktopMenu])
 
-function SectionHeading({ eyebrow, title, text }: { eyebrow: string; title: string; text?: string }) { return <div className="prod-section-heading"><span className="prod-eyebrow">{eyebrow}</span><h2>{title}</h2>{text && <p>{text}</p>}</div> }
+  const closeMobile = () => setMobileOpen(false)
 
-function ContactForm() { const [form, setForm] = useState({ name: '', company: '', email: '', subject: '产品咨询', message: '' }); const [busy, setBusy] = useState(false); const submit = async (event: FormEvent) => { event.preventDefault(); if (!form.name || !form.company || !form.email || !form.message) { Message.warning('请填写完整的联系信息'); return } setBusy(true); try { await apiFetch('/contact-requests', { method: 'POST', body: JSON.stringify({ name: form.name, company: form.company, email: form.email, message: `${form.subject}\n${form.message}` }) }); Message.success('信息已提交，团队会通过企业邮箱联系你'); setForm({ name: '', company: '', email: '', subject: '产品咨询', message: '' }) } catch (error) { Message.error(error instanceof Error ? error.message : '提交失败，请稍后重试') } finally { setBusy(false) } }; return <form className="prod-contact-form" onSubmit={submit}><div className="prod-form-grid"><label>联系人<input value={form.name} onChange={event => setForm({ ...form, name: event.target.value })} placeholder="姓名" required /></label><label>企业名称<input value={form.company} onChange={event => setForm({ ...form, company: event.target.value })} placeholder="企业名称" required /></label></div><div className="prod-form-grid"><label>企业邮箱<input type="email" value={form.email} onChange={event => setForm({ ...form, email: event.target.value })} placeholder="name@company.com" required /></label><label>咨询类型<select value={form.subject} onChange={event => setForm({ ...form, subject: event.target.value })}><option>产品咨询</option><option>Amazon API 接入</option><option>企业权限与治理</option><option>合作联系</option></select></label></div><label>留言<textarea value={form.message} onChange={event => setForm({ ...form, message: event.target.value })} placeholder="请描述团队当前的业务范围和需要解决的问题" rows={6} required /></label><button className="prod-primary prod-submit" disabled={busy}>{busy ? '提交中…' : '提交联系信息'} <IconArrowRight /></button><small>提交的信息仅用于联系，不会自动创建账号。</small></form> }
+  return <header className="pub-header">
+    <div className="lx-topbar"><div><span>{company.legalName}</span><a href={`mailto:${company.email}`}>{company.email}</a><span>工作日回复</span></div><SiteLink href="/login">登录工作台</SiteLink></div>
+    <div className="pub-header-bar">
+      <SiteLink href="/" className="pub-brand"><span className="brand-mark">N</span><span><b>NOVA ERP</b><small>DZANX</small></span></SiteLink>
+      <nav className="pub-desktop-nav" aria-label="主导航">
+        <SiteLink href="/" className={page === 'home' ? 'active' : ''}>首页</SiteLink>
+        <div className="pub-dropdown" onMouseLeave={() => setDesktopMenu(current => current === 'product' ? null : current)}>
+          <button className={page.startsWith('product') ? 'active' : ''} aria-expanded={desktopMenu === 'product'} aria-controls={`${menuId}-product`} onClick={() => setDesktopMenu(current => current === 'product' ? null : 'product')}>产品</button>
+          <div id={`${menuId}-product`} className="pub-mega" hidden={desktopMenu !== 'product'}>
+            {[
+              ['财务', ['/product/finance', '/product/returns']],
+              ['供应链', ['/product/inventory', '/product/inbound', '/product/listings', '/product/orders', '/product/stores']],
+              ['运营', ['/product/permissions']],
+              ['广告', ['/product/advertising']],
+            ].map(([label, hrefs]) => <div key={String(label)}><div className="pub-mega-label">{label}</div>{navProduct.filter(item => (hrefs as string[]).includes(item.href)).map(item => <SiteLink key={item.href} href={item.href} onClick={() => setDesktopMenu(null)}><b>{item.label}</b><small>{item.text}</small></SiteLink>)}</div>)}
+            <aside className="pub-mega-side"><b>授权怎么分</b><p>卖家授权完成后，广告花费不会自动出现。广告账户要再授权一次，报表只读。</p><SiteLink href="/security" onClick={() => setDesktopMenu(null)}>查看数据说明</SiteLink></aside>
+          </div>
+        </div>
+        <div className="pub-dropdown" onMouseLeave={() => setDesktopMenu(current => current === 'solutions' ? null : current)}>
+          <button className={page === 'solutions' || page === 'solutions-advertising' ? 'active' : ''} aria-expanded={desktopMenu === 'solutions'} aria-controls={`${menuId}-solutions`} onClick={() => setDesktopMenu(current => current === 'solutions' ? null : 'solutions')}>方案</button>
+          <div id={`${menuId}-solutions`} className="pub-mega pub-mega-slim" hidden={desktopMenu !== 'solutions'}>
+            <div>{navSolutions.map(item => <SiteLink key={item.label} href={item.href} onClick={() => setDesktopMenu(null)}><b>{item.label}</b><small>{item.text}</small></SiteLink>)}</div>
+            <aside className="pub-mega-side"><b>目录价</b><p>单公司起步不含广告报表。开通以书面方案为准，网页不收款。</p><SiteLink href="/pricing" onClick={() => setDesktopMenu(null)}>查看目录价</SiteLink></aside>
+          </div>
+        </div>
+        <SiteLink href="/pricing" className={page === 'pricing' ? 'active' : ''}>价格</SiteLink>
+        <div className="pub-dropdown" onMouseLeave={() => setDesktopMenu(current => current === 'resources' ? null : current)}>
+          <button className={page === 'resources' || page === 'news' ? 'active' : ''} aria-expanded={desktopMenu === 'resources'} onClick={() => setDesktopMenu(current => current === 'resources' ? null : 'resources')}>资源</button>
+          <div className="pub-mega pub-mega-slim" hidden={desktopMenu !== 'resources'}>
+            <div>
+              <div className="pub-mega-label">资源</div>
+              <SiteLink href="/news" onClick={() => setDesktopMenu(null)}><b>最新资讯</b><small>已经写进网站和系统的规则</small></SiteLink>
+              <SiteLink href="/resources" onClick={() => setDesktopMenu(null)}><b>接入说明</b><small>卖家授权、广告授权、权限和删除</small></SiteLink>
+              <div className="pub-mega-label">支持</div>
+              <SiteLink href="/security" onClick={() => setDesktopMenu(null)}><b>数据说明</b><small>保存、删除和成员权限</small></SiteLink>
+            </div>
+            <aside className="pub-mega-side"><b>先确认范围</b><p>主体、店铺数量和要看的模块写在预约里。没有自助开通。</p><SiteLink href="/contact" onClick={() => setDesktopMenu(null)}>预约演示</SiteLink></aside>
+          </div>
+        </div>
+        <div className="pub-dropdown" onMouseLeave={() => setDesktopMenu(current => current === 'about' ? null : current)}>
+          <button className={page === 'about' ? 'active' : ''} aria-expanded={desktopMenu === 'about'} onClick={() => setDesktopMenu(current => current === 'about' ? null : 'about')}>关于</button>
+          <div className="pub-mega pub-mega-slim" hidden={desktopMenu !== 'about'}>
+            <div>
+              <SiteLink href="/about" onClick={() => setDesktopMenu(null)}><b>关于我们</b><small>公司登记、住所和统一社会信用代码</small></SiteLink>
+              <SiteLink href="/news" onClick={() => setDesktopMenu(null)}><b>新闻</b><small>授权边界和删除规则的变更</small></SiteLink>
+              <SiteLink href="/contact" onClick={() => setDesktopMenu(null)}><b>联系</b><small>工作日用邮件回复预约</small></SiteLink>
+            </div>
+            <aside className="pub-mega-side"><b>{company.legalName}</b><p>{company.email}</p><SiteLink href="/about" onClick={() => setDesktopMenu(null)}>查看登记信息</SiteLink></aside>
+          </div>
+        </div>
+      </nav>
+      <div className="pub-header-actions">
+        <SiteLink href="/login" className="pub-login">登录</SiteLink>
+        <SiteLink href="/contact" className="pub-primary">预约演示</SiteLink>
+        <button ref={menuButtonRef} className="pub-menu-button" aria-expanded={mobileOpen} aria-controls="mobile-nav" onClick={() => setMobileOpen(true)}>菜单</button>
+      </div>
+    </div>
+    {mobileOpen && <div className="pub-drawer-backdrop" onClick={closeMobile}>
+      <div id="mobile-nav" ref={drawerRef} className="pub-drawer" role="dialog" aria-modal="true" aria-label="网站菜单" onClick={event => event.stopPropagation()}>
+        <div className="pub-drawer-head"><b>NOVA ERP</b><button onClick={closeMobile}>关闭</button></div>
+        <details open><summary>产品</summary>{navProduct.map(item => <SiteLink key={item.href} href={item.href} onClick={closeMobile}>{item.label}</SiteLink>)}</details>
+        <details open><summary>方案</summary>{navSolutions.map(item => <SiteLink key={item.label} href={item.href} onClick={closeMobile}>{item.label}</SiteLink>)}</details>
+        <SiteLink href="/pricing" onClick={closeMobile}>价格</SiteLink>
+        <details><summary>资源</summary><SiteLink href="/news" onClick={closeMobile}>最新资讯</SiteLink><SiteLink href="/resources" onClick={closeMobile}>接入说明</SiteLink><SiteLink href="/security" onClick={closeMobile}>数据说明</SiteLink></details>
+        <details><summary>关于</summary><SiteLink href="/about" onClick={closeMobile}>关于我们</SiteLink><SiteLink href="/news" onClick={closeMobile}>新闻</SiteLink><SiteLink href="/contact" onClick={closeMobile}>联系接入</SiteLink></details>
+        <div className="pub-drawer-actions">
+          <SiteLink href="/login" onClick={closeMobile}>登录</SiteLink>
+          <SiteLink href="/contact" className="pub-primary" onClick={closeMobile}>预约演示</SiteLink>
+        </div>
+      </div>
+    </div>}
+  </header>
+}
 
-function Home() { return <><section className="prod-hero"><div className="prod-hero-copy"><span className="prod-eyebrow">NOVA ERP · COMMERCE OPERATING SYSTEM</span><h1>把跨境经营，<em>变成可以执行的系统。</em></h1><p>商品、库存、FBA 入仓、订单、财务和广告，不再分散在多个工具里。NOVA 将真实业务对象、任务和权限放到同一套企业工作台。</p><div className="prod-hero-actions"><button className="prod-primary" onClick={() => nav('/login')}>进入 ERP 工作台 <IconArrowRight /></button><button className="prod-secondary" onClick={() => nav('/product')}>查看产品</button></div><div className="prod-hero-meta"><span><i />Amazon.com FBA</span><span><i />对象与任务驱动</span><span><i />企业权限隔离</span></div></div><div className="prod-hero-aside"><div className="prod-aside-label">WORKSPACE PRINCIPLES</div><div className="prod-principle"><b>01</b><span>真实来源</span><small>连接 Amazon 官方 API，保留来源、更新时间和请求链路。</small></div><div className="prod-principle"><b>02</b><span>可执行</span><small>每张列表都能进入详情、创建任务、处理异常或重试。</small></div><div className="prod-principle"><b>03</b><span>可审计</span><small>权限、授权、数据写入和导出都有企业级操作记录。</small></div></div></section><section className="prod-section"><SectionHeading eyebrow="PRODUCT SYSTEM" title="从业务对象开始，而不是从看板开始。" text="每个模块都围绕真实记录、状态和下一步动作构建。" /><div className="prod-module-grid">{productModules.map(module => <button className="prod-module-card" key={module.number} onClick={() => nav(module.path)}><span className="prod-card-number">{module.number}</span><span className="prod-card-icon">{module.icon}</span><h3>{module.title}</h3><p>{module.text}</p><span className="prod-card-link">进入模块 <IconArrowRight /></span></button>)}</div></section><section className="prod-section prod-section-split"><div><SectionHeading eyebrow="FOR OPERATING TEAMS" title="让团队每天知道下一步做什么。" text="异常、补货、接收差异、费用核对和授权问题都有清晰入口。" /><button className="prod-text-link" onClick={() => nav('/solutions')}>查看团队解决方案 <IconArrowRight /></button></div><div className="prod-list-card"><div><i className="prod-list-dot danger" /><b>FC 接收差异</b><span>创建赔付核对</span></div><div><i className="prod-list-dot warn" /><b>库存 Days of Supply</b><span>创建补货计划</span></div><div><i className="prod-list-dot" /><b>Finance 报表任务</b><span>查看生成状态</span></div><div><i className="prod-list-dot" /><b>Amazon 授权连接</b><span>查看健康检查</span></div></div></section><section className="prod-dark-band"><div><span className="prod-eyebrow">READY WHEN YOUR DATA IS READY</span><h2>先连接真实业务，再让系统成为团队的日常工作台。</h2></div><button className="prod-light-button" onClick={() => nav('/contact')}>联系团队 <IconArrowRight /></button></section></> }
+function Footer() {
+  return <footer className="pub-footer">
+    <div className="pub-wrap pub-footer-intro"><b>{company.legalName}</b><p>NOVA ERP 用于多家公司的订单、库存、刊登、入库、财务和广告报表。卖家授权与广告授权分开完成。</p><a href={`mailto:${company.email}`}>{company.email}</a></div>
+    <div className="pub-wrap pub-footer-grid">
+      <div>
+        <b>产品</b>
+        {navProduct.map(item => <SiteLink key={item.href} href={item.href}>{item.label}</SiteLink>)}
+      </div>
+      <div>
+        <b>方案</b>
+        <SiteLink href="/solutions#single">单公司起步</SiteLink>
+        <SiteLink href="/solutions#multi">多公司</SiteLink>
+        <SiteLink href="/solutions/advertising">广告只读报表</SiteLink>
+        <SiteLink href="/product/finance">业财核对</SiteLink>
+      </div>
+      <div>
+        <b>资源</b>
+        <SiteLink href="/news">最新资讯</SiteLink>
+        <SiteLink href="/resources">接入说明</SiteLink>
+        <SiteLink href="/security">数据说明</SiteLink>
+      </div>
+      <div>
+        <b>关于</b>
+        <SiteLink href="/about">关于我们</SiteLink>
+        <SiteLink href="/contact">联系接入</SiteLink>
+        <SiteLink href="/news">新闻</SiteLink>
+      </div>
+      <div>
+        <b>法律</b>
+        <SiteLink href="/privacy">隐私政策</SiteLink>
+        <SiteLink href="/terms">服务条款</SiteLink>
+        <SiteLink href="/security">安全说明</SiteLink>
+      </div>
+    </div>
+    <div className="pub-wrap pub-footer-bottom">
+      <span>© 2026 {company.legalName}</span>
+      <span>{company.address}</span>
+      <span><a href={`mailto:${company.email}`}>{company.email}</a>{company.phone ? ` · ${company.phone}` : ''}</span>
+      <span className="pub-footer-links"><SiteLink href="/privacy">隐私政策</SiteLink><SiteLink href="/terms">服务条款</SiteLink><SiteLink href="/security">安全说明</SiteLink></span>
+    </div>
+  </footer>
+}
 
-function ProductPage() { return <><section className="prod-page-hero"><span className="prod-eyebrow">PRODUCT</span><h1>一个工作台，覆盖 Amazon FBA 的完整经营链路。</h1><p>从 Catalog 到 FBA Inventory，从 Inbound 到 Finance、Returns 和 Ads，围绕美国站真实业务对象构建。</p></section><section className="prod-section"><div className="prod-product-list">{productModules.map(module => <article key={module.number}><span>{module.number}</span><div><h3>{module.title}</h3><p>{module.text}</p><button className="prod-text-link" onClick={() => nav(module.path)}>进入工作台 <IconArrowRight /></button></div><ul><li><IconCheckCircle />列表、筛选与详情</li><li><IconCheckCircle />状态、任务与异常</li><li><IconCheckCircle />权限、来源与审计</li></ul></article>)}</div></section></> }
+function SideDock() {
+  const [top, setTop] = useState(false)
+  useEffect(() => {
+    const onScroll = () => setTop(window.scrollY > 480)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+  return <aside className="side-dock" aria-label="快捷联系">
+    <SiteLink href="/contact">咨询</SiteLink>
+    <a href={`mailto:${company.email}`}>邮件</a>
+    {company.phone ? <a href={`tel:${company.phone.replace(/-/g, '')}`}>电话</a> : null}
+    {top && <button type="button" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>顶部</button>}
+  </aside>
+}
 
-function SolutionsPage() { return <><section className="prod-page-hero"><span className="prod-eyebrow">SOLUTIONS</span><h1>为运营、供应链、财务和管理团队建立同一套事实来源。</h1><p>不同岗位看到不同工作范围，但每个动作都指向同一份可追溯数据。</p></section><section className="prod-section"><div className="prod-solution-grid"><article><span>运营团队</span><h3>从订单与库存异常开始工作</h3><p>将待履约、低库存、滞留、退货和连接异常按优先级集中处理。</p><button onClick={() => nav('/app/overview')}>进入运营控制台 <IconArrowRight /></button></article><article><span>供应链团队</span><h3>把补货变成可执行的入仓计划</h3><p>关联 SKU、数量、发货地址、Inbound Plan、Shipment 和 FC Receiving。</p><button onClick={() => nav('/app/supply-chain')}>进入供应链工作台 <IconArrowRight /></button></article><article><span>财务团队</span><h3>从结算事件还原经营结果</h3><p>区分 FBA 费用、退款、赔付和广告成本，避免用总额替代归因。</p><button onClick={() => nav('/app/finance')}>进入财务工作台 <IconArrowRight /></button></article><article><span>管理团队</span><h3>用权限和证据控制企业风险</h3><p>主体、店铺、成员、授权范围、同步和高风险动作均可复核。</p><button onClick={() => nav('/app/audit')}>查看治理中心 <IconArrowRight /></button></article></div></section></> }
+function SolutionsPage() {
+  return <div className="lx-page">
+    <section className="lx-subhero"><p className="lx-kicker">方案</p><h1>按公司数量选择接法</h1><p className="lx-lead">三列对照的是适合谁、包含哪些模块、要做几次授权。目录价在价格页。</p></section>
+    <section className="lx-wrap lx-plans">
+      <article id="single"><h2>单公司</h2><p className="lx-fit">1 个法律主体，1 到 5 个店铺</p><ul><li>订单、退货、库存、刊登、入库、财务</li><li>成员按权限查看这一家</li><li>卖家授权一次</li><li>不含广告报表</li></ul><SiteLink href="/pricing" className="lx-btn">查看目录价</SiteLink></article>
+      <article id="multi" className="is-on"><h2>多公司</h2><p className="lx-fit">最多 3 个法律主体，6 到 20 个店铺</p><ul><li>单公司的全部模块</li><li>每家公司单独授权</li><li>广告只读报表</li><li>财务按币种分开</li></ul><SiteLink href="/pricing" className="lx-btn">查看目录价</SiteLink></article>
+      <article id="ads"><h2>只看广告</h2><p className="lx-fit">广告账户和卖家账号不是同一家在管</p><ul><li>广告授权单独完成</li><li>查看花费、点击和广告销售额</li><li>不改预算，不改竞价</li><li>不代投放</li></ul><SiteLink href="/solutions/advertising" className="lx-btn lx-btn-line">查看广告说明</SiteLink></article>
+    </section>
+    <section className="lx-feature"><div className="lx-wrap"><h2>业财怎么对</h2><div className="lx-rows"><article className="lx-feature-row"><div><h3>财务月结</h3><p>收入、退款、费用按同一币种排列。退款保留原订单号和退货日期。</p><ul><li>同一币种内看净额</li><li>不把美元和日元加在一起</li><li>费用留着入账时间</li></ul></div><SiteLink href="/product/finance" className="lx-btn">查看财务说明</SiteLink></article><article className="lx-feature-row"><div><h3>多店铺分开授权</h3><p>每家公司自己的卖家账号单独授权。未授权的公司不进入可查看范围。</p><ul><li>公司、卖家账号、站点分层保存</li><li>等待审批的连接保持等待</li><li>成员只看被分配的公司</li></ul></div><SiteLink href="/product/stores" className="lx-btn">查看店铺说明</SiteLink></article></div></div></section>
+  </div>
+}
 
-function AboutPage() { return <><section className="prod-page-hero"><span className="prod-eyebrow">ABOUT NOVA</span><h1>我们把 ERP 做成团队真正每天使用的工作系统。</h1><p>不追求堆叠功能入口，而是把数据、状态、动作和责任串在一起。</p></section><section className="prod-section prod-about-grid"><div><SectionHeading eyebrow="OUR VIEW" title="好的企业软件，应该减少判断成本。" text="团队不应该在多个表格和工具之间确认同一件事。NOVA 让每条数据都有来源，每个状态都有下一步。" /></div><div className="prod-about-values"><div><b>01</b><h3>事实优先</h3><p>以 Amazon 官方数据和企业内部记录为基础。</p></div><div><b>02</b><h3>动作优先</h3><p>从列表进入任务，从任务进入结果。</p></div><div><b>03</b><h3>边界优先</h3><p>租户、主体、店铺和角色权限清晰分隔。</p></div></div></section></> }
+function AboutPage() {
+  return <div className="lx-page">
+    <section className="lx-subhero"><p className="lx-kicker">关于我们</p><h1>{company.legalName}</h1><p className="lx-lead">NOVA ERP 由本公司运营，用于已授权企业的多店铺经营数据。产品说明在产品页，这里只列公司登记。</p></section>
+    <section className="lx-wrap lx-facts"><article><small>成立日期</small><b>{company.foundedOn}</b></article><article><small>注册资本</small><b>{company.registeredCapital}</b></article><article><small>邮箱</small><b>{company.email}</b></article></section>
+    <section className="lx-feature"><div className="lx-wrap"><h2>登记信息</h2><dl className="lx-registry"><div><dt>名称</dt><dd>{company.legalName}</dd></div><div><dt>统一社会信用代码</dt><dd>{company.creditCode}</dd></div><div><dt>类型</dt><dd>{company.companyType}</dd></div><div><dt>法定代表人</dt><dd>{company.legalRepresentative}</dd></div><div><dt>住所</dt><dd>{company.address}</dd></div><div><dt>应用名称</dt><dd>{company.brand}</dd></div></dl></div></section>
+    <section className="lx-feature"><div className="lx-wrap"><h2>产品介绍</h2><div className="lx-rows"><article className="lx-feature-row"><div><h3>财务与供应链</h3><p>订单、库存、入库、刊登、退货和财务，按法律主体分开查看。</p></div><SiteLink href="/product" className="lx-btn">查看产品</SiteLink></article><article className="lx-feature-row"><div><h3>广告报表</h3><p>广告账户另行授权后，查看花费、点击和广告销售额。默认只读。</p></div><SiteLink href="/solutions/advertising" className="lx-btn">查看广告说明</SiteLink></article></div></div></section>
+    <section className="lx-band"><div className="lx-wrap"><h2>公开应用对应的数据范围</h2><div className="lx-feature-grid">{spApiRoles.map(role => <article key={role.code}><small>{role.code}</small><h3>{role.name}</h3><p>{role.use}</p></article>)}</div></div></section>
+    <section className="lx-final"><h2>预约演示</h2><div><SiteLink href="/contact" className="lx-btn">联系团队</SiteLink></div></section>
+  </div>
+}
 
-function NewsPage() { const items = [['2026.10', '产品更新', 'FBA 对象工作台进入生产化改造阶段'], ['2026.09', '连接能力', 'Amazon US SP-API 授权与任务链路完成重构'], ['2026.08', '企业治理', '成员权限、审计和连接健康状态进入统一工作区']]; return <><section className="prod-page-hero"><span className="prod-eyebrow">NEWS & UPDATES</span><h1>产品动态</h1><p>记录 NOVA 的产品演进、连接能力和企业运营实践。</p></section><section className="prod-section"><div className="prod-news-list">{items.map(item => <article key={item[0]}><time>{item[0]}</time><div><span>{item[1]}</span><h3>{item[2]}</h3><p>围绕真实业务对象、任务状态和企业权限持续完善。</p></div><IconArrowRight /></article>)}</div></section></> }
+function NewsPage() {
+  return <div className="lx-page">
+    <section className="lx-subhero"><p className="lx-kicker">新闻</p><h1>产品边界变更</h1><p className="lx-lead">只记录已经写进网站和系统的规则，不发布客户案例。</p></section>
+    <section className="lx-wrap"><ol className="lx-timeline">{press.map(item => <li key={item.title}><time>{item.date}</time><h2>{item.title}</h2><p>{item.text}</p><SiteLink href="/about">了解详情</SiteLink></li>)}</ol></section>
+  </div>
+}
 
-function ResourcesPage() { return <><section className="prod-page-hero"><span className="prod-eyebrow">RESOURCES</span><h1>给团队使用的产品资源。</h1><p>从 ERP 工作台进入真实业务，从连接页面开始配置 Amazon 账号和数据范围。</p></section><section className="prod-section"><div className="prod-resource-grid"><button onClick={() => nav('/login')}><IconStorage /><b>进入 ERP 工作台</b><span>登录后查看当前企业的业务数据和任务。</span><IconArrowRight /></button><button onClick={() => nav('/app/connections')}><IconSettings /><b>Amazon 连接管理</b><span>查看 Seller Central、SP-API 和 Ads 连接状态。</span><IconArrowRight /></button><button onClick={() => nav('/app/reports')}><IconFile /><b>报表与数据任务</b><span>创建、跟踪和下载企业报表任务。</span><IconArrowRight /></button><button onClick={() => nav('/contact')}><IconUser /><b>联系产品团队</b><span>提交企业业务范围和产品问题。</span><IconArrowRight /></button></div></section></> }
+function ResourcesPage() {
+  return <div className="lx-page">
+    <section className="lx-subhero"><p className="lx-kicker">资源中心</p><h1>接入前先看这几件事</h1><p className="lx-lead">下面是卖家授权、广告授权、权限和删除规则的说明。真实店铺数据只在授权完成并同步成功后进入工作台。</p></section>
+    <section className="lx-wrap"><ul className="lx-res-list">{guides.map(item => <li key={item.title}><div><h2>{item.title}</h2><p>{item.text}</p></div><SiteLink href={item.href} className="lx-btn lx-btn-line">了解详情</SiteLink></li>)}</ul></section>
+    <section className="lx-wrap"><div className="panel"><h2>申请里会出现的四类卖家数据</h2><ul><li><b>库存与订单跟踪</b><span>订单、库存和退货，供经营查看。</span></li><li><b>亚马逊履约</b><span>FBA 库存、入库计划和退货处置。</span></li><li><b>财务与会计</b><span>结算、费用和退款，同一币种内核对。</span></li><li><b>商品刊登</b><span>ASIN、SKU 和刊登状态，用于商品对照，不代替卖家改刊登。</span></li></ul><SiteLink href="/about">在关于页查看角色原文 →</SiteLink></div></section>
+  </div>
+}
+const emptyContact = { name: '', company: '', email: '', phone: '', subject: 'Seller / FBA', storeBand: '1–5', message: '', consent: false, companyWebsite: '' }
 
-function ContactPage() { return <><section className="prod-page-hero"><span className="prod-eyebrow">CONTACT</span><h1>告诉我们你的业务范围。</h1><p>我们会围绕 Amazon 站点、主体、店铺、角色和数据域了解你的实际需求。</p></section><section className="prod-section prod-contact-grid"><div><h2>把问题交给产品团队。</h2><p>适合产品咨询、Amazon API 接入、权限治理和企业内部工作流讨论。</p><div className="prod-contact-points"><span><i />企业团队使用</span><span><i />Amazon.com FBA 场景</span><span><i />真实数据与权限边界</span></div></div><ContactForm /></section></> }
+function ContactForm() {
+  const [form, setForm] = useState(emptyContact)
+  const [busy, setBusy] = useState(false)
+  const submit = async (event: FormEvent) => {
+    event.preventDefault()
+    if (busy) return
+    if (!form.consent) { Message.warning('请先阅读并同意隐私政策'); return }
+    if (form.companyWebsite) { Message.success('信息已提交'); setForm(emptyContact); return }
+    setBusy(true)
+    try {
+      const result = await apiFetch<{ reference?: string }>('/contact-requests', { method: 'POST', body: JSON.stringify({
+        name: form.name,
+        company: form.company,
+        email: form.email,
+        phone: form.phone,
+        topic: form.subject,
+        storeBand: form.storeBand,
+        companyWebsite: form.companyWebsite,
+        message: form.message,
+      }) })
+      Message.success(result.reference ? `信息已提交，咨询编号 ${result.reference}` : '信息已提交')
+      setForm(emptyContact)
+    } catch (error) { Message.error(error instanceof Error ? error.message : '提交失败，请稍后重试') }
+    finally { setBusy(false) }
+  }
+  return <form id="contact-form" className="prod-contact-form" onSubmit={submit}>
+    <div className="pub-honeypot" aria-hidden="true"><label>公司网站<input tabIndex={-1} autoComplete="off" value={form.companyWebsite} onChange={event => setForm({ ...form, companyWebsite: event.target.value })} /></label></div>
+    <div className="prod-form-grid"><label>姓名<input value={form.name} onChange={event => setForm({ ...form, name: event.target.value })} placeholder="姓名" autoComplete="name" required /></label><label>公司名称<input value={form.company} onChange={event => setForm({ ...form, company: event.target.value })} placeholder="公司名称" autoComplete="organization" required /></label></div>
+    <div className="prod-form-grid"><label>公司邮箱<input type="email" value={form.email} onChange={event => setForm({ ...form, email: event.target.value })} placeholder="name@company.com" autoComplete="email" required /></label><label>电话（选填）<input value={form.phone} onChange={event => setForm({ ...form, phone: event.target.value })} placeholder="联系电话" autoComplete="tel" /></label></div>
+    <div className="prod-form-grid"><label>接入范围<select value={form.subject} onChange={event => setForm({ ...form, subject: event.target.value })}><option>Seller / FBA</option><option>Amazon Ads</option><option>Seller + Ads</option><option>企业治理</option></select></label><label>店铺数量<select value={form.storeBand} onChange={event => setForm({ ...form, storeBand: event.target.value })}><option>1–5</option><option>6–20</option><option>21–100</option><option>100+</option></select></label></div>
+    <label>需求说明<textarea value={form.message} maxLength={4000} onChange={event => setForm({ ...form, message: event.target.value })} placeholder="请描述企业数量、店铺规模和需要的报表。不要填写 Amazon 密码或令牌。" rows={6} required /></label>
+    <p className="pub-count">{form.message.length}/4000</p>
+    <div className="pub-consent"><label><input type="checkbox" checked={form.consent} onChange={event => setForm({ ...form, consent: event.target.checked })} required /> 我已阅读并同意隐私政策</label><SiteLink href="/privacy">查看隐私政策</SiteLink></div>
+    <button className="prod-primary prod-submit" disabled={busy}>{busy ? '提交中…' : '提交联系信息'} <IconArrowRight /></button>
+    <small>提交的信息仅用于联系，不会自动创建账号。</small>
+  </form>
+}
 
-export function ProductionWebsite({ page = 'home' }: { page?: WebsitePage }) { return <div className="prod-site"><Header page={page} /><main>{page === 'home' && <Home />}{page === 'product' && <ProductPage />}{page === 'solutions' && <SolutionsPage />}{page === 'about' && <AboutPage />}{page === 'news' && <NewsPage />}{page === 'resources' && <ResourcesPage />}{page === 'contact' && <ContactPage />}</main><Footer /></div> }
+function ContactPage() {
+  return <div className="lx-page">
+    <section className="lx-subhero"><p className="lx-kicker">联系</p><h1>预约演示</h1><p className="lx-lead">工作日查看表单后，用邮件回复。不会自动开通账号。</p></section>
+    <section className="lx-feature"><div className="lx-wrap lx-feature-grid"><div><h2>{company.legalName}</h2><p>{company.address}</p><p><a href={`mailto:${company.email}`}>{company.email}</a></p><ol className="lx-timeline"><li><b>提交表单</b><p>写明公司数量、店铺数量和要看的模块。</p></li><li><b>邮件确认</b><p>核对主体和授权范围，发出书面方案。</p></li><li><b>开通</b><p>方案确认后配置账号。网页不收款。</p></li></ol></div><ContactForm /></div></section>
+  </div>
+}
+function PolicyPage({ title, intro, sections }: { title: string; intro: string; sections: { h: string; p: string }[] }) {
+  return <article className="pub-policy"><div className="pub-wrap lx-policy">
+    <div>
+      <p className="pub-policy-banner">{legalBanner}</p>
+      <h1>{title}</h1>
+      <p className="pub-lede">{intro}</p>
+      {sections.map((section, index) => <section id={`policy-${index}`} key={section.h}><h2>{section.h}</h2><p>{section.p}</p></section>)}
+      <p className="pub-policy-links"><SiteLink href="/privacy">隐私政策</SiteLink><SiteLink href="/terms">服务条款</SiteLink><SiteLink href="/security">安全说明</SiteLink><SiteLink href="/contact">联系我们</SiteLink></p>
+    </div>
+    <nav className="lx-toc" aria-label="本页目录">{sections.map((section, index) => <a key={section.h} href={`#policy-${index}`}>{section.h}</a>)}</nav>
+  </div></article>
+}
+
+function NotFoundPage() {
+  return <section className="pub-policy"><div className="pub-wrap"><h1>页面不存在</h1><p className="pub-lede">这个地址没有对应的公开页面。</p><SiteLink href="/" className="pub-primary">返回首页</SiteLink></div></section>
+}
+
+export function ProductionWebsite({ page = 'home' }: { page?: WebsitePage }) {
+  usePageMeta(page)
+  useEffect(() => {
+    const hash = window.location.hash
+    if (!hash) return
+    const target = document.querySelector(hash)
+    if (target) target.scrollIntoView()
+  }, [page])
+  return <div className="pub-site site-public lx">
+    <a className="pub-skip" href="#main">跳到主要内容</a>
+    <div className="site-notice"><span>{[company.legalName, '经营数据服务', company.phone].filter(Boolean).join(' · ')}</span><SiteLink href="/contact">预约演示</SiteLink><SiteLink href="/pricing">查看服务范围</SiteLink></div>
+    <Header page={page} />
+    <main id="main">
+      {page === 'home' && <OfficialHome />}
+      {productPageBody(page)}
+      {page === 'solutions' && <SolutionsPage />}
+      {page === 'about' && <AboutPage />}
+      {page === 'news' && <NewsPage />}
+      {page === 'resources' && <ResourcesPage />}
+      {page === 'contact' && <ContactPage />}
+      {page === 'privacy' && <PolicyPage title="隐私政策" intro="本政策说明卖家数据、广告数据和咨询信息如何被收集、使用、存储、保护和删除。" sections={privacySections} />}
+      {page === 'terms' && <PolicyPage title="服务条款" intro="费用和退款以书面方案为准。本页说明服务范围和授权责任。" sections={termsSections} />}
+      {page === 'security' && <PolicyPage title="安全说明" intro="传输、凭据、权限、隔离、审计和删除按以下方式执行。" sections={securitySections} />}
+      {page === 'not-found' && <NotFoundPage />}
+    </main>
+    <Footer />
+    <SideDock />
+  </div>
+}
+
+export { websitePageFromPath } from './public-site-content'
