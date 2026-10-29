@@ -1,7 +1,8 @@
 import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { company } from './site-company'
-import { homeHero, pageMeta, publicCopyText, publicDocumentPaths, websitePageFromPath } from './public-site-content'
+import { homeHero, pageMeta, publicCopyText, publicDocumentPaths, publicEnglishText, websitePageFromPath } from './public-site-content'
+import { enPricingFaqs } from './site-en'
 import { pricingFaqs } from './public-product-content'
 
 describe('public site copy', () => {
@@ -16,7 +17,22 @@ describe('public site copy', () => {
     expect(websitePageFromPath('/solutions/advertising')).toBe('solutions-advertising')
     expect(websitePageFromPath('/pricing')).toBe('pricing')
     expect(websitePageFromPath('/help')).toBeNull()
-    expect(websitePageFromPath('/en')).toBeNull()
+    expect(websitePageFromPath('/en')).toBe('en-home')
+    expect(websitePageFromPath('/en/privacy')).toBe('en-privacy')
+    expect(websitePageFromPath('/en/help')).toBeNull()
+  })
+
+  it('keeps the English pages bounded the same way', () => {
+    const text = publicEnglishText()
+    expect(text).toContain(company.legalName)
+    expect(text).toContain(company.legalNameEn)
+    expect(text).toContain(company.email)
+    expect(text).toContain('Inventory and Order Tracking')
+    expect(text).toContain('read-only')
+    for (const phrase of ['official partner', 'Official Partner', 'certified', 'Certified', 'bank-level', 'bank-grade', '#1', 'number one', 'free sign', 'Free sign', 'endorsed by Amazon']) {
+      expect(text).not.toContain(phrase)
+    }
+    expect(JSON.stringify(enPricingFaqs)).not.toMatch(/[¥$]\s*\d/)
   })
 
   it('keeps the homepage claim bounded to implemented behavior', () => {
@@ -39,7 +55,7 @@ describe('public site copy', () => {
     const sitemap = readFileSync('public/sitemap.xml', 'utf8')
     const nginx = readFileSync('infrastructure/aliyun/nginx.conf', 'utf8')
     const viteConfig = readFileSync('vite.config.ts', 'utf8')
-    for (const path of ['/product/stores', '/product/orders', '/product/returns', '/product/finance', '/product/advertising', '/product/permissions', '/product/inventory', '/product/listings', '/product/inbound', '/solutions/advertising', '/pricing', '/news', '/resources']) {
+    for (const path of ['/product/stores', '/product/orders', '/product/returns', '/product/finance', '/product/advertising', '/product/permissions', '/product/inventory', '/product/listings', '/product/inbound', '/solutions/advertising', '/pricing', '/news', '/resources', '/en', '/en/product', '/en/pricing', '/en/about', '/en/contact', '/en/privacy', '/en/terms', '/en/security']) {
       expect(publicDocumentPaths().has(path)).toBe(true)
       expect(sitemap).toContain(`https://dzanx.com${path}`)
       expect(viteConfig).toContain(`'${path}'`)

@@ -1,31 +1,111 @@
+# 本地全栈开发环境（P1-25）：结构与生产一致——队列与缓存两个带密码的 Redis、数据库连接池（PgBouncer）、
+# 接口与后台任务使用最小权限账号 nova_app / nova_system（行级安全生效）、语句超时、慢查询日志。
+# 只有网关（web）对外暴露端口；数据库、Redis、接口服务不暴露。需要从宿主机直接连数据库或 Redis 调试时，叠加端口映射文件：
+#   docker compose -f infrastructure/compose/docker-compose.yml -f infrastructure/compose/docker-compose.dev-ports.yml up --build
+# 以下密码、密钥都只用于本机开发，生产环境见 docker-compose.aliyun.yml 与 .env.aliyun.example。
+x-dev-database: &dev-database
+  DATABASE_URL: postgresql://nova_app:nova_app_dev_password@pgbouncer:6432/nova_erp?schema=public&pgbouncer=true
+  DATABASE_SYSTEM_URL: postgresql://nova_system:nova_system_dev_password@pgbouncer:6432/nova_erp?schema=public&pgbouncer=true
+x-dev-redis: &dev-redis
+  QUEUE_REDIS_URL: redis://:nova_dev_queue_password@queue-redis:6379
+  CACHE_REDIS_URL: redis://:nova_dev_cache_password@cache-redis:6379
+x-dev-secrets: &dev-secrets
+  TOKEN_ENCRYPTION_KEY: 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+  STORAGE_DRIVER: local
+  STORAGE_LOCAL_DIR: /data/storage
+  STORAGE_PUBLIC_BASE_URL: http://127.0.0.1:8080/api/v1/storage/local
+  STORAGE_SIGNING_KEY: local-development-storage-signing-key-change-me
+
 services:
   postgres:
     image: postgres:16-alpine
+    # 分区表较多，迁移与回滚会在一个事务内锁定大量分区与索引（M-P1-27）。
+    # 慢查询日志：超过 1 秒的语句记入数据库日志；同时应用层也会按 SLOW_QUERY_MS 输出带耗时的告警。
+    command: ["postgres", "-c", "max_locks_per_transaction=512", "-c", "log_min_duration_statement=1000", "-c", "log_lock_waits=on"]
     environment: { POSTGRES_USER: nova, POSTGRES_PASSWORD: nova_dev_password, POSTGRES_DB: nova_erp }
-    # Keep local development isolated from other stacks that commonly bind
-    # PostgreSQL on 5432 (for example Chatwoot). Containers still use the
-    # internal postgres:5432 address through DATABASE_URL.
-    ports: ["15432:5432"]
     volumes: [nova-postgres:/var/lib/postgresql/data]
     healthcheck: { test: ["CMD-SHELL", "pg_isready -U nova -d nova_erp"], interval: 5s, timeout: 5s, retries: 12 }
-  redis:
+  # 队列实例：存任务，不淘汰任何键、开持久化、设密码
+  queue-redis:
     image: redis:7-alpine
-    # Keep local development isolated from other Redis stacks on 6379.
-    ports: ["16379:6379"]
+    command: ["sh", "-c", "exec redis-server --requirepass \"$$REDIS_PASSWORD\" --appendonly yes --maxmemory 512mb --maxmemory-policy noeviction"]
+    environment: { REDIS_PASSWORD: nova_dev_queue_password, REDISCLI_AUTH: nova_dev_queue_password }
     volumes: [nova-redis:/data]
     healthcheck: { test: ["CMD", "redis-cli", "ping"], interval: 5s, timeout: 5s, retries: 12 }
+  # 缓存实例：限流桶、并发槽位等可重建数据，不持久化，内存满时淘汰最久未用的键
+  cache-redis:
+    image: redis:7-alpine
+    command: ["sh", "-c", "exec redis-server --requirepass \"$$REDIS_PASSWORD\" --save \"\" --appendonly no --maxmemory 128mb --maxmemory-policy allkeys-lru"]
+    environment: { REDIS_PASSWORD: nova_dev_cache_password, REDISCLI_AUTH: nova_dev_cache_password }
+    healthcheck: { test: ["CMD", "redis-cli", "ping"], interval: 5s, timeout: 5s, retries: 12 }
+  # 数据库连接池（事务池模式）：应用经它连接，迁移直连数据库
+  pgbouncer:
+    build: { context: ./pgbouncer }
+    environment:
+      PGB_DB_HOST: postgres
+      PGB_DB_NAME: nova_erp
+      PGB_USERS: nova_app:nova_app_dev_password nova_system:nova_system_dev_password
+    depends_on: { postgres: { condition: service_healthy } }
+  # 一次性：创建/更新连接账号（含账号级语句超时），并补齐已有表的权限；可重复执行，必须先于迁移
+  roles:
+    image: postgres:16-alpine
+    restart: "no"
+    entrypoint: ["psql", "-v", "ON_ERROR_STOP=1", "-f", "/ops/roles.sql", "-f", "/ops/regrant.sql"]
+    environment:
+      PGHOST: postgres
+      PGUSER: nova
+      PGPASSWORD: nova_dev_password
+      PGDATABASE: nova_erp
+      NOVA_APP_PASSWORD: nova_app_dev_password
+      NOVA_SYSTEM_PASSWORD: nova_system_dev_password
+    volumes: ["../../database/ops:/ops:ro"]
+    depends_on: { postgres: { condition: service_healthy } }
   migrate:
     build: { context: ../.., dockerfile: infrastructure/compose/api.Dockerfile }
+    # 迁移与本地初始化用迁移账号直连数据库（表的所有者）
     environment: { APP_MODE: development, DEMO_MODE: "false", LOCAL_NO_AUTH: "true", LOCAL_DEV_TENANT_ID: local-dev-tenant, LOCAL_DEV_USER_ID: local-dev-user, LOCAL_DEV_USER_EMAIL: local.admin@nova-erp.local, DATABASE_URL: postgresql://nova:nova_dev_password@postgres:5432/nova_erp?schema=public }
     command: ["sh", "-c", "pnpm --filter @nova/api prisma:deploy && pnpm --filter @nova/api prisma:local-bootstrap"]
-    depends_on: { postgres: { condition: service_healthy } }
+    depends_on: { postgres: { condition: service_healthy }, roles: { condition: service_completed_successfully } }
   api:
     build: { context: ../.., dockerfile: infrastructure/compose/api.Dockerfile }
-    environment: { APP_MODE: development, DEMO_MODE: "false", MOCK_CONNECTOR: "false", LOCAL_NO_AUTH: "true", LOCAL_DEV_TENANT_ID: local-dev-tenant, LOCAL_DEV_USER_ID: local-dev-user, JWT_SECRET: local-development-secret-change-me-at-least-32, TOKEN_ENCRYPTION_KEY: 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef, DATABASE_URL: postgresql://nova:nova_dev_password@postgres:5432/nova_erp?schema=public, REDIS_URL: redis://redis:6379, CORS_ORIGINS: http://127.0.0.1:5173 }
-    ports: ["4000:4000"]
-    depends_on: { postgres: { condition: service_healthy }, redis: { condition: service_healthy }, migrate: { condition: service_completed_successfully } }
+    environment:
+      <<: [*dev-database, *dev-redis, *dev-secrets]
+      APP_MODE: development
+      DEMO_MODE: "false"
+      MOCK_CONNECTOR: "false"
+      LOCAL_NO_AUTH: "true"
+      LOCAL_DEV_TENANT_ID: local-dev-tenant
+      LOCAL_DEV_USER_ID: local-dev-user
+      JWT_SECRET: local-development-secret-change-me-at-least-32
+      CORS_ORIGINS: http://127.0.0.1:5173,http://127.0.0.1:8080
+    volumes: [nova-storage:/data/storage]
+    healthcheck: { test: ["CMD-SHELL", "wget -q -O - http://127.0.0.1:4000/api/v1/health >/dev/null"], interval: 10s, timeout: 5s, start_period: 20s, retries: 12 }
+    depends_on:
+      pgbouncer: { condition: service_healthy }
+      queue-redis: { condition: service_healthy }
+      cache-redis: { condition: service_healthy }
+      migrate: { condition: service_completed_successfully }
   worker:
     build: { context: ../.., dockerfile: infrastructure/compose/worker.Dockerfile }
-    environment: { APP_MODE: development, DEMO_MODE: "false", MOCK_CONNECTOR: "false", DATABASE_URL: postgresql://nova:nova_dev_password@postgres:5432/nova_erp?schema=public, REDIS_URL: redis://redis:6379 }
-    depends_on: { postgres: { condition: service_healthy }, redis: { condition: service_healthy }, migrate: { condition: service_completed_successfully } }
-volumes: { nova-postgres: {}, nova-redis: {} }
+    # 内存守卫超限时进程会以退出码 75 优雅退出，必须有重启策略把它拉起来
+    restart: unless-stopped
+    environment:
+      <<: [*dev-database, *dev-redis, *dev-secrets]
+      APP_MODE: development
+      DEMO_MODE: "false"
+      MOCK_CONNECTOR: "false"
+    volumes: [nova-storage:/data/storage]
+    depends_on:
+      pgbouncer: { condition: service_healthy }
+      queue-redis: { condition: service_healthy }
+      cache-redis: { condition: service_healthy }
+      migrate: { condition: service_completed_successfully }
+  # 网关：唯一对外的入口（官网、ERP 页面与 /api 反向代理）。只绑定本机回环地址
+  web:
+    build:
+      context: ../..
+      dockerfile: infrastructure/compose/web.Dockerfile
+      args: { VITE_API_MODE: server, VITE_API_BASE_URL: /api/v1 }
+    ports: ["${HTTP_PORT:-127.0.0.1:8080}:80"]
+    depends_on: { api: { condition: service_healthy } }
+volumes: { nova-postgres: {}, nova-redis: {}, nova-storage: {} }

@@ -1,0 +1,34 @@
+/* NOVA ERP 设计令牌（15 章第 3 节，P6-01 起取值与 src/erp/theme/tokens.ts 一致）。
+   只保留颜色、圆角、阴影变量：Ant Design / AG Grid / ECharts 的主题取自 tokens.ts，
+   这里的变量用于校验两处取值一致（theme.test.ts）。组件样式不得直接写色值（样式守卫测试扫描，本文件与 theme/ 目录是白名单）。 */
+
+:root {
+  --erp-brand-50: #e8f3ff;
+  --erp-brand-100: #bedaff;
+  --erp-brand-400: #4080ff;
+  --erp-brand-500: #165dff;
+  --erp-brand-600: #0e42d2;
+  --erp-ink: #1d2129;
+  --erp-ink-soft: #4e5969;
+  --erp-ink-mute: #86909c;
+  --erp-ink-faint: #c0c4cc;
+  --erp-line: #e5e6eb;
+  --erp-line-soft: #f2f3f5;
+  --erp-line-strong: #d9dbe0;
+  --erp-canvas: #ffffff;
+  --erp-canvas-soft: #f4f5f7;
+  --erp-canvas-sunk: #f2f3f5;
+  --erp-success: #00b42a;
+  --erp-success-soft: #e8ffea;
+  --erp-warning: #ff7d00;
+  --erp-warning-soft: #fff7e8;
+  --erp-danger: #f53f3f;
+  --erp-danger-soft: #ffece8;
+  --erp-info: #14c9c9;
+  --erp-info-soft: #e8fffb;
+  --erp-neutral-soft: #f2f3f5;
+  --erp-r-xs: 2px;
+  --erp-r-sm: 4px;
+  --erp-r-md: 6px;
+  --erp-shadow-popup: 0 6px 20px rgba(0, 0, 0, 0.12);
+}

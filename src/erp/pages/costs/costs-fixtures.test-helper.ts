@@ -1,0 +1,138 @@
+import type { CostDetailResponse, CostListResponse, CostPart, CostRow, CostVersionView } from '@nova/api-contracts'
+
+// 商品成本页面测试用的接口返回样例（只在测试里使用）。
+
+export const ok = (data: unknown) => ({ body: { success: true, data } })
+
+export const part = (over: Partial<CostPart> = {}): CostPart => ({
+  amount: '10.000000',
+  currency: 'USD',
+  usd: 10,
+  versionId: 'cv1',
+  versionNo: 1,
+  effectiveFrom: '2026-09-01',
+  source: 'MANUAL',
+  ...over,
+})
+
+export const costRow = (over: Partial<CostRow> = {}): CostRow => ({
+  sku: 'SKU-A',
+  title: '示例商品 A',
+  asin: 'B0TEST',
+  parts: { product: part(), firstMile: part({ amount: '1.500000', usd: 1.5, versionId: 'cv2', versionNo: 2, source: 'FIRST_MILE_ALLOCATION' }), duty: null, other: null },
+  landedUsd: 11.5,
+  landedState: 'OK',
+  coverage: 'COVERED',
+  productEffectiveFrom: '2026-09-01',
+  activeCount: 2,
+  draftCount: 0,
+  lastChangedAt: '2026-10-20T08:00:00.000Z',
+  ...over,
+})
+
+export const costList = (items: CostRow[] = [costRow()], over: Partial<CostListResponse> = {}): CostListResponse => ({
+  state: items.length ? 'OK' : 'NO_DATA',
+  note: null,
+  today: '2026-10-23',
+  items,
+  pageInfo: { pageSize: 20, nextCursor: null, hasMore: false, approxTotal: items.length },
+  summary: { COVERED: 1, STALE: 0, DRAFT_ONLY: 0, MISSING: 2 },
+  draftSkus: 0,
+  truncated: false,
+  canWrite: true,
+  ...over,
+})
+
+export const versionView = (over: Partial<CostVersionView> = {}): CostVersionView => ({
+  id: 'cv1',
+  version: 2,
+  versionNo: 1,
+  status: 'ACTIVE',
+  statusLabel: '生效中',
+  source: 'MANUAL',
+  sourceLabel: '手工录入',
+  sourceDocId: null,
+  sourceDocNo: null,
+  effectiveFrom: '2026-09-01',
+  currency: 'USD',
+  product: '10.000000',
+  firstMile: null,
+  duty: null,
+  other: null,
+  quantity: null,
+  note: null,
+  createdByName: '采购小李',
+  createdAt: '2026-09-01T00:00:00.000Z',
+  activatedByName: '采购小李',
+  activatedAt: '2026-09-01T01:00:00.000Z',
+  replacedByVersionNo: null,
+  replacedAt: null,
+  ignoredComponents: [],
+  willReplace: [],
+  blockedReason: null,
+  editable: null,
+  canDiscard: false,
+  ...over,
+})
+
+export const costDetail = (over: Partial<CostDetailResponse> = {}): CostDetailResponse => ({
+  sku: 'SKU-A',
+  title: '示例商品 A',
+  asin: 'B0TEST',
+  today: '2026-10-23',
+  row: costRow(),
+  versions: [
+    versionView({
+      id: 'cv4',
+      versionNo: 4,
+      status: 'DRAFT',
+      statusLabel: '草稿',
+      version: 1,
+      product: '12.000000',
+      editable: 'ALL',
+      canDiscard: true,
+      willReplace: [3],
+      activatedAt: null,
+      activatedByName: null,
+      effectiveFrom: '2026-10-23',
+    }),
+    versionView({ id: 'cv3', versionNo: 3, effectiveFrom: '2026-10-23', product: '11.000000' }),
+    versionView({
+      id: 'cv2',
+      versionNo: 2,
+      source: 'PURCHASE_RECEIPT',
+      sourceLabel: '采购收货',
+      sourceDocId: 'po1',
+      sourceDocNo: 'PO-2026-001',
+      quantity: 40,
+      product: '9.000000',
+      effectiveFrom: '2026-10-01',
+    }),
+    versionView({ id: 'cv1', versionNo: 1, status: 'REPLACED', statusLabel: '已替换', replacedByVersionNo: 3, ignoredComponents: [] }),
+  ],
+  versionsTruncated: false,
+  composition: {
+    slices: [
+      { component: 'product', label: '采购单价', usd: 10 },
+      { component: 'firstMile', label: '头程分摊', usd: 1.5 },
+    ],
+    totalUsd: 11.5,
+    note: null,
+  },
+  pricing: { product: 'BATCH', firstMile: 'PRICE', duty: null, other: null },
+  valuation: {
+    state: 'OK',
+    method: 'FIFO',
+    methodLabel: '先进先出',
+    methodValid: true,
+    onHandUnits: 50,
+    valueUsd: 450,
+    uncoveredUnits: 10,
+    avgUnitUsd: 9,
+    note: '估算值：现有件数取各店铺最近一次库存规划报告',
+  },
+  fx: [],
+  canWrite: true,
+  notes: ['成本版本按 SKU 记在企业层面。', '关税目前只在这里记录与折算。'],
+  ...over,
+})

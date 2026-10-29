@@ -1,0 +1,20 @@
+{
+  "selection": {
+    "selectionId": "sel-1",
+    "revisionId": 1,
+    "type": "ITEMS",
+    "selectionDetails": {
+      "items": [
+        {
+          "asin": "b0testasin1",
+          "sku": "SKU-1",
+          "benefit": { "type": "DISCOUNTED_PRICE", "discount": { "type": "PERCENTAGE_OFF", "percentOff": 20 }, "perCustomerUses": 1 },
+          "budget": { "type": "UNITS", "value": 100 }
+        },
+        { "asin": "B0TESTASIN2", "benefit": { "type": "FIXED_PRICE", "price": { "amount": 19.99, "currencyCode": "USD" } } },
+        { "benefit": { "type": "FIXED_PRICE" } }
+      ],
+      "issues": [{ "code": "LOW_STOCK", "message": "库存偏低", "severity": "WARNING", "identifier": { "asin": "B0TESTASIN2" } }]
+    }
+  }
+}

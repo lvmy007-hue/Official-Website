@@ -1,7 +1,7 @@
-import React from 'react'
-import { createRoot } from 'react-dom/client'
-import '@arco-design/web-react/dist/css/arco.css'
-import './styles.css'
-import App from './App'
+import { isWorkspacePath } from './route-kind'
 
-createRoot(document.getElementById('root')!).render(<React.StrictMode><App /></React.StrictMode>)
+const container = document.getElementById('root')!
+const path = window.location.pathname || '/'
+
+if (isWorkspacePath(path)) void import('./app-entry').then(entry => entry.mount(container))
+else void import('./public-entry').then(entry => entry.mount(container, path))

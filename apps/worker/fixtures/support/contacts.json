@@ -1,0 +1,33 @@
+{
+  "contacts": [
+    {
+      "contactId": "ct-1",
+      "channel": "EMAIL",
+      "createdDate": "2026-10-20T03:00:00Z",
+      "emailContent": {
+        "sender": { "role": "AMAZON", "displayName": "Amazon Seller Support" },
+        "message": "请提供入库证据。",
+        "attachments": [{ "name": "照片.png", "url": "https://example.invalid/expires-in-15-min" }]
+      }
+    },
+    {
+      "contactId": "ct-2",
+      "channel": "EMAIL",
+      "createdDate": "2026-10-21T04:00:00Z",
+      "emailContent": { "sender": { "role": "SELLING_PARTNER", "displayName": "我方" }, "message": "已补充。" }
+    },
+    {
+      "contactId": "ct-3",
+      "channel": "PHONE",
+      "createdDate": "2026-10-21T06:00:00Z",
+      "phoneContent": { "callNotes": "电话沟通：等待仓库复核。" }
+    },
+    {
+      "contactId": "ct-4",
+      "channel": "CHAT",
+      "createdDate": "2026-10-21T07:00:00Z",
+      "chatContent": { "events": [{ "participant": { "displayName": "客服" }, "message": "您好" }, { "participant": { "displayName": "我方" }, "message": "你好" }] }
+    },
+    { "contactId": "ct-5", "channel": "EMAIL", "emailContent": { "message": "缺少创建时间的行" } }
+  ]
+}

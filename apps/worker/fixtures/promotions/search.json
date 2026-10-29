@@ -1,0 +1,59 @@
+{
+  "totalResults": 4,
+  "pagination": { "nextToken": "NEXT-PAGE-TOKEN" },
+  "promotions": [
+    {
+      "promotionId": "P-DEAL-1",
+      "promotionTitle": "十月秒杀·厨房小家电",
+      "promotionType": "DEAL",
+      "status": "RUNNING",
+      "marketplaceId": "ATVPDKIKX0DER",
+      "trackingId": "TRK-DEAL-1",
+      "schedule": { "startDate": "2026-10-20T07:00:00Z", "endDate": "2026-10-27T06:59:59Z", "eventId": "Prime Big Deal Days" },
+      "budget": { "type": "UNITS", "value": 200 },
+      "feeSnapshot": {
+        "previewedFeeRates": {
+          "upfrontFee": { "rate": { "amount": 150, "currencyCode": "USD" }, "frequency": "ONE_TIME" },
+          "variableFee": { "salesPercentage": 2, "feeCapAmount": { "amount": 25, "currencyCode": "USD" } }
+        }
+      },
+      "selection": { "selectionId": "sel-1", "revisionId": 1, "type": "ITEMS" },
+      "issues": [{ "code": "PRICE_NEAR_FLOOR", "message": "折后价接近最低价", "severity": "WARNING" }],
+      "createdDate": "2026-10-10T08:00:00Z",
+      "lastUpdatedDate": "2026-10-19T09:00:00Z"
+    },
+    {
+      "promotionId": "P-COUPON-1",
+      "promotionTitle": "新品优惠券 15%",
+      "promotionType": "COUPON",
+      "couponType": "STANDARD",
+      "status": "UPCOMING",
+      "marketplaceId": "ATVPDKIKX0DER",
+      "trackingId": "TRK-COUPON-1",
+      "schedule": { "startDate": "2026-11-01T07:00:00Z", "endDate": "2026-11-15T06:59:59Z" },
+      "budget": { "type": "AMOUNT", "value": 500, "currencyCode": "USD" },
+      "benefit": { "discount": { "type": "PERCENTAGE_OFF", "percentOff": 15 }, "perCustomerUses": 1 },
+      "selection": { "selectionId": "sel-2", "revisionId": 2, "type": "ITEMS" },
+      "latestRevision": { "revisionStatus": "FAILED", "promotionTitle": "新品优惠券 20%" },
+      "issues": [{ "code": "REVISION_REJECTED", "message": "修订未通过校验", "severity": "ERROR" }],
+      "createdDate": "2026-10-12T08:00:00Z",
+      "lastUpdatedDate": "2026-10-20T09:00:00Z"
+    },
+    {
+      "promotionId": "P-CAT-1",
+      "promotionType": "PRICE_DISCOUNT",
+      "status": "EXPIRED",
+      "marketplaceId": "ATVPDKIKX0DER",
+      "schedule": { "startDate": "2026-09-01T07:00:00Z", "endDate": "2026-09-08T06:59:59Z" },
+      "selection": { "type": "CATALOG" },
+      "createdDate": "2026-08-25T08:00:00Z",
+      "lastUpdatedDate": "2026-09-08T09:00:00Z"
+    },
+    {
+      "promotionTitle": "缺少促销编号的行",
+      "promotionType": "DEAL",
+      "status": "RUNNING",
+      "lastUpdatedDate": "2026-10-19T09:00:00Z"
+    }
+  ]
+}

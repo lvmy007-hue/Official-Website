@@ -1,0 +1,14 @@
+{
+  "contentRecord": {
+    "contentReferenceKey": "KEY-DRAFT",
+    "contentMetadata": { "name": "Summer launch", "marketplaceId": "ATVPDKIKX0DER", "status": "DRAFT", "badgeSet": ["STANDARD"], "updateTime": "2026-10-20T08:00:00Z" },
+    "contentDocument": {
+      "name": "Summer launch",
+      "contentType": "EBC",
+      "contentSubType": null,
+      "locale": "en-US",
+      "contentModuleList": [{ "contentModuleType": "STANDARD_TEXT", "standardText": { "headline": { "value": "Hello", "decoratorSet": [] } } }]
+    }
+  },
+  "warnings": []
+}

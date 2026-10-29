@@ -1,4 +1,5 @@
 import { company } from './site-company'
+import type { PanelKey } from './lx-panels'
 
 /**
  * 官网商业内容配置。只写可以由企业资料或产品代码证明的事实，
@@ -87,10 +88,10 @@ export const featureChapters = [
     cta: '查看库存说明',
     shot: 'store' as const,
     points: [
-      { title: '一站式看库存', text: '可售、预留、在途和不可售按站点和 SKU 分开，低库存会标出来。' },
-      { title: '入库计划', text: '先有卖家授权才能建计划。货件号和接收数量来自同步结果。' },
-      { title: '刊登对照', text: 'ASIN、SKU 和刊登状态用来对订单和库存，不代替卖家修改刊登。' },
-      { title: '订单跟到店铺', text: '购买日、状态和币种留在这家店。多家公司的订单可以按权限一起筛。' },
+      { title: '一站式看库存', text: '可售、预留、在途和不可售按站点和 SKU 分开，低库存会标出来。', panel: 'inventory' as PanelKey },
+      { title: '入库计划', text: '先有卖家授权才能建计划。货件号和接收数量来自同步结果。', panel: 'inbound' as PanelKey },
+      { title: '刊登对照', text: 'ASIN、SKU 和刊登状态用来对订单和库存，不代替卖家修改刊登。', panel: 'listings' as PanelKey },
+      { title: '订单跟到店铺', text: '购买日、状态和币种留在这家店。多家公司的订单可以按权限一起筛。', panel: 'orders' as PanelKey },
     ],
   },
   {
@@ -100,9 +101,9 @@ export const featureChapters = [
     cta: '查看财务说明',
     shot: 'finance' as const,
     points: [
-      { title: '同一币种里看净额', text: '美元和日元不合成一个总数。月报按公司和币种出。' },
-      { title: '退款回到原订单月', text: '退货记录保留退货日期和原订单号，不把旧订单的退款算进新销售。' },
-      { title: '费用留着入账时间', text: '费用事件保留金额、币种和入账时间，可带结算编号。' },
+      { title: '同一币种里看净额', text: '美元和日元不合成一个总数。月报按公司和币种出。', panel: 'finance' as PanelKey },
+      { title: '退款回到原订单月', text: '退货记录保留退货日期和原订单号，不把旧订单的退款算进新销售。', panel: 'returns' as PanelKey },
+      { title: '费用留着入账时间', text: '费用事件保留金额、币种和入账时间，可带结算编号。', panel: 'fees' as PanelKey },
     ],
   },
   {
@@ -112,9 +113,9 @@ export const featureChapters = [
     cta: '查看店铺说明',
     shot: 'store' as const,
     points: [
-      { title: '主体下登记卖家账号', text: '公司、卖家账号、站点分层保存，账号不脱离法律主体。' },
-      { title: '授权状态看得到', text: '连接记录授权情况和最近一次成功同步的时间。等待审批的连接保持等待。' },
-      { title: '成员范围跟着公司走', text: '运营、财务、广告使用不同权限。新人按岗位开通。' },
+      { title: '主体下登记卖家账号', text: '公司、卖家账号、站点分层保存，账号不脱离法律主体。', panel: 'stores' as PanelKey },
+      { title: '授权状态看得到', text: '连接记录授权情况和最近一次成功同步的时间。等待审批的连接保持等待。', panel: 'connections' as PanelKey },
+      { title: '成员范围跟着公司走', text: '运营、财务、广告使用不同权限。新人按岗位开通。', panel: 'permissions' as PanelKey },
     ],
   },
   {
@@ -124,9 +125,9 @@ export const featureChapters = [
     cta: '查看广告说明',
     shot: 'ads' as const,
     points: [
-      { title: '看数之前先有广告账户', text: '没有单独开通广告的团队，页面上不出现花费和广告销售额。' },
-      { title: '按账户币种阅读', text: '花费、点击、CTR、CPC、广告销售额、ACOS 和 ROAS 留在这个账户自己的币种里。' },
-      { title: '只读，不代投放', text: '可以对照报表。不改出价，不改预算，也不代替客户投放。' },
+      { title: '看数之前先有广告账户', text: '没有单独开通广告的团队，页面上不出现花费和广告销售额。', panel: 'adsAccount' as PanelKey },
+      { title: '按账户币种阅读', text: '花费、点击、CTR、CPC、广告销售额、ACOS 和 ROAS 留在这个账户自己的币种里。', panel: 'ads' as PanelKey },
+      { title: '只读，不代投放', text: '可以对照报表。不改出价，不改预算，也不代替客户投放。', panel: 'adsFlow' as PanelKey },
     ],
   },
 ]
@@ -164,14 +165,19 @@ export const marks = [
 ]
 
 export const press = [
-  { date: '2026-10-19', title: '公开站点写明运营主体', text: `${company.legalName}运营 NOVA ERP。关于页列出统一社会信用代码、住所和 ${company.email}。应用名是 NOVA ERP，不使用亚马逊官方合作或认证表述。` },
-  { date: '2026-10-19', title: '卖家数据与广告数据分开授权', text: '订单、库存、刊登、入库和财务走卖家授权。广告 Profile、活动和报表走另一次广告授权。未授权时，页面不把结果写成已经同步。' },
-  { date: '2026-10-19', title: '买家信息的保存期限', text: `订单中的买家姓名、地址、电话和邮箱加密保存。已发货的在 ${company.piiRetentionDays} 日内删除。连续 15 分钟没有操作，工作台会话失效。` },
+  { date: '2026-10', tag: '经营', title: '多公司多店铺工作台', text: '支持在一个工作台按法律主体分层管理多家公司的店铺与站点，各公司账套清晰归属、互不混淆。' },
+  { date: '2026-10', tag: '财务', title: '财务多币种对账', text: '收入、退款与费用在同一币种内核对，退款可对回原订单月份，月结更准确。' },
+  { date: '2026-10', tag: '广告', title: '广告只读分析', text: '广告花费、点击与广告销售额集中查看，报表只读，不改出价、不代投放。' },
+  { date: '2026-10', tag: '安全', title: '数据安全与权限分级', text: `运营、财务、广告按主体分权查看；买家个人信息在发货后约 ${company.piiRetentionDays} 天内按政策删除。` },
+  { date: '2026-09', tag: '供应链', title: '采购与供应商管理', text: '支持维护供应商档案、创建并跟踪采购单，把备货与到货情况和经营数据放在一起管理。' },
+  { date: '2026-09', tag: '供应链', title: '仓库与库存流水', text: '支持管理多个仓库并记录出入库与调拨流水，每一笔库存变动都有迹可循。' },
+  { date: '2026-08', tag: '数据', title: '报表中心上线', text: '支持按需生成订单、库存、财务与广告报表任务，导出结果用于经营复盘与归档。' },
 ]
 
 export const guides = [
-  { title: '如何确认接入范围', text: '先确认企业主体、Amazon.com Seller / FBA、Amazon Ads、成员权限和数据保存范围，再由团队安排授权与部署。', href: '/contact' },
-  { title: '广告数据是否自动出现', text: '不会。Amazon Ads 需要单独授权，Profile、Campaign 和异步报表按广告账户保存。', href: '/solutions/advertising' },
-  { title: '哪些数据可以进入 ERP', text: '仅进入已授权连接且同步成功的数据；失败任务保留错误原因和重试入口。', href: '/solutions' },
-  { title: '企业联系信息', text: '运营主体为 ' + company.legalName + '，地址和邮箱以公司资料页为准。', href: '/about' },
+  { title: '如何开始使用', text: '确认公司主体、店铺规模、需要的模块与成员权限后，团队会协助你完成连接与部署。', href: '/contact' },
+  { title: '支持哪些站点和币种', text: '支持多站点、多币种，按账户币种对账，不同币种不相加。', href: '/product' },
+  { title: '广告数据如何查看', text: '广告账户单独连接，花费与广告销售额只读查看，用于分析与对账。', href: '/solutions/advertising' },
+  { title: '数据安全与保护', text: '数据加密传输与存储，权限按主体分级，买家信息按政策定期删除。', href: '/security' },
+  { title: '企业联系信息', text: '运营主体为 ' + company.legalName + '，地址和邮箱以关于页为准。', href: '/about' },
 ]

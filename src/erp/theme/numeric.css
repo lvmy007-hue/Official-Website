@@ -1,0 +1,16 @@
+/* 数字等宽：Ant Design 令牌没有字体特性项，这里只提供数字对齐这一个全局工具类。 */
+.erp-num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* 正负色语义全站统一，色值来自 Ant Design 主题变量，不在此处写死。 */
+.erp-tone-positive {
+  color: var(--ant-color-success);
+}
+.erp-tone-negative {
+  color: var(--ant-color-error);
+}
+.erp-tone-neutral {
+  color: var(--ant-color-text-secondary);
+}

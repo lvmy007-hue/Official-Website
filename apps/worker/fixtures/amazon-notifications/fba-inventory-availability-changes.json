@@ -1,0 +1,24 @@
+{
+  "notificationVersion": "1.0",
+  "notificationType": "FBA_INVENTORY_AVAILABILITY_CHANGES",
+  "payloadVersion": "1.0",
+  "eventTime": "2026-10-22T09:30:00.000Z",
+  "payload": {
+    "fbaInventoryAvailabilityChanges": {
+      "sellerId": "A21CXK3C4ERTY8",
+      "sku": "NOVA-SKU-001",
+      "fnSku": "X001ABCDEF",
+      "asin": "B00032HE0O",
+      "fulfillmentInventoryByMarketplace": [
+        { "marketplaceId": "ATVPDKIKX0DER", "fulfillableQuantity": 120 },
+        { "marketplaceId": "A1F83G8C2ARO7P", "fulfillableQuantity": 33 }
+      ]
+    }
+  },
+  "notificationMetadata": {
+    "applicationId": "amzn1.sellerapps.app.fixture",
+    "subscriptionId": "fixture-subscription",
+    "publishTime": "2026-10-22T09:30:05.000Z",
+    "notificationId": "fixture-notification"
+  }
+}

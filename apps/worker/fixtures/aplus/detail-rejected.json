@@ -1,0 +1,13 @@
+{
+  "contentRecord": {
+    "contentReferenceKey": "KEY-REJECTED",
+    "contentMetadata": {
+      "name": "Winter set",
+      "marketplaceId": "ATVPDKIKX0DER",
+      "status": "REJECTED",
+      "updateTime": "2026-10-22T08:00:00Z",
+      "rejectionReason": "Image contains price information (see guidelines)."
+    },
+    "contentDocument": { "name": "Winter set", "contentType": "EBC", "locale": "en-US", "contentModuleList": [] }
+  }
+}

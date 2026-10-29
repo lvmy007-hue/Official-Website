@@ -1,0 +1,21 @@
+{
+  "shipmentId": "SHIP-1",
+  "orderId": "ORD-1",
+  "externalReferenceId": "NOVA-REF-1",
+  "shipmentStatus": "RECEIVING",
+  "carrierCode": { "carrierCodeType": "SCAC", "carrierCodeValue": "ABCD" },
+  "trackingId": "TRACK-1",
+  "destinationRegion": "us-east",
+  "destinationAddress": { "name": "AWD Warehouse", "addressLine1": "1 Dock Rd", "city": "Edison", "stateOrRegion": "NJ", "postalCode": "08817", "countryCode": "US" },
+  "originAddress": { "name": "Our Warehouse", "addressLine1": "9 Origin St", "stateOrRegion": "CA", "countryCode": "US" },
+  "shipBy": "2026-10-15T00:00:00Z",
+  "warehouseReferenceId": "WH-REF-1",
+  "createdAt": "2026-10-10T08:00:00Z",
+  "updatedAt": "2026-10-20T08:00:00Z",
+  "shipmentContainerQuantities": [],
+  "shipmentSkuQuantities": [
+    { "sku": "SKU-A", "expectedQuantity": { "quantity": 120, "unitOfMeasurement": "PRODUCT_UNITS" }, "receivedQuantity": { "quantity": 40, "unitOfMeasurement": "PRODUCT_UNITS" } },
+    { "sku": "SKU-B", "expectedQuantity": { "quantity": 60, "unitOfMeasurement": "PRODUCT_UNITS" } },
+    { "expectedQuantity": { "quantity": 5, "unitOfMeasurement": "PRODUCT_UNITS" } }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "payload": {
+    "asin": "B0OWNASIN1",
+    "topics": [
+      { "topic": "Sturdy build", "sentiment": "POSITIVE", "mentionRange": "100-250" },
+      { "topic": { "topicName": "Zipper breaks" }, "sentiment": "negative", "reviewCountBucket": "500-1000" },
+      { "topic": "Odd smell", "sentiment": "NEUTRAL" },
+      { "sentiment": "POSITIVE" },
+      "plain string entry",
+      { "topic": "Wheels loose", "sentiment": "NEGATIVE", "mentionRange": 12 }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+/* 筛选栏（P6-04）：1440 宽度一行放下，放不下的收进“更多筛选”；只用 antd 令牌，不写颜色值。 */
+.erp-filter-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 0;
+}
+.erp-filter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.erp-filter-main {
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+.erp-filter-actions {
+  margin-inline-start: auto;
+}
+.erp-filter-count {
+  color: var(--ant-color-text-secondary);
+}
+.erp-filter-badge {
+  margin-inline-start: 6px;
+}
+.erp-filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.erp-filter-more {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 16px;
+  width: 420px;
+}
+.erp-filter-more-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--ant-color-text-secondary);
+}

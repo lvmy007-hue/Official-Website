@@ -1,0 +1,11 @@
+{
+  "offers": [
+    { "sku": "SKU-A", "asin": "B0AAAAAAA1", "marketplaceId": "ATVPDKIKX0DER", "eligibility": "ELIGIBLE", "programType": "SUBSCRIBE_AND_SAVE",
+      "offerProgramConfiguration": { "promotions": { "sellingPartnerFundedBaseDiscount": { "percentage": 5 } }, "enrollmentMethod": "MANUAL" },
+      "price": 19.99, "priceCurrencyCode": "USD", "inventory": 320, "stockRisk": "NEXT_30_DAYS_DELIVERIES_AT_LOW_INVENTORY_RISK", "subscriptions": 41,
+      "fulfillmentNetworkIDType": "AMAZON", "forecastDeliveries": { "next15DaysDeliveries": 18, "next30DaysDeliveries": 36, "next60DaysDeliveries": 70, "next90DaysDeliveries": 101 } },
+    { "sku": "SKU-B", "asin": "B0BBBBBBB2", "eligibility": "SUSPENDED", "price": 9.5, "priceCurrencyCode": "USD", "inventory": 0, "subscriptions": 0 },
+    { "asin": "B0CCCCCCC3", "price": 3 }
+  ],
+  "pagination": { "totalResults": 3 }
+}

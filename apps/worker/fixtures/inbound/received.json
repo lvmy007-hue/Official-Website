@@ -1,0 +1,10 @@
+{
+  "payload": {
+    "ItemData": [
+      { "SellerSKU": "SKU-A", "QuantityShipped": 120, "QuantityReceived": 118 },
+      { "SellerSKU": "SKU-B", "QuantityShipped": 60, "QuantityReceived": 60 },
+      { "SellerSKU": "SKU-C", "QuantityShipped": 10 },
+      { "QuantityShipped": 1, "QuantityReceived": 1 }
+    ]
+  }
+}

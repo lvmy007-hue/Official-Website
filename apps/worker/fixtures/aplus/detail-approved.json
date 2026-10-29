@@ -1,0 +1,12 @@
+{
+  "contentRecord": {
+    "contentReferenceKey": "KEY-APPROVED",
+    "contentMetadata": { "name": "Brand story", "marketplaceId": "ATVPDKIKX0DER", "status": "APPROVED", "badgeSet": ["BRAND_STORY"], "updateTime": "2026-10-18T08:00:00Z" },
+    "contentDocument": {
+      "name": "Brand story",
+      "contentType": "EMC",
+      "locale": "en-US",
+      "contentModuleList": [{ "contentModuleType": "STANDARD_COMPANY_LOGO", "standardCompanyLogo": { "companyLogo": { "uploadDestinationId": "sc/abc.png" } } }]
+    }
+  }
+}

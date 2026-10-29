@@ -1,0 +1,67 @@
+{
+  "numberOfResults": 3,
+  "pagination": {},
+  "items": [
+    {
+      "asin": "B0AAAAAAA1",
+      "attributes": {
+        "color": [
+          { "value": "Rouge", "language_tag": "fr_CA", "marketplace_id": "A2EUQ1WTGCTBG2" },
+          { "value": "Red", "language_tag": "en_US", "marketplace_id": "ATVPDKIKX0DER" }
+        ],
+        "size": [{ "value": "L", "marketplace_id": "ATVPDKIKX0DER" }]
+      },
+      "images": [
+        {
+          "marketplaceId": "ATVPDKIKX0DER",
+          "images": [
+            { "variant": "PT01", "link": "https://m.media-amazon.com/images/I/pt01.jpg", "height": 2000, "width": 2000 },
+            { "variant": "MAIN", "link": "https://m.media-amazon.com/images/I/main-small.jpg", "height": 500, "width": 500 },
+            { "variant": "MAIN", "link": "https://m.media-amazon.com/images/I/main-large.jpg", "height": 1500, "width": 1500 }
+          ]
+        }
+      ],
+      "productTypes": [{ "marketplaceId": "ATVPDKIKX0DER", "productType": "KITCHEN" }],
+      "relationships": [
+        {
+          "marketplaceId": "ATVPDKIKX0DER",
+          "relationships": [
+            { "type": "VARIATION", "parentAsins": ["B0PARENT01"], "variationTheme": { "attributes": ["color"], "theme": "COLOR" } },
+            { "type": "PACKAGE_HIERARCHY", "childAsins": ["B0IGNORED1"] }
+          ]
+        }
+      ],
+      "salesRanks": [
+        {
+          "marketplaceId": "ATVPDKIKX0DER",
+          "classificationRanks": [
+            { "classificationId": "289913", "title": "Kitchen Utensils & Gadgets", "link": "https://www.amazon.com/gp/bestsellers/kitchen/289913", "rank": 1520 },
+            { "classificationId": "bad", "title": "排名不是正整数的分类", "rank": 0 }
+          ],
+          "displayGroupRanks": [{ "websiteDisplayGroup": "home_display_on_website", "title": "Home & Kitchen", "link": "https://www.amazon.com/gp/bestsellers/home", "rank": 20450 }]
+        }
+      ],
+      "summaries": [
+        {
+          "marketplaceId": "ATVPDKIKX0DER",
+          "brand": "NovaHome",
+          "itemName": "Silicone Spatula Set",
+          "browseClassification": { "displayName": "Kitchen Utensils & Gadgets", "classificationId": "289913" },
+          "websiteDisplayGroup": "home_display_on_website",
+          "websiteDisplayGroupName": "Home & Kitchen"
+        }
+      ]
+    },
+    {
+      "asin": "B0PARENT01",
+      "relationships": [
+        {
+          "marketplaceId": "ATVPDKIKX0DER",
+          "relationships": [{ "type": "VARIATION", "childAsins": ["B0AAAAAAA1", "B0BBBBBBB2"], "variationTheme": { "attributes": ["color"], "theme": "COLOR" } }]
+        }
+      ],
+      "summaries": [{ "marketplaceId": "ATVPDKIKX0DER", "brand": "NovaHome" }]
+    },
+    { "summaries": [] }
+  ]
+}

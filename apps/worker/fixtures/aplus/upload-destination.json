@@ -1,0 +1,7 @@
+{
+  "payload": {
+    "uploadDestinationId": "sc/e1f2a3.png",
+    "url": "https://s3.example.invalid/upload/e1f2a3",
+    "headers": { "Content-MD5": "abc==", "x-amz-acl": "private" }
+  }
+}

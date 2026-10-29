@@ -1,0 +1,29 @@
+{
+  "browseNodeId": "2975312011",
+  "marketplaceId": "ATVPDKIKX0DER",
+  "positiveTopics": [
+    {
+      "topic": "Sturdy build",
+      "trends": [
+        { "startDate": "2026-03-01", "endDate": "2026-03-31", "allProducts": 12.5, "top25Percent": 18 },
+        { "startDate": "2026-04-01", "endDate": "2026-04-30", "allProducts": 13, "top25Percent": 19.25 },
+        { "startDate": "2026-05-01", "endDate": "2026-05-31", "allProducts": 13.5, "top25Percent": 20 },
+        { "startDate": "2026-06-01", "endDate": "2026-06-30", "allProducts": 14, "top25Percent": 20.5 },
+        { "startDate": "2026-07-01", "endDate": "2026-07-31", "allProducts": 14.5, "top25Percent": 21 },
+        { "startDate": "2026-08-01", "endDate": "2026-08-31", "allProducts": 15, "top25Percent": 21.5 },
+        { "startDate": "2026-09-01", "endDate": "2026-09-30", "allProducts": 15.5, "top25Percent": 22 }
+      ]
+    }
+  ],
+  "negativeTopics": [
+    {
+      "topic": "Zipper breaks",
+      "trends": [
+        { "month": "2026-08", "allProducts": 7, "top25Percent": 150 },
+        { "month": "2026-09", "allProducts": "8.5%", "top25Percent": null },
+        { "month": "bad-month", "allProducts": 3 },
+        { "month": "2026-09", "topicNote": "no scope here" }
+      ]
+    }
+  ]
+}

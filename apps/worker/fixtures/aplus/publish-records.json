@@ -1,0 +1,14 @@
+{
+  "contentPublishRecordList": [
+    {
+      "marketplaceId": "ATVPDKIKX0DER",
+      "contentReferenceKey": "KEY-APPROVED",
+      "contentType": "EMC",
+      "contentSubType": null,
+      "contentStatus": "APPROVED",
+      "publishTime": "2026-10-19T00:00:00Z"
+    },
+    { "marketplaceId": "ATVPDKIKX0DER", "contentReferenceKey": "KEY-OTHER", "contentType": "EBC", "contentStatus": "APPROVED", "effectiveDate": "2026-09-01T00:00:00Z" },
+    { "marketplaceId": "ATVPDKIKX0DER", "contentReferenceKey": "KEY-NOTIME", "contentType": "EBC", "contentStatus": "APPROVED" }
+  ]
+}

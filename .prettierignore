@@ -1,0 +1,13 @@
+dist
+dist-ssr
+node_modules
+coverage
+pnpm-lock.yaml
+*.md
+*.sql
+*.prisma
+database
+infrastructure
+public
+*.generated.ts
+packages/authz/src/catalog.ts

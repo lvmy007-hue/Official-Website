@@ -1,0 +1,9 @@
+{
+  "inboundPlanId": "wf1a2b3c4-0000-4000-8000-000000000001",
+  "name": "2026-10 FBA replenishment",
+  "status": "ACTIVE",
+  "createdAt": "2026-10-20T08:00:00Z",
+  "lastUpdatedAt": "2026-10-20T08:05:00Z",
+  "marketplaceIds": ["ATVPDKIKX0DER"],
+  "shipments": [{ "shipmentId": "sh1-aaaa" }, { "shipmentId": "sh2-bbbb" }, { "note": "no id" }]
+}

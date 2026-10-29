@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 最小基础：仅作用于启用了 Tailwind 的公开站根（.nv），不影响旧页面与 Arco 工作台 */
+@layer base {
+  .nv,
+  .nv *,
+  .nv ::before,
+  .nv ::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: theme('colors.line.DEFAULT');
+  }
+  .nv {
+    font-family: theme('fontFamily.sans');
+    color: theme('colors.ink.DEFAULT');
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  .nv h1, .nv h2, .nv h3, .nv h4, .nv h5, .nv h6, .nv p, .nv figure, .nv ul, .nv ol {
+    margin: 0;
+  }
+  .nv ul, .nv ol { list-style: none; padding: 0; }
+  .nv a { color: inherit; text-decoration: none; }
+  .nv button { font: inherit; color: inherit; background: none; cursor: pointer; }
+  .nv img, .nv svg, .nv canvas { display: block; max-width: 100%; }
+}
+
+@layer components {
+  .nv-container { width: min(1240px, calc(100% - 56px)); margin-inline: auto; }
+  .nv-container-wide { width: min(1440px, calc(100% - 64px)); margin-inline: auto; }
+
+  .nv-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    height: 46px; padding: 0 22px; border-radius: 12px;
+    font-size: 15px; font-weight: 600; letter-spacing: .01em;
+    transition: transform .18s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
+    white-space: nowrap;
+  }
+  .nv-btn-primary { background: theme('colors.brand.500'); color: #fff; box-shadow: theme('boxShadow.glow'); }
+  .nv-btn-primary:hover { background: theme('colors.brand.600'); transform: translateY(-1px); }
+  .nv-btn-ghost { background: #fff; color: theme('colors.brand.600'); border: 1px solid theme('colors.brand.200'); }
+  .nv-btn-ghost:hover { background: theme('colors.brand.50'); }
+  .nv-btn-sm { height: 38px; padding: 0 16px; font-size: 14px; border-radius: 10px; }
+
+  .nv-chip {
+    display: inline-flex; align-items: center; gap: 7px; height: 30px; padding: 0 13px;
+    border-radius: 999px; font-size: 12.5px; font-weight: 600;
+    background: #fff; color: theme('colors.ink.soft');
+    border: 1px solid theme('colors.line.DEFAULT');
+  }
+  .nv-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: theme('colors.ink.mute');
+    font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  }
+  .nv-eyebrow::before {
+    content: ''; display: inline-block; width: 20px; height: 2px; border-radius: 2px;
+    background: theme('colors.brand.500');
+  }
+  .nv-card {
+    border-radius: theme('borderRadius.2xl'); background: #fff;
+    border: 1px solid theme('colors.line.DEFAULT'); box-shadow: theme('boxShadow.card');
+  }
+}
+
+@layer utilities {
+  .nv-reveal { opacity: 0; transform: translateY(26px); }
+  .nv-text-gradient {
+    color: theme('colors.brand.600');
+    -webkit-text-fill-color: currentColor;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .nv-reveal { opacity: 1 !important; transform: none !important; }
+    .nv .animate-draw, .nv .animate-growx, .nv .animate-fadeup,
+    .nv .animate-floaty, .nv .animate-pulsering, .nv .animate-flow { animation: none !important; }
+  }
+}

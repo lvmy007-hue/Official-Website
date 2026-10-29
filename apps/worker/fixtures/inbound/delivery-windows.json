@@ -1,0 +1,6 @@
+{
+  "deliveryWindowOptions": [
+    { "deliveryWindowOptionId": "dw1", "startDate": "2026-10-28T00:00:00Z", "endDate": "2026-10-30T00:00:00Z", "availabilityType": "AVAILABLE", "validUntil": "2026-10-26T00:00:00Z" },
+    { "deliveryWindowOptionId": "dw2", "startDate": "bad", "endDate": "2026-11-02T00:00:00Z" }
+  ]
+}

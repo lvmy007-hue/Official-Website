@@ -1,0 +1,166 @@
+/* 外壳布局：尺寸与间距只用 Ant Design 令牌变量，色值不在此处写死（样式守卫测试扫描）。
+   高度取 15 章第 11 节：顶栏 56、页签条 40、侧边导航 216（宽度在 AppShell 里）。 */
+.erp-shell-sider {
+  border-inline-end: 1px solid var(--ant-color-border-secondary);
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow: auto;
+}
+.erp-shell-brand {
+  padding: 14px 20px 8px;
+  font-weight: 600;
+  font-size: var(--ant-font-size-lg);
+  color: var(--ant-color-primary);
+  letter-spacing: 0.02em;
+}
+.erp-shell-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding-inline: 16px;
+  line-height: 56px;
+  border-bottom: 1px solid var(--ant-color-border-secondary);
+}
+.erp-shell-header-left {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+}
+.erp-shell-content {
+  padding: 16px;
+  min-width: 0;
+}
+.erp-scope-bar {
+  padding: 8px 16px;
+  background: var(--ant-color-bg-container);
+  border-bottom: 1px solid var(--ant-color-border-secondary);
+}
+.erp-kbd {
+  margin-inline-start: 8px;
+  padding: 0 4px;
+  font-size: var(--ant-font-size-sm);
+  color: var(--ant-color-text-tertiary);
+  border: 1px solid var(--ant-color-border);
+  border-radius: var(--ant-border-radius-sm);
+  background: var(--ant-color-fill-alter);
+}
+
+/* 多页签条（P6-01）：白底，选中页签用主色浅底加主色文字；页签多了横向滚动，不换行。 */
+.erp-tabbar {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-inline: 8px;
+  background: var(--ant-color-bg-container);
+  border-bottom: 1px solid var(--ant-color-border-secondary);
+}
+.erp-tabbar-list {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.erp-tab {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  max-width: 200px;
+  height: 28px;
+  padding-inline: 10px 4px;
+  color: var(--ant-color-text-secondary);
+  border-radius: var(--ant-border-radius);
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+.erp-tab:hover {
+  background: var(--ant-color-fill-alter);
+}
+.erp-tab[data-active='true'] {
+  color: var(--ant-color-primary);
+  background: var(--ant-color-primary-bg);
+  font-weight: 500;
+}
+.erp-tab-title {
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  outline-offset: 2px;
+}
+.erp-tab-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  margin-inline-start: 4px;
+  padding: 0;
+  color: inherit;
+  font-size: var(--ant-font-size-sm);
+  background: transparent;
+  border: 0;
+  border-radius: var(--ant-border-radius-sm);
+  cursor: pointer;
+}
+.erp-tab-close:hover {
+  background: var(--ant-color-fill-secondary);
+}
+
+/* 顶栏消息与预警浮层（P6-01） */
+.erp-notice-panel {
+  width: 360px;
+}
+.erp-notice-item {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  text-align: start;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--ant-color-border-secondary);
+  cursor: pointer;
+}
+.erp-notice-item:last-child {
+  border-bottom: 0;
+}
+.erp-notice-item:hover {
+  background: var(--ant-color-fill-alter);
+}
+.erp-notice-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ant-color-text);
+}
+.erp-notice-title .ant-typography {
+  flex: 1;
+  min-width: 0;
+  color: inherit;
+}
+.erp-notice-title[data-unread='false'] {
+  color: var(--ant-color-text-secondary);
+}
+.erp-notice-meta {
+  margin-top: 2px;
+  color: var(--ant-color-text-tertiary);
+  font-size: var(--ant-font-size-sm);
+}
+.erp-notice-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--ant-color-border-secondary);
+}

@@ -1,0 +1,32 @@
+{
+  "notificationVersion": "2020-09-04",
+  "notificationType": "ITEM_INVENTORY_EVENT_CHANGE",
+  "payloadVersion": "2020-09-04",
+  "eventTime": "2023-02-07T16:05:32.378Z",
+  "payload": {
+    "itemInventoryEventChanges": [
+      {
+        "accountId": "amzn1.merchant.o.A21CXK3C4ERTY8",
+        "marketplaceId": "ATVPDKIKX0DER",
+        "startTime": "2023-02-07T15:00:00Z",
+        "endTime": "2023-02-07T16:00:00Z",
+        "asin": "B00032HE0O",
+        "highlyAvailableInventory": 650
+      },
+      {
+        "accountId": "amzn1.merchant.o.A21CXK3C4ERTY8",
+        "marketplaceId": "ATVPDKIKX0DER",
+        "startTime": "2023-02-07T15:00:00Z",
+        "endTime": "2023-02-07T16:00:00Z",
+        "asin": "B00094A20U",
+        "highlyAvailableInventory": 519
+      }
+    ]
+  },
+  "notificationMetadata": {
+    "applicationId": "amzn1.sellerapps.app.aacccfff-4455-4b7c-4422-664ecacdd336",
+    "subscriptionId": "d0e9e693-c3ad-4373-979f-ed4ec98dd746",
+    "publishTime": "2023-02-07T16:45:32.378Z",
+    "notificationId": "f2g1g815-e5cf-6595-b91h-gf6ge10ff968"
+  }
+}

@@ -1,0 +1,351 @@
+import type { ProductDetail } from './public-product-content'
+
+export const enProductAreas = [
+  {
+    href: '/product/stores',
+    title: 'Multi-store & multi-entity',
+    claim: 'Manage stores by legal entity, so each company’s data is clearly owned and never mixed.',
+    problem: 'When several companies each hold seller accounts, stores and marketplaces easily fail to line up with legal entities, and data ownership becomes unclear.',
+    features: ['Three-tier registry: company, seller account, marketplace', 'Separate books per company', 'Store status at a glance', 'Members see only assigned companies'],
+    source: 'Companies, seller accounts and marketplaces are registered in layers, with ownership clearly traceable by company.',
+    status: 'Supports managing multiple legal entities in parallel, with each company’s books kept separate.',
+  },
+  {
+    href: '/product/orders',
+    title: 'Order management',
+    claim: 'Orders are grouped by store, keeping purchase time, status, currency and source update time.',
+    problem: 'Looking only at one aggregate figure, you can’t tell which company, marketplace or day an order belongs to.',
+    features: ['Orders tied to stores', 'Purchase time and status kept', 'Amounts carry currency', 'Source update time recorded'],
+    source: 'Orders are grouped by store and company on a consistent basis for easy reconciliation.',
+    status: 'Filter orders quickly by company, marketplace and time.',
+  },
+  {
+    href: '/product/returns',
+    title: 'Cross-month returns',
+    claim: 'Refunds map back to the original order month, so refunds on old orders aren’t counted in this month’s sales.',
+    problem: 'At month-end close, refunds received this month often come from earlier-month orders; subtracting them directly distorts the result.',
+    features: ['Returns keep the return date', 'Can link the original order number', 'Refund amount recorded separately', 'Inventory disposition and refund viewed separately'],
+    source: 'Refunds keep the return date and map against the original order month.',
+    status: 'More accurate month-end close; refunds no longer blur new sales.',
+  },
+  {
+    href: '/product/finance',
+    title: 'Financial reconciliation',
+    claim: 'Revenue, refunds and fees are arranged per currency; different currencies are never added together.',
+    problem: 'Merging USD orders with EUR fees into one total gives a net figure that can’t be reconciled.',
+    features: ['Fees keep posting time', 'Fees can carry a settlement ID', 'Refund amount separated from order amount', 'Currency stored with each record'],
+    source: 'Revenue, refunds and fees are reconciled within the same currency.',
+    status: 'Net amounts are computed per currency, making monthly reconciliation clear.',
+  },
+  {
+    href: '/product/advertising',
+    title: 'Advertising reports',
+    claim: 'After connecting advertising accounts separately, spend, clicks and ad sales are viewed centrally, read-only.',
+    problem: 'When several companies each have advertising accounts, spend and sales are scattered and hard to analyze together.',
+    features: ['Advertising and seller authorization separated', 'Metrics read in account currency', 'Spend broken down by campaign type', 'Read-only; bids unchanged'],
+    source: 'Advertising spend and sales are presented centrally by account.',
+    status: 'Read-only viewing and reconciliation — no bid changes, no managed operations.',
+  },
+  {
+    href: '/product/permissions',
+    title: 'Member permissions',
+    claim: 'Who can see which company is decided by permissions; logging in does not mean seeing everything.',
+    problem: 'Operations, finance and advertising staff need different data scopes; sharing one account makes responsibilities impossible to separate.',
+    features: ['Members assigned to specific companies', 'View scope by role', 'Viewing and managing authorized separately', 'New members provisioned by role'],
+    source: 'Permissions are assigned by the company administrator per role.',
+    status: 'Operations, finance and advertising each see their own companies, with clear responsibility.',
+  },
+  {
+    href: '/product/inventory',
+    title: 'FBA inventory',
+    claim: 'Available, reserved, inbound and unsellable quantities are viewed centrally by seller account and marketplace.',
+    problem: 'If inventory is detached from legal entities, you can’t say which company a batch of goods belongs to.',
+    features: ['Stored by seller account and SKU', 'Distinguishes available, reserved, inbound, unsellable', 'Low stock flagged automatically', 'Turnover by marketplace'],
+    source: 'Inventory is grouped by seller account and marketplace.',
+    status: 'Days of cover and reorder alerts visible on one screen.',
+  },
+  {
+    href: '/product/listings',
+    title: 'Product listings',
+    claim: 'ASIN, SKU, FNSKU and listing status are used to align stores and products.',
+    problem: 'When the same product has mismatched SKUs across stores, orders and inventory can’t be grouped to one product.',
+    features: ['ASIN and SKU kept', 'FNSKU and fulfillment method recorded', 'Listing status mapping', 'Used for order and inventory grouping'],
+    source: 'The product catalog is used to align stores and products.',
+    status: 'Orders, inventory and products line up, making statistics more accurate.',
+  },
+  {
+    href: '/product/inbound',
+    title: 'FBA inbound',
+    claim: 'Inbound plans, shipments and received quantities are managed centrally by seller account.',
+    problem: 'If restocking lives only in spreadsheets, you can’t see which shipment has reached the fulfillment center or how much was received.',
+    features: ['Inbound plans and shipments recorded separately', 'Ship-from address entered as required', 'Shipment ID and destination clear', 'Received quantity tracking'],
+    source: 'Inbound plans and shipment receipts are tracked centrally.',
+    status: 'Restock progress and received quantities available anytime.',
+  },
+]
+
+export const enProductDetails: Record<string, ProductDetail> = {
+  '/product/stores': {
+    sections: { problem: 'The data-ownership problem of multiple companies and stores', feature: 'A three-tier entity–account–marketplace structure', scenario: 'Typical multi-entity scenarios', fields: 'Key information for registration and connection' },
+    highlights: ['Three-tier registry: legal entity / seller account / marketplace', 'Separate books per company', 'Members scoped by entity', 'Authorization status fully traceable'],
+    detail: [
+      { t: 'Three-tier structure', d: 'Register layer by layer — legal entity → seller account → marketplace: create the company entity first, then link the Amazon seller accounts it holds, and finally expand the marketplaces under each account, so data is naturally owned by company.' },
+      { t: 'Separate books', d: 'Each company’s orders, inventory, returns and finance are booked separately; when a cross-company comparison is needed, the consolidated view still labels everything clearly by legal entity, never mixing different companies’ figures.' },
+      { t: 'Clear connection boundaries', d: 'Each seller account initiates its own data connection; companies that haven’t finished connecting don’t enter the viewable scope and aren’t treated as the developer’s own stores.' },
+      { t: 'Member visibility', d: 'Members are bound to specific companies, and roles decide which entities and modules they see — operations, finance and advertising each see their own few companies.' },
+      { t: 'Unified marketplace view', d: 'US, EU, JP and other marketplaces under the same seller account are shown together, with marketplace status, currency and connection state visible on one screen.' },
+    ],
+    scenarios: [
+      { t: 'Multi-company agency teams', d: 'One team manages stores for several companies at once, needing both separate reconciliation and reports per company and a unified back office to see the whole picture.' },
+      { t: 'Fast onboarding of a new entity', d: 'After a newly registered company opens a store, registering the entity and linking the account is enough to connect it independently, without affecting existing companies’ data or permission settings.' },
+      { t: 'Account ownership checks', d: 'When multiple companies each hold accounts, use the three-tier structure to verify which account belongs to which company and which marketplace it runs on, avoiding ownership confusion.' },
+    ],
+    fields: [
+      ['Legal entity', 'Registration info such as company name and unified social credit code'],
+      ['Seller account', 'Amazon seller account identifier and connection status'],
+      ['Marketplace', 'Marketplaces and settlement currencies under the account'],
+      ['Connection status', 'Not connected / pending approval / connected / connection error'],
+      ['Ownership', 'The entity–account–marketplace mapping'],
+    ],
+    faqs: [
+      { q: 'Can multiple companies connect separately?', a: 'Yes. Each company is registered as a legal entity and initiates its own connection; their data and permissions don’t affect each other.' },
+      { q: 'Will companies that aren’t connected show data?', a: 'No. Companies that haven’t finished connecting don’t enter the viewable scope and aren’t shown as synced.' },
+      { q: 'Can members see all companies?', a: 'Assigned by the administrator. Members see only the companies granted to them; operations, finance and advertising can each be scoped.' },
+    ],
+  },
+  '/product/orders': {
+    sections: { problem: 'Reconciling orders scattered across store back offices', feature: 'Unified multi-store order management', scenario: 'Common order-reconciliation scenarios', fields: 'Key fields in an order record' },
+    highlights: ['Grouped by store and company', 'Purchase time and status kept', 'Amounts carry currency', 'Unified multi-store filtering'],
+    detail: [
+      { t: 'Orders tied to stores', d: 'Each order belongs to a specific seller account and marketplace, naturally hanging under the matching company, so you’re never left with a single aggregate figure of unclear origin.' },
+      { t: 'Complete fields kept', d: 'Order number, purchase time, order status, amount and currency, plus the source update time, are all kept for line-by-line reconciliation with the seller back office.' },
+      { t: 'Multi-store, multi-currency filtering', d: 'Orders across companies and marketplaces can be filtered by company, marketplace, time and status; different currencies are counted separately, with no FX merging.' },
+      { t: 'Status tracking', d: 'From pending to shipped to delivered, order status updates with each sync, so you can quickly locate processing or abnormal orders.' },
+      { t: 'Linked with inventory and finance', d: 'Orders share the same store and product basis as inventory and finance, so sales, stock consumption and revenue reconcile on the same baseline.' },
+    ],
+    scenarios: [
+      { t: 'Daily multi-store order checks', d: 'Operations check new orders and shipping status across many stores each day, scanning them with unified filters instead of logging into each back office.' },
+      { t: 'Cross-marketplace sales comparison', d: 'For the same product selling across US, EU and JP, view order volume and amount by marketplace and currency to judge each market’s performance.' },
+      { t: 'Month-end back-office reconciliation', d: 'Export orders by store at month-end and reconcile line by line with the Amazon back office and finance settlements, reducing disputes with consistent definitions.' },
+    ],
+    fields: [
+      ['Order number', 'Platform order ID'],
+      ['Store / marketplace', 'The owning seller account and marketplace'],
+      ['Purchase time', 'Order time, used to assign the month'],
+      ['Order status', 'Pending / shipped / delivered, etc.'],
+      ['Amount & currency', 'Order amount and its settlement currency'],
+      ['Update time', 'The source’s latest sync time'],
+    ],
+    faqs: [
+      { q: 'How often is order data updated?', a: 'Synced daily by default; the page shows the data cutoff time for reconciliation with the back office.' },
+      { q: 'Can orders from multiple stores be viewed together?', a: 'Yes, filtered by company, marketplace and time; different currencies are counted separately.' },
+      { q: 'How is buyer personal information handled?', a: 'Buyer name, address and the like are deleted on schedule within about 30 days after fulfillment, and used only within what order display requires.' },
+    ],
+  },
+  '/product/returns': {
+    sections: { problem: 'Month-end distortion caused by cross-month refunds', feature: 'Refund management grouped by original order month', scenario: 'Typical refund-accounting scenarios', fields: 'Key fields for returns and refunds' },
+    highlights: ['Refunds map to the original order month', 'Return date kept', 'Refund separated from physical return', 'No offset against new sales'],
+    detail: [
+      { t: 'Refunds map back to the original month', d: 'Refunds received this month may correspond to earlier-month orders; the system maps a refund back to its original order’s month, so month-end close doesn’t offset old-order refunds against new sales.' },
+      { t: 'Return date and original order number', d: 'Each return keeps its return date and links the original order number, so you can trace which order a refund came from and when it happened.' },
+      { t: 'Refund separate from physical return', d: 'A refund record doesn’t mean goods are back in the warehouse; the two are shown separately, keeping inventory disposition and financial refunds from blurring.' },
+      { t: 'Cross-month matrix', d: 'A “refund month × original order month” matrix shows at a glance which months’ orders this month’s refunds came from.' },
+      { t: 'Consistent with finance', d: 'Refund amounts are recorded by currency and reconciled with revenue and fees in the finance module on the same basis.' },
+    ],
+    scenarios: [
+      { t: 'Month-end close', d: 'When computing net amounts at month-end, refunds are mapped back to the original order month to avoid distorting the month’s sales with cross-month refunds.' },
+      { t: 'Investigating return anomalies', d: 'When refunds spike in a month, trace the source by original order month and order number to tell concentrated returns from a single large refund.' },
+    ],
+    fields: [
+      ['Refund month', 'The month the refund posts'],
+      ['Original order month', 'The month of the original order'],
+      ['Original order number', 'The linked original order ID'],
+      ['Refund amount / currency', 'Refund amount and currency'],
+      ['Return date', 'The date the return occurred'],
+    ],
+    faqs: [
+      { q: 'Does a refund record equal a physical return?', a: 'No. Refunds and physical returns are recorded separately; a posted refund doesn’t mean the item is back in the warehouse.' },
+      { q: 'How are cross-month refunds handled?', a: 'Refunds map back to the original order month and don’t offset the new sales of the refund month.' },
+    ],
+  },
+  '/product/finance': {
+    sections: { problem: 'The reconciliation burden of multiple currencies and entities', feature: 'Financial reconciliation on one consistent basis', scenario: 'Common financial-accounting scenarios', fields: 'Key definitions in financial data' },
+    highlights: ['Reconciled within one currency', 'Currencies listed separately, not merged', 'Fees keep posting time', 'Refunds map to the original order month'],
+    detail: [
+      { t: 'Same-currency reconciliation', d: 'Order revenue, refunds, platform fees and net amounts are arranged and reconciled within the same currency; different currencies are kept on separate lines, with no FX-merged estimates.' },
+      { t: 'Fee breakdown and settlement IDs', d: 'Fee events such as commissions, FBA fees and storage fees keep amount, currency and posting time, and can carry a settlement ID for line-by-line lookup.' },
+      { t: 'Sales vs. gross margin', d: 'Sales and gross margin trends are compared on the same screen, showing the relationship between revenue growth and profit.' },
+      { t: 'Refunds map to the original month', d: 'Refunds posted this month map back to the original order month, so net amounts aren’t disturbed by cross-month refunds.' },
+      { t: 'Reports by company and currency', d: 'Monthly reports are issued separately by legal entity and currency, keeping multiple companies’ finances from mixing.' },
+    ],
+    scenarios: [
+      { t: 'Multi-currency close', d: 'USD, EUR and JPY each compute their own net amount, without converting into a single currency, so the close can be compared directly with settlement reports.' },
+      { t: 'Profit review', d: 'Combining sales, fees and refunds, review true gross margin by store and time to inform pricing and ad spend.' },
+      { t: 'Fee verification', d: 'For an abnormal fee, locate the source by settlement ID and posting time to verify whether the platform charge is correct.' },
+    ],
+    fields: [
+      ['Currency', 'The currency of the revenue or expense'],
+      ['Revenue', 'Order revenue'],
+      ['Refund', 'Refund amount'],
+      ['Fees', 'Commissions, FBA, storage and other fees'],
+      ['Net', 'The balance within one currency'],
+      ['Posting time', 'The posting time of a fee / settlement event'],
+    ],
+    faqs: [
+      { q: 'Are different currencies merged?', a: 'No. Each currency computes its own net amount, with no FX-merged estimates.' },
+      { q: 'Can fees be traced to their source?', a: 'Yes. Fees keep amount, currency and posting time, and can carry a settlement ID for line-by-line reconciliation.' },
+    ],
+  },
+  '/product/advertising': {
+    sections: { problem: 'The disconnect between advertising data and operating data', feature: 'Read-only advertising report analytics', scenario: 'Typical ad-review scenarios', fields: 'Core metrics in advertising reports' },
+    highlights: ['Advertising accounts connected separately', 'Read-only viewing and reconciliation', 'Presented in account currency', 'Spend structure can be broken down'],
+    detail: [
+      { t: 'Advertising and store connected separately', d: 'An advertising account’s data connection is completed separately from the seller account; connecting a store doesn’t automatically pull in ad spend and sales.' },
+      { t: 'Core metrics in one place', d: 'Spend, impressions, clicks, CTR, CPC, ad sales, ACoS and ROAS are presented together, read in account currency.' },
+      { t: 'Spend breakdown', d: 'Spend is broken down by campaign type such as SP auto, SP manual, SB brand and SD display, so you can quickly see where the budget went.' },
+      { t: 'Read-only, no operations', d: 'Advertising data is read-only by default — no bid changes, no budget adjustments, and no managing or running campaigns on your behalf.' },
+      { t: 'Data cutoff labeled', d: 'Each report labels its data cutoff time for line-by-line reconciliation with the advertising back office.' },
+    ],
+    scenarios: [
+      { t: 'Unified multi-account review', d: 'Spend and sales from multiple advertising accounts are gathered in one place to compare efficiency by account and marketplace.' },
+      { t: 'ACoS / ROAS monitoring', d: 'Review ACoS and ROAS changes regularly to judge efficiency trends and inform manual adjustments.' },
+    ],
+    fields: [
+      ['Spend', 'Total spend of the advertising account'],
+      ['Clicks / impressions', 'Number of clicks and impressions'],
+      ['CTR / CPC', 'Click-through rate and cost per click'],
+      ['Ad sales', 'Ad-attributed sales'],
+      ['ACoS / ROAS', 'The ratio of spend to ad sales'],
+    ],
+    faqs: [
+      { q: 'Are advertising and store connected together?', a: 'No. The advertising account is connected separately; reports are read-only and kept apart from store data.' },
+      { q: 'Will you adjust my ads?', a: 'No. Advertising data is read-only — no bid changes, no budget changes, and no managed operations.' },
+    ],
+  },
+  '/product/permissions': {
+    sections: { problem: 'Data visibility under multi-company collaboration', feature: 'Tiered authorization by entity and role', scenario: 'Common team-permission scenarios', fields: 'Key dimensions of permission settings' },
+    highlights: ['Members bound to companies', 'Permissions by role', 'Viewing and managing separated', 'Actions logged and traceable'],
+    detail: [
+      { t: 'Members belong to entities', d: 'Members are bound to specific legal entities; a successful login doesn’t mean seeing every company, as visibility is decided jointly by ownership and role.' },
+      { t: 'Role-based permissions', d: 'Orders, refunds, finance, advertising, export, member and connection management are granted separately, so operations, finance and advertising each get the part they need.' },
+      { t: 'Viewing separated from managing', d: 'Read-only viewing and actions like changing connections or managing members use different permissions; a read-only account can’t change connection settings through the API.' },
+      { t: 'Audit logging', d: 'Logins, authorizations and data reads record the actor, action, object and result, so key actions can be traced and reviewed.' },
+      { t: 'New members provisioned by role', d: 'New hires are provisioned by role template and promptly de-provisioned on departure, reducing over-privilege risk.' },
+    ],
+    scenarios: [
+      { t: 'Separation of duties', d: 'Finance sees only finance, operations see only their companies, and advertising staff see only ad reports, with no cross-viewing.' },
+      { t: 'External collaboration control', d: 'Temporary collaborators get only the necessary read-only scope, without connection-management or export permissions.' },
+    ],
+    fields: [
+      ['Member', 'Member account and owning company'],
+      ['Role', 'The role and its permission scope'],
+      ['Visible entities', 'The legal entities that can be viewed'],
+      ['Action permissions', 'View / export / manage, etc.'],
+    ],
+    faqs: [
+      { q: 'Can I grant view-only without edit?', a: 'Yes. Viewing and managing use different permissions; a read-only account can’t change connections or member settings.' },
+      { q: 'Are member actions logged?', a: 'Yes. Logins, authorizations and data reads are all logged for security review and tracing.' },
+    ],
+  },
+  '/product/inventory': {
+    sections: { problem: 'Confused inventory definitions across warehouses and marketplaces', feature: 'A unified FBA inventory view', scenario: 'Common inventory-turnover scenarios', fields: 'Key fields in inventory data' },
+    highlights: ['Available / reserved / inbound / unsellable', 'By seller account and marketplace', 'Days of cover and reorder line', 'Low-stock alerts'],
+    detail: [
+      { t: 'Multi-dimensional stock status', d: 'Available, reserved, inbound and unsellable quantities are distinguished and grouped by seller account and marketplace, so inventory naturally hangs under the matching company.' },
+      { t: 'Days-of-cover estimate', d: 'Combined with sales, each SKU’s days of cover is estimated, and anything below the reorder line is flagged orange to prompt timely restocking.' },
+      { t: 'Turnover by marketplace', d: 'Inventory and turnover for the same product across marketplaces are viewed separately to judge whether stocking in each market is reasonable.' },
+      { t: 'Linked with purchasing', d: 'Inventory is linked with purchasing and inbound plans, so out-of-stock SKUs can connect to purchase orders and FBA inbound progress.' },
+      { t: 'Clear, reconcilable basis', d: 'Inventory snapshots label the data source time for a definition consistent with the seller back office.' },
+    ],
+    scenarios: [
+      { t: 'Restock decisions', d: 'Filter SKUs nearing stockout by days of cover and reorder line, then arrange purchasing and inbound to avoid stockouts or overstock.' },
+      { t: 'Identifying slow movers', d: 'SKUs with overly long days of cover are flagged; combined with sales, decide whether to clear stock or adjust ad spend.' },
+    ],
+    fields: [
+      ['Available', 'Sellable quantity'],
+      ['Reserved', 'Reserved / pending-shipment quantity'],
+      ['Inbound', 'Quantity inbound in transit'],
+      ['Unsellable', 'Damaged / pending-disposition quantity'],
+      ['Days of cover', 'Days of cover estimated from sales'],
+    ],
+    faqs: [
+      { q: 'Where does inventory data come from?', a: 'From the FBA inventory sync of connected seller accounts; the page labels the data cutoff time.' },
+      { q: 'Do unconnected companies show inventory figures?', a: 'No. Companies that aren’t connected don’t display inventory data.' },
+    ],
+  },
+  '/product/listings': {
+    sections: { problem: 'The gap between ASIN and local SKU', feature: 'Mapping management of product identifiers', scenario: 'Common product-alignment scenarios', fields: 'Key fields in a product record' },
+    highlights: ['ASIN / SKU / FNSKU mapping', 'Listing status overview', 'Store and product grouping', 'No listing edits on your behalf'],
+    detail: [
+      { t: 'Product identifier mapping', d: 'ASIN, Seller SKU and FNSKU are kept to map the same product’s identifiers across stores, making order and inventory grouping easier.' },
+      { t: 'Listing status overview', d: 'Active, incomplete, closed and other listing statuses are recorded for a quick view of a product’s availability across stores.' },
+      { t: 'Fulfillment method labeled', d: 'FBA / FBM and other fulfillment methods are labeled to correspond with inventory and inbound definitions.' },
+      { t: 'For mapping only', d: 'Product information is used to align stores and products, not to submit or change listings on the platform for the seller.' },
+      { t: 'More accurate statistics', d: 'Once products line up, orders, inventory and sales are grouped to the same product for more accurate data.' },
+    ],
+    scenarios: [
+      { t: 'Aligning products across stores', d: 'When the same product has inconsistent SKUs across stores, use identifier mapping to group them to one product.' },
+      { t: 'Checking availability', d: 'Filter incomplete or closed products by listing status to check whether listing is normal.' },
+    ],
+    fields: [
+      ['ASIN', 'Amazon product ID'],
+      ['Seller SKU', 'Seller-defined SKU'],
+      ['FNSKU', 'FBA product code'],
+      ['Listing status', 'Active / incomplete / closed'],
+      ['Fulfillment method', 'FBA / FBM'],
+    ],
+    faqs: [
+      { q: 'Will you edit my listings?', a: 'No. Product information is used only for mapping, not to submit or change listings on the seller’s behalf.' },
+      { q: 'How are identical products matched across stores?', a: 'Through identifiers such as ASIN, SKU and FNSKU, grouping identical products together.' },
+    ],
+  },
+  '/product/inbound': {
+    sections: { problem: 'Blind spots in tracking FBA inbound progress', feature: 'Inbound plan and shipment tracking', scenario: 'Common restocking-and-inbound scenarios', fields: 'Key fields in an inbound shipment' },
+    highlights: ['Inbound plans and shipments', 'Created by seller account', 'Received-quantity tracking', 'Restock progress visible'],
+    detail: [
+      { t: 'Plans separate from shipments', d: 'Inbound plans and specific shipments are recorded separately; one plan can be split into multiple shipments and tracked individually.' },
+      { t: 'Created after authorization', d: 'A seller connection must be completed before creating an inbound plan, and the plan is written only when the seller actively submits it, avoiding mistakes.' },
+      { t: 'Complete shipment info', d: 'Shipment ID, destination warehouse, ship-from address and received quantity are recorded clearly, so you can see exactly where restocking stands.' },
+      { t: 'Receiving-progress tracking', d: 'From pending-sync to in-transit to received, received quantities update with each sync, so you can reconcile actual inbound against the plan.' },
+      { t: 'Connected with inventory and purchasing', d: 'Inbound progress is linked with inventory and purchasing, so the full restock chain is traceable.' },
+    ],
+    scenarios: [
+      { t: 'Executing restocks', d: 'Arrange FBA inbound by purchasing and inventory, create plans, split shipments and track arrivals to keep sellable stock topped up.' },
+      { t: 'Reconciling arrival differences', d: 'When received quantity differs from the plan, reconcile by shipment ID to investigate short receipts or damage.' },
+    ],
+    fields: [
+      ['Inbound plan', 'Plan ID and status'],
+      ['Shipment', 'Shipment ID and destination warehouse'],
+      ['Ship-from address', 'Ship-from info entered as the API requires'],
+      ['Planned quantity', 'Planned inbound quantity'],
+      ['Received quantity', 'Quantity actually received at the fulfillment center'],
+    ],
+    faqs: [
+      { q: 'Can I create an inbound plan without authorization?', a: 'No. A seller connection is required first, and the inbound plan is created only when the seller submits it.' },
+      { q: 'Where does shipment data come from?', a: 'Shipment IDs and received quantities come from sync results and are never filled in arbitrarily.' },
+    ],
+  },
+}
+
+export const enPermissionRows = [
+  ['Companies & entities', 'View or maintain legal entities and seller accounts'],
+  ['Connection management', 'Initiate and maintain store authorization connections'],
+  ['Orders & refunds', 'View orders and refund records'],
+  ['Finance', 'View finance and settlement records'],
+  ['Advertising', 'View advertising reports'],
+  ['Data export', 'Create data exports'],
+  ['Members & roles', 'View members, invite members, manage roles'],
+]
+
+export const enAdKpis = [
+  ['Spend', 'Total spend of the advertising account', 'Account currency', 'Selected date range', 'Daily'],
+  ['Impressions', 'Number of ad impressions', 'Count', 'Selected date range', 'Daily'],
+  ['Clicks', 'Number of ad clicks', 'Count', 'Selected date range', 'Daily'],
+  ['CTR', 'Clicks ÷ impressions', 'Ratio', 'Same window as clicks and impressions', 'Daily'],
+  ['CPC', 'Spend ÷ clicks', 'Account currency', 'Same window as spend and clicks', 'Daily'],
+  ['Ad sales', 'Ad-attributed sales', 'Account currency', 'Account attribution window', 'Daily'],
+  ['ACoS', 'Spend ÷ ad sales', 'Ratio', 'Same account, same window', 'Daily'],
+  ['ROAS', 'Ad sales ÷ spend', 'Ratio', 'Same account, same window', 'Daily'],
+]
+
+export const enServiceNature = 'NOVA ERP provides advertising reports and analytics software. Once an advertising account is authorized, you can view spend and ad sales by account. We do not provide managed operations, nor do we change bids on your behalf.'

@@ -1,0 +1,150 @@
+/* 详情形态（P6-05）：整页详情的头部信息卡、收缩吸顶条、吸顶导航、锚点板块；抽屉与下钻弹窗。只用 antd 令牌，不写颜色值。 */
+.erp-detail-layout {
+  display: flex;
+  flex-direction: column;
+}
+.erp-detail-layout > * + * {
+  margin-top: 8px;
+}
+
+/* 编码字段组：“字段名 值”排成一行，可换行 */
+.erp-detail-codes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin: 6px 0 0;
+  font-size: var(--ant-font-size-sm);
+}
+.erp-detail-code {
+  display: inline-flex;
+  gap: 6px;
+  min-width: 0;
+}
+.erp-detail-code dt {
+  color: var(--ant-color-text-secondary);
+  white-space: nowrap;
+}
+.erp-detail-code dd {
+  margin: 0;
+  color: var(--ant-color-text);
+}
+
+/* 关键指标：竖线分隔，不做小卡片 */
+.erp-detail-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  margin-top: 8px;
+}
+.erp-detail-metric {
+  min-width: 110px;
+  padding-inline: 16px;
+  border-inline-start: 1px solid var(--ant-color-border-secondary);
+}
+.erp-detail-metric:first-child {
+  padding-inline-start: 0;
+  border-inline-start: 0;
+}
+.erp-detail-metric-label {
+  font-size: var(--ant-font-size-sm);
+  color: var(--ant-color-text-secondary);
+}
+.erp-detail-metric-value {
+  font-size: var(--ant-font-size-lg);
+  font-weight: 600;
+}
+
+/* 收缩后的一行吸顶条：高度 40，叠在吸顶导航之上；外层槽高度为零，出现与消失不让页面内容跳动 */
+.erp-detail-compact-slot {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  height: 0;
+  margin-top: 0 !important;
+}
+.erp-detail-compact {
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding-inline: 12px;
+  background: var(--ant-color-bg-container);
+  border-bottom: 1px solid var(--ant-color-border-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.erp-detail-compact-metrics {
+  display: inline-flex;
+  gap: 16px;
+  margin-inline-start: 8px;
+  min-width: 0;
+  overflow: hidden;
+}
+.erp-detail-compact-actions {
+  margin-inline-start: auto;
+}
+
+/* 吸顶导航：下划线样式（antd 页签默认），位于收缩条之下；共享筛选在同一行右侧 */
+.erp-detail-sticky {
+  position: sticky;
+  top: 40px;
+  z-index: 5;
+  background: var(--ant-color-bg-container);
+  border-bottom: 1px solid var(--ant-color-border-secondary);
+  padding-inline: 12px;
+}
+.erp-detail-sticky .ant-tabs-nav {
+  margin: 0;
+}
+.erp-detail-nav > .ant-tabs-content-holder {
+  padding-top: 8px;
+}
+.erp-detail-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 锚点板块：一块一张卡片；滚动定位要避开吸顶区 */
+.erp-detail-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.erp-detail-section {
+  scroll-margin-top: 96px;
+}
+
+/* 抽屉：直角贴右边（antd 抽屉默认就是直角），头部左边是对象标识，右边是主操作与“打开完整详情” */
+.erp-drawer-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+}
+.erp-drawer-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.erp-drawer-actions {
+  flex: none;
+}
+.erp-detail-drawer .erp-detail-metrics {
+  margin: 0 0 4px;
+  padding-top: 8px;
+}
+
+/* 下钻弹窗：顶部放后退 / 前进与面包屑 */
+.erp-drill-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}

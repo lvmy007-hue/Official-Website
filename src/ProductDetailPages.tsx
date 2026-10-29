@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import type { ReactNode } from 'react'
-import { IconArrowRight } from '@arco-design/web-react/icon'
 import { SiteLink } from './site-link'
 import { AdsScreen, FinanceScreen, InventoryScreen, OrdersScreen, StoresScreen } from './ProductScreens'
 import { AdsBoard } from './HomeCharts'
@@ -51,7 +50,7 @@ export function ProductHub() {
           <h2>{area.title}</h2>
           <p>{area.claim}</p>
           <p>{area.problem}</p>
-          <SiteLink href={area.href} className="pub-text-link">查看详情 <IconArrowRight /></SiteLink>
+          <SiteLink href={area.href} className="pub-text-link">查看详情 →</SiteLink>
         </div>
         <div>
           <ol>{area.features.map(feature => <li key={feature}>{feature}</li>)}</ol>
@@ -125,7 +124,7 @@ export function OrdersPage() {
       </div>
     </div>
     <p>来源更新留空，是因为这条示意没有对应的同步任务。真实订单只有在授权和同步完成后才会出现更新时间。</p>
-    <SiteLink href="/product/returns" className="pub-text-link">继续看退货如何对回这个购买日 <IconArrowRight /></SiteLink>
+    <SiteLink href="/product/returns" className="pub-text-link">继续看退货如何对回这个购买日 →</SiteLink>
   </Frame>
 }
 
@@ -188,7 +187,7 @@ export function AdvertisingProductPage() {
       {adHierarchy.map((item, index) => <li key={item}><span>0{index + 1}</span><b>{item}</b></li>)}
     </ol>
     <p>Portfolio、Campaign 和更下层的对象，都挂在某一个 Advertising Profile 下面。Profile 再属于广告主的一次授权。把卖家账号直接当成广告账户，会把两家公司的数据混在一起。</p>
-    <SiteLink href="/solutions/advertising" className="pub-text-link">查看广告管理方案 <IconArrowRight /></SiteLink>
+    <SiteLink href="/solutions/advertising" className="pub-text-link">查看广告管理方案 →</SiteLink>
   </Frame>
 }
 
@@ -202,7 +201,7 @@ export function PermissionsPage() {
       </table>
     </div>
     <p>只读权限不能代替 connection.manage。公开页面不能证明每一个按钮都已对只读角色隐藏，但缺少权限时，对应接口会拒绝访问。</p>
-    <SiteLink href="/security" className="pub-text-link">查看安全说明 <IconArrowRight /></SiteLink>
+    <SiteLink href="/security" className="pub-text-link">查看安全说明 →</SiteLink>
   </Frame>
 }
 

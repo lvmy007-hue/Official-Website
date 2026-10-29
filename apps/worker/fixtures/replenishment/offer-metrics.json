@@ -1,0 +1,8 @@
+{
+  "offers": [
+    { "sku": "SKU-A", "asin": "B0AAAAAAA1", "fulfillmentChannelType": "AMAZON", "shippedSubscriptionUnits": 30, "totalSubscriptionsRevenue": 599.7, "currencyCode": "USD" },
+    { "sku": "SKU-Z", "shippedSubscriptionUnits": 5 },
+    { "asin": "B0NOSKU000", "shippedSubscriptionUnits": 9 }
+  ],
+  "pagination": { "totalResults": 3 }
+}

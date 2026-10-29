@@ -1,0 +1,10 @@
+{
+  "shipmentId": "sh1-aaaa",
+  "status": "WORKING",
+  "shipmentConfirmationId": "FBA15ABCDEF",
+  "placementOptionId": "pl2",
+  "destination": { "destinationType": "AMAZON_OPTIMIZED", "warehouseId": "ONT8" },
+  "selectedTransportationOptionId": "tr1",
+  "selectedDeliveryWindow": { "deliveryWindowOptionId": "dw1" },
+  "trackingDetails": { "spdTrackingDetail": { "spdTrackingItems": [{ "boxId": "box-1", "trackingId": "1Z999" }] } }
+}

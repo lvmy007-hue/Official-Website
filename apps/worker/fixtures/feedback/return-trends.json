@@ -1,0 +1,18 @@
+{
+  "browseNodeId": "2975312011",
+  "marketplaceId": "ATVPDKIKX0DER",
+  "returnTopics": [
+    {
+      "topic": "Too small",
+      "allProducts": [
+        { "month": "2026-08-01", "percentage": 4.5 },
+        { "month": "2026-09-01", "percentage": 5 }
+      ],
+      "top25Percent": [{ "month": "2026-09-01", "percentage": 2.25 }]
+    },
+    {
+      "topic": "Damaged on arrival",
+      "trends": [{ "dateRange": { "startDate": "2026-09-01", "endDate": "2026-09-30" }, "scope": "TOP_25_PERCENT", "percent": 1.5 }]
+    }
+  ]
+}

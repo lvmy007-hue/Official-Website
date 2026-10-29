@@ -1,0 +1,19 @@
+{
+  "inventory": [
+    {
+      "sku": "SKU-A",
+      "totalOnhandQuantity": 480,
+      "totalInboundQuantity": 120,
+      "inventoryDetails": { "availableDistributableQuantity": 400, "reservedDistributableQuantity": 50, "replenishmentQuantity": 30 },
+      "expirationDetails": [
+        { "expiration": "2027-03-15T00:00:00Z", "onhandQuantity": 200 },
+        { "expiration": "2027-01-10T00:00:00Z", "onhandQuantity": 280 },
+        { "expiration": "2026-12-01T00:00:00Z", "onhandQuantity": 0 }
+      ]
+    },
+    { "sku": "SKU-B", "totalOnhandQuantity": 0, "totalInboundQuantity": 0, "inventoryDetails": { "availableDistributableQuantity": 0 } },
+    { "sku": "SKU-C", "totalOnhandQuantity": 75 },
+    { "totalOnhandQuantity": 9 }
+  ],
+  "nextToken": "TOKEN-2"
+}

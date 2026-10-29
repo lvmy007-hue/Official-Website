@@ -1,0 +1,16 @@
+{
+  "asin": "B0OWNASIN1",
+  "marketplaceId": "ATVPDKIKX0DER",
+  "lastUpdatedDate": "2026-10-20",
+  "topics": {
+    "positiveTopics": [
+      { "topic": "Sturdy build", "asinMetrics": { "mentionRange": "100-250", "reviewCountBucket": "1000+" } },
+      { "topic": "Easy to carry", "mentionRange": "50-100" },
+      { "topic": "Good value" }
+    ],
+    "negativeTopics": [
+      { "topic": "Zipper breaks", "asinMetrics": { "mentionRange": "50-100", "reviewCountBucket": "500-1000" } },
+      { "topic": "Wheels loose", "mentionRange": "10-50" }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "placementOptions": [
+    {
+      "placementOptionId": "pl1",
+      "status": "OFFERED",
+      "expiration": "2026-10-27T08:00:00Z",
+      "fees": [{ "value": { "amount": 30, "code": "USD" } }],
+      "discounts": [],
+      "shipmentIds": ["sh1-aaaa"]
+    },
+    {
+      "placementOptionId": "pl2",
+      "status": "ACCEPTED",
+      "expiration": "2026-10-27T08:00:00Z",
+      "shipmentIds": ["sh1-aaaa", "sh2-bbbb"]
+    },
+    { "status": "OFFERED" }
+  ]
+}

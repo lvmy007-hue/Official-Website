@@ -1,0 +1,7 @@
+{
+  "metrics": [
+    { "timeInterval": { "startDate": "2026-10-20T00:00:00Z", "endDate": "2026-10-20T23:59:59Z" }, "shippedSubscriptionUnits": 12, "totalSubscriptionsRevenue": 239.88, "activeSubscriptions": 41, "currencyCode": "USD" },
+    { "timeInterval": { "startDate": "2026-10-21T00:00:00Z", "endDate": "2026-10-21T23:59:59Z" }, "shippedSubscriptionUnits": 0, "activeSubscriptions": 40 },
+    { "shippedSubscriptionUnits": 3 }
+  ]
+}

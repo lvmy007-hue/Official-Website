@@ -1,0 +1,11 @@
+{
+  "selection": {
+    "selectionId": "sel-2",
+    "revisionId": 2,
+    "type": "ITEMS",
+    "selectionDetails": {
+      "items": [{ "asin": "B0TESTASIN1" }],
+      "pagination": { "nextToken": "SEL-NEXT" }
+    }
+  }
+}

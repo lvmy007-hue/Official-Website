@@ -1,0 +1,7 @@
+{
+  "shipments": [
+    { "shipmentId": "SHIP-1", "orderId": "ORD-1", "shipmentStatus": "IN_TRANSIT", "updatedAt": "2026-10-20T08:00:00Z", "createdAt": "2026-10-10T08:00:00Z" },
+    { "shipmentId": "SHIP-2", "orderId": "ORD-2", "shipmentStatus": "CREATED", "updatedAt": "2026-10-21T09:30:00Z" },
+    { "orderId": "ORD-X", "shipmentStatus": "CREATED" }
+  ]
+}

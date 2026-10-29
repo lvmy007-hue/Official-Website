@@ -1,6 +1,6 @@
-node_modules
-dist
-.turbo
+**/node_modules
+**/dist
+**/.turbo
 .pnpm-store
 .npm-cache
 .git
@@ -9,3 +9,4 @@ dist
 !.env.example
 !.env.aliyun.example
 coverage
+storage-data

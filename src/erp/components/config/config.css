@@ -1,0 +1,143 @@
+/* 配置组件（P6-07）：条件构造器、规则描述、模板选择器。只用 antd 令牌与 --erp-* 变量，不写颜色值。 */
+.erp-cond-builder {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.erp-cond-main {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.erp-cond-side {
+  flex: 0 0 280px;
+  position: sticky;
+  top: 8px;
+}
+.erp-cond-group {
+  border: 1px solid var(--ant-color-border-secondary);
+  border-radius: 4px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.erp-cond-group-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 28px;
+}
+.erp-cond-group-head .ant-btn {
+  margin-inline-start: auto;
+}
+.erp-cond-or,
+.erp-cond-and {
+  color: var(--ant-color-text-secondary);
+  font-size: 12px;
+  line-height: 20px;
+}
+.erp-cond-or {
+  padding-inline-start: 12px;
+}
+.erp-cond-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.erp-cond-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.erp-cond-compare {
+  padding-inline-start: 8px;
+}
+.erp-cond-unit {
+  min-width: 12px;
+  color: var(--ant-color-text-secondary);
+}
+.erp-cond-hint {
+  color: var(--ant-color-text-secondary);
+  font-size: 12px;
+}
+.erp-cond-note {
+  margin: 0;
+  color: var(--ant-color-text-secondary);
+}
+.erp-cond-issues {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--ant-color-error);
+  font-size: 12px;
+}
+.erp-rule-desc {
+  border: 1px solid var(--ant-color-border-secondary);
+  border-radius: 4px;
+  padding: 12px;
+}
+.erp-rule-desc-title {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.erp-rule-desc-text {
+  margin: 0;
+  line-height: 22px;
+  word-break: break-all;
+}
+.erp-rule-desc-empty {
+  color: var(--ant-color-text-secondary);
+}
+.erp-rule-desc-warn {
+  margin: 8px 0 0;
+  color: var(--ant-color-warning-text);
+  font-size: 12px;
+}
+.erp-tpl-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.erp-tpl-title {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.erp-tpl-group-name {
+  margin-bottom: 6px;
+  color: var(--ant-color-text-secondary);
+  font-size: 12px;
+}
+.erp-tpl-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.erp-tpl-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border: 1px solid var(--ant-color-border-secondary);
+  border-radius: 4px;
+  padding: 12px;
+}
+.erp-tpl-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+}
+.erp-tpl-summary {
+  margin: 0;
+  flex: 1 1 auto;
+  line-height: 20px;
+  word-break: break-all;
+}

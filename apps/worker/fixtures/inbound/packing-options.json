@@ -1,0 +1,20 @@
+{
+  "packingOptions": [
+    {
+      "packingOptionId": "po1",
+      "status": "OFFERED",
+      "expiration": "2026-10-27T08:00:00Z",
+      "fees": [{ "target": "ITEM_FEES", "type": "FEE", "value": { "amount": 12.5, "code": "USD" } }, { "target": "ITEM_FEES", "type": "FEE", "value": { "amount": 2.25, "code": "USD" } }],
+      "discounts": [{ "target": "ITEM_FEES", "type": "DISCOUNT", "value": { "amount": 1, "code": "USD" } }],
+      "packingGroups": ["pg1", "pg2"],
+      "supportedShippingConfigurations": [{ "shippingMode": "GROUND_SMALL_PARCEL" }]
+    },
+    {
+      "packingOptionId": "po2",
+      "status": "ACCEPTED",
+      "fees": [{ "value": { "amount": 5, "code": "USD" } }, { "value": { "amount": 5, "code": "CAD" } }],
+      "packingGroups": ["pg1"]
+    },
+    { "status": "OFFERED" }
+  ]
+}

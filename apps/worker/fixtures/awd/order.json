@@ -1,0 +1,39 @@
+{
+  "orderId": "ORD-1",
+  "orderStatus": "CONFIRMED",
+  "externalReferenceId": "NOVA-REF-1",
+  "createdAt": "2026-10-10T07:00:00Z",
+  "updatedAt": "2026-10-11T07:00:00Z",
+  "originAddress": { "name": "Our Warehouse", "addressLine1": "9 Origin St", "stateOrRegion": "CA", "countryCode": "US" },
+  "preferences": { "destinationRegion": "us-east" },
+  "destinationDetails": { "destinationRegion": "us-east", "shipmentId": "SHIP-1" },
+  "packagesToInbound": [
+    {
+      "count": 10,
+      "distributionPackage": {
+        "type": "CASE",
+        "measurements": { "weight": { "weight": 12.5, "unitOfMeasurement": "POUNDS" }, "dimensions": { "length": 20, "width": 15, "height": 10, "unitOfMeasurement": "INCHES" } },
+        "contents": { "products": [{ "sku": "SKU-A", "quantity": 12, "expiration": "2027-06-30T00:00:00Z", "prepDetails": { "prepOwner": "SELF", "labelOwner": "SELF" } }] }
+      }
+    },
+    {
+      "count": 1,
+      "distributionPackage": {
+        "type": "PALLET",
+        "measurements": { "weight": { "weight": 300, "unitOfMeasurement": "POUNDS" } },
+        "contents": {
+          "packages": [
+            {
+              "count": 5,
+              "distributionPackage": {
+                "type": "CASE",
+                "measurements": { "weight": { "weight": 10, "unitOfMeasurement": "POUNDS" } },
+                "contents": { "products": [{ "sku": "SKU-B", "quantity": 12 }] }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

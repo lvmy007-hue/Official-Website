@@ -1,5 +1,0 @@
-import { CanActivate, ExecutionContext, Injectable } from '@nestjs/common'
-import { JwtService } from '@nestjs/jwt'
-import { RequestWithContext, AppError } from './http'
-@Injectable()
-export class AuthGuard implements CanActivate { constructor(private readonly jwt: JwtService) {} async canActivate(context: ExecutionContext) { const request = context.switchToHttp().getRequest<RequestWithContext>(); const header = request.header('authorization'); if (!header?.startsWith('Bearer ')) { if (process.env.APP_MODE === 'development' && process.env.LOCAL_NO_AUTH === 'true') { request.user = { userId: process.env.LOCAL_DEV_USER_ID ?? 'local-dev-user', sessionId: 'local-dev-session' }; return true } throw new AppError(401, 'AUTH_REQUIRED', '需要登录') } try { const payload = await this.jwt.verifyAsync<{ userId: string; sessionId: string }>(header.slice(7)); request.user = { userId: payload.userId, sessionId: payload.sessionId }; return true } catch { throw new AppError(401, 'AUTH_REQUIRED', '登录已失效，请重新登录') } } }

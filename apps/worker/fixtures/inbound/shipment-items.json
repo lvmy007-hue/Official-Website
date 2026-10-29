@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "msku": "SKU-A", "fnsku": "X00A", "quantity": 120, "asin": "B0A" },
+    { "msku": "SKU-B", "fnsku": "X00B", "quantity": 60 },
+    { "msku": "SKU-C", "quantity": 0 },
+    { "fnsku": "X00D", "quantity": 5 }
+  ]
+}

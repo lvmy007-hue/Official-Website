@@ -1,0 +1,8 @@
+{
+  "asinMetadataSet": [
+    { "asin": "B0AAAAAAA1", "title": "Widget one", "badgeSet": ["BRAND_REGISTERED"], "parent": null, "contentReferenceKeySet": ["KEY-APPROVED"] },
+    { "asin": "b0aaaaaaa2", "title": "Widget two" },
+    { "asin": "bad" },
+    "B0AAAAAAA3"
+  ]
+}

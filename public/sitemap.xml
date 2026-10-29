@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://dzanx.com/</loc></url>
-  <url><loc>https://dzanx.com/product</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://dzanx.com/</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://dzanx.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://dzanx.com/en"/></url>
+  <url><loc>https://dzanx.com/product</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://dzanx.com/product"/><xhtml:link rel="alternate" hreflang="en" href="https://dzanx.com/en/product"/></url>
   <url><loc>https://dzanx.com/product/stores</loc></url>
   <url><loc>https://dzanx.com/product/orders</loc></url>
   <url><loc>https://dzanx.com/product/returns</loc></url>
@@ -13,12 +13,20 @@
   <url><loc>https://dzanx.com/product/inbound</loc></url>
   <url><loc>https://dzanx.com/solutions</loc></url>
   <url><loc>https://dzanx.com/solutions/advertising</loc></url>
-  <url><loc>https://dzanx.com/pricing</loc></url>
-  <url><loc>https://dzanx.com/about</loc></url>
+  <url><loc>https://dzanx.com/pricing</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://dzanx.com/pricing"/><xhtml:link rel="alternate" hreflang="en" href="https://dzanx.com/en/pricing"/></url>
+  <url><loc>https://dzanx.com/about</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://dzanx.com/about"/><xhtml:link rel="alternate" hreflang="en" href="https://dzanx.com/en/about"/></url>
   <url><loc>https://dzanx.com/news</loc></url>
   <url><loc>https://dzanx.com/resources</loc></url>
-  <url><loc>https://dzanx.com/contact</loc></url>
-  <url><loc>https://dzanx.com/privacy</loc></url>
-  <url><loc>https://dzanx.com/terms</loc></url>
-  <url><loc>https://dzanx.com/security</loc></url>
+  <url><loc>https://dzanx.com/contact</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://dzanx.com/contact"/><xhtml:link rel="alternate" hreflang="en" href="https://dzanx.com/en/contact"/></url>
+  <url><loc>https://dzanx.com/privacy</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://dzanx.com/privacy"/><xhtml:link rel="alternate" hreflang="en" href="https://dzanx.com/en/privacy"/></url>
+  <url><loc>https://dzanx.com/terms</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://dzanx.com/terms"/><xhtml:link rel="alternate" hreflang="en" href="https://dzanx.com/en/terms"/></url>
+  <url><loc>https://dzanx.com/security</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://dzanx.com/security"/><xhtml:link rel="alternate" hreflang="en" href="https://dzanx.com/en/security"/></url>
+  <url><loc>https://dzanx.com/en</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://dzanx.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://dzanx.com/en"/></url>
+  <url><loc>https://dzanx.com/en/product</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://dzanx.com/product"/><xhtml:link rel="alternate" hreflang="en" href="https://dzanx.com/en/product"/></url>
+  <url><loc>https://dzanx.com/en/pricing</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://dzanx.com/pricing"/><xhtml:link rel="alternate" hreflang="en" href="https://dzanx.com/en/pricing"/></url>
+  <url><loc>https://dzanx.com/en/about</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://dzanx.com/about"/><xhtml:link rel="alternate" hreflang="en" href="https://dzanx.com/en/about"/></url>
+  <url><loc>https://dzanx.com/en/contact</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://dzanx.com/contact"/><xhtml:link rel="alternate" hreflang="en" href="https://dzanx.com/en/contact"/></url>
+  <url><loc>https://dzanx.com/en/privacy</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://dzanx.com/privacy"/><xhtml:link rel="alternate" hreflang="en" href="https://dzanx.com/en/privacy"/></url>
+  <url><loc>https://dzanx.com/en/terms</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://dzanx.com/terms"/><xhtml:link rel="alternate" hreflang="en" href="https://dzanx.com/en/terms"/></url>
+  <url><loc>https://dzanx.com/en/security</loc><xhtml:link rel="alternate" hreflang="zh-CN" href="https://dzanx.com/security"/><xhtml:link rel="alternate" hreflang="en" href="https://dzanx.com/en/security"/></url>
 </urlset>

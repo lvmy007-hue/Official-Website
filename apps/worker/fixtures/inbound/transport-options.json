@@ -1,0 +1,15 @@
+{
+  "transportationOptions": [
+    {
+      "shipmentId": "sh1-aaaa",
+      "transportationOptionId": "tr1",
+      "shippingMode": "GROUND_SMALL_PARCEL",
+      "shippingSolution": "AMAZON_PARTNERED_CARRIER",
+      "carrier": { "name": "UPS", "alphaCode": "UPSN" },
+      "quote": { "cost": { "amount": 88.4, "code": "USD" }, "expiration": "2026-10-23T00:00:00Z", "voidableUntil": "2026-10-24T08:00:00Z" },
+      "preconditions": ["CONFIRMED_DELIVERY_WINDOW"]
+    },
+    { "shipmentId": "sh1-aaaa", "transportationOptionId": "tr2", "shippingMode": "FREIGHT_LTL", "shippingSolution": "USE_YOUR_OWN_CARRIER", "carrier": { "alphaCode": "XYZ" } },
+    { "transportationOptionId": "tr3" }
+  ]
+}

@@ -6,9 +6,9 @@
 
 本地预览：`pnpm install` 后执行 `pnpm dev`，打开 `http://127.0.0.1:5173/login`。默认是本地示例模式，输入任意非空邮箱和密码即可进入预览工作台；生产模式不会接受这种本地登录。
 
-本地全栈：`docker compose -f infrastructure/compose/docker-compose.yml up --build`。
+本地全栈：`pnpm fullstack:up`（等价于 `docker compose -f infrastructure/compose/docker-compose.yml up --build`），打开 `http://127.0.0.1:8080`。本地结构与生产一致：队列与缓存两个带密码的 Redis、数据库连接池（PgBouncer）、接口与后台任务使用最小权限数据库账号、只有网关对外暴露端口。需要在宿主机直接连数据库、Redis 或运行接口开发服务器时，用 `pnpm fullstack:dev-up`（叠加仅绑定本机回环地址的端口映射）。
 
-阿里云部署：复制 `.env.aliyun.example` 为 `.env.aliyun`，修改数据库密码、JWT_SECRET、TOKEN_ENCRYPTION_KEY、域名和首个管理员，然后执行：
+阿里云部署：复制 `.env.aliyun.example` 为 `.env.aliyun`，修改全部密码（数据库迁移账号、应用账号、系统账号、两个 Redis）、JWT_SECRET、TOKEN_ENCRYPTION_KEY、STORAGE_SIGNING_KEY、域名和首个管理员，然后执行：
 
 `docker compose --env-file .env.aliyun -f infrastructure/compose/docker-compose.aliyun.yml up -d --build`
 

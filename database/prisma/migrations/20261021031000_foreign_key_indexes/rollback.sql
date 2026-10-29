@@ -1,0 +1,22 @@
+-- M-P1-27（续）回滚：删除本迁移创建的外键索引。手工执行；同时需从 _prisma_migrations 删除对应记录，并回退 schema.prisma 中的 @@index 声明。
+DROP INDEX IF EXISTS "AdsMetric_reportJobId_idx";
+DROP INDEX IF EXISTS "AdsTermMetric_reportJobId_idx";
+DROP INDEX IF EXISTS "AuditEvent_actorId_idx";
+DROP INDEX IF EXISTS "CommerceOrder_planId_idx";
+DROP INDEX IF EXISTS "FbaFinancialTransaction_settlementId_idx";
+DROP INDEX IF EXISTS "FbaInboundPlan_sellerAccountId_idx";
+DROP INDEX IF EXISTS "FbaReportJob_createdById_idx";
+DROP INDEX IF EXISTS "InventoryMovement_warehouseId_idx";
+DROP INDEX IF EXISTS "Membership_roleId_idx";
+DROP INDEX IF EXISTS "OAuthState_connectionId_idx";
+DROP INDEX IF EXISTS "OAuthState_initiatedById_idx";
+DROP INDEX IF EXISTS "OrderItem_orderId_orderPurchaseDate_idx";
+DROP INDEX IF EXISTS "PaymentEvent_paymentId_idx";
+DROP INDEX IF EXISTS "PlatformConnection_adsProfileId_idx";
+DROP INDEX IF EXISTS "PlatformConnection_sellerAccountId_idx";
+DROP INDEX IF EXISTS "PurchaseOrder_supplierId_idx";
+DROP INDEX IF EXISTS "RefundRequest_paymentId_idx";
+DROP INDEX IF EXISTS "SellerAccount_legalEntityId_idx";
+DROP INDEX IF EXISTS "Subscription_orderId_idx";
+DROP INDEX IF EXISTS "Subscription_planId_idx";
+DROP INDEX IF EXISTS "SyncJob_connectionId_idx";

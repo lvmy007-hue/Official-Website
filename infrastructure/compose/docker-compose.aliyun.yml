@@ -1,10 +1,53 @@
+# 阿里云单机部署（P1-25 加固）。所有变量见 .env.aliyun.example。
+#
+# 结构：
+#   web（网关，唯一对外端口） → api / worker
+#   api、worker → pgbouncer（连接池，事务池模式） → postgres
+#   api、worker → queue-redis（队列：不淘汰、持久化、密码）与 cache-redis（缓存：淘汰最久未用、密码）两个独立实例
+#   postgres、redis、pgbouncer、api 都不映射到宿主机端口；只通过内部网络访问。
+# 启动顺序：postgres → roles（创建/更新最小权限账号并补齐权限）→ migrate（迁移账号直连）→ api、worker → web。
+# 使用云数据库或云 Redis 时，改 DATABASE_APP_URL / DATABASE_SYSTEM_URL / DATABASE_OWNER_URL / QUEUE_REDIS_URL / CACHE_REDIS_URL，
+# 并跨机时打开 DB_REQUIRE_TLS / REDIS_REQUIRE_TLS（连接串写加密选项，证书始终校验），详见 docs/runbooks/aliyun-deploy.md。
+x-database: &database
+  DATABASE_URL: ${DATABASE_APP_URL:-postgresql://nova_app:${NOVA_APP_PASSWORD:?必须设置 NOVA_APP_PASSWORD}@pgbouncer:6432/${POSTGRES_DB:-nova_erp}?schema=public&pgbouncer=true}
+  DATABASE_SYSTEM_URL: ${DATABASE_SYSTEM_URL:-postgresql://nova_system:${NOVA_SYSTEM_PASSWORD:?必须设置 NOVA_SYSTEM_PASSWORD}@pgbouncer:6432/${POSTGRES_DB:-nova_erp}?schema=public&pgbouncer=true}
+  DB_POOL_SIZE: ${DB_POOL_SIZE:-10}
+  DB_POOL_TIMEOUT_SECONDS: ${DB_POOL_TIMEOUT_SECONDS:-20}
+  DB_REQUIRE_TLS: ${DB_REQUIRE_TLS:-false}
+  SLOW_QUERY_MS: ${SLOW_QUERY_MS:-1000}
+x-redis: &redis
+  QUEUE_REDIS_URL: ${QUEUE_REDIS_URL:-redis://:${QUEUE_REDIS_PASSWORD:?必须设置 QUEUE_REDIS_PASSWORD}@queue-redis:6379}
+  CACHE_REDIS_URL: ${CACHE_REDIS_URL:-redis://:${CACHE_REDIS_PASSWORD:?必须设置 CACHE_REDIS_PASSWORD}@cache-redis:6379}
+  REDIS_REQUIRE_TLS: ${REDIS_REQUIRE_TLS:-false}
+  REDIS_TLS_CA_FILE: ${REDIS_TLS_CA_FILE:-}
+  REDIS_TLS_SERVERNAME: ${REDIS_TLS_SERVERNAME:-}
+x-encryption: &encryption
+  TOKEN_ENCRYPTION_KEY: ${TOKEN_ENCRYPTION_KEY:-}
+  ENCRYPTION_MASTER_KEYS: ${ENCRYPTION_MASTER_KEYS:-}
+  ENCRYPTION_MASTER_KEY_ACTIVE: ${ENCRYPTION_MASTER_KEY_ACTIVE:-}
+  ENCRYPTION_KEY_PROVIDER: ${ENCRYPTION_KEY_PROVIDER:-env}
+  KMS_KEY_ID: ${KMS_KEY_ID:-}
+x-storage: &storage
+  STORAGE_DRIVER: ${STORAGE_DRIVER:-local}
+  STORAGE_LOCAL_DIR: /data/storage
+  STORAGE_PUBLIC_BASE_URL: ${STORAGE_PUBLIC_BASE_URL:-}
+  STORAGE_SIGNING_KEY: ${STORAGE_SIGNING_KEY:-}
+  STORAGE_MAX_UPLOAD_MB: ${STORAGE_MAX_UPLOAD_MB:-50}
+  OSS_ENDPOINT: ${OSS_ENDPOINT:-}
+  OSS_BUCKET: ${OSS_BUCKET:-}
+  OSS_ACCESS_KEY_ID: ${OSS_ACCESS_KEY_ID:-}
+  OSS_ACCESS_KEY_SECRET: ${OSS_ACCESS_KEY_SECRET:-}
+
 services:
   postgres:
     image: postgres:16-alpine
     restart: unless-stopped
+    # 分区表较多，迁移与回滚会在一个事务内锁定大量分区与索引，max_locks_per_transaction 不得小于 512（freeze/index-review.md）。
+    # 慢查询日志：超过 1 秒的语句记入数据库日志；log_lock_waits 记录等锁超过 1 秒的情况。
+    command: ["postgres", "-c", "max_locks_per_transaction=512", "-c", "log_min_duration_statement=1000", "-c", "log_lock_waits=on"]
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-nova}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?必须设置 POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB:-nova_erp}
     volumes: [nova-aliyun-postgres:/var/lib/postgresql/data]
     healthcheck:
@@ -12,12 +55,56 @@ services:
       interval: 5s
       timeout: 5s
       retries: 24
-  redis:
+  # 队列实例：存任务。不淘汰任何键（内存满时拒绝写入而不是丢任务）、开持久化、设密码
+  queue-redis:
     image: redis:7-alpine
     restart: unless-stopped
-    command: ["redis-server", "--appendonly", "yes"]
+    command: ["sh", "-c", "exec redis-server --requirepass \"$$REDIS_PASSWORD\" --appendonly yes --maxmemory $${REDIS_MAXMEMORY} --maxmemory-policy noeviction"]
+    environment:
+      REDIS_PASSWORD: ${QUEUE_REDIS_PASSWORD:?必须设置 QUEUE_REDIS_PASSWORD}
+      REDISCLI_AUTH: ${QUEUE_REDIS_PASSWORD}
+      REDIS_MAXMEMORY: ${QUEUE_REDIS_MAXMEMORY:-512mb}
+    mem_limit: ${QUEUE_REDIS_MEM_LIMIT:-768m}
+    # 沿用原有 Redis 的数据卷名：升级时未消费的队列任务不丢（新增 requirepass 后需用密码连接）
     volumes: [nova-aliyun-redis:/data]
     healthcheck: { test: ["CMD", "redis-cli", "ping"], interval: 5s, timeout: 5s, retries: 24 }
+  # 缓存实例：限流桶、并发槽位等可重建数据。不持久化，内存满时淘汰最久未用的键，设密码
+  cache-redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["sh", "-c", "exec redis-server --requirepass \"$$REDIS_PASSWORD\" --save \"\" --appendonly no --maxmemory $${REDIS_MAXMEMORY} --maxmemory-policy allkeys-lru"]
+    environment:
+      REDIS_PASSWORD: ${CACHE_REDIS_PASSWORD:?必须设置 CACHE_REDIS_PASSWORD}
+      REDISCLI_AUTH: ${CACHE_REDIS_PASSWORD}
+      REDIS_MAXMEMORY: ${CACHE_REDIS_MAXMEMORY:-256mb}
+    mem_limit: ${CACHE_REDIS_MEM_LIMIT:-384m}
+    healthcheck: { test: ["CMD", "redis-cli", "ping"], interval: 5s, timeout: 5s, retries: 24 }
+  # 数据库连接池（事务池模式）：应用经它连接，迁移直连数据库
+  pgbouncer:
+    build: { context: ./pgbouncer }
+    restart: unless-stopped
+    environment:
+      PGB_DB_HOST: postgres
+      PGB_DB_NAME: ${POSTGRES_DB:-nova_erp}
+      PGB_USERS: nova_app:${NOVA_APP_PASSWORD:?必须设置 NOVA_APP_PASSWORD} nova_system:${NOVA_SYSTEM_PASSWORD:?必须设置 NOVA_SYSTEM_PASSWORD}
+      PGB_DEFAULT_POOL_SIZE: ${PGB_DEFAULT_POOL_SIZE:-20}
+      PGB_MAX_CLIENT_CONN: ${PGB_MAX_CLIENT_CONN:-500}
+    mem_limit: 128m
+    depends_on: { postgres: { condition: service_healthy } }
+  # 一次性：创建/更新两个最小权限账号（含账号级语句超时），并补齐已有表的权限；可重复执行，必须先于迁移
+  roles:
+    image: postgres:16-alpine
+    restart: "no"
+    entrypoint: ["psql", "-v", "ON_ERROR_STOP=1", "-f", "/ops/roles.sql", "-f", "/ops/regrant.sql"]
+    environment:
+      PGHOST: postgres
+      PGUSER: ${POSTGRES_USER:-nova}
+      PGPASSWORD: ${POSTGRES_PASSWORD}
+      PGDATABASE: ${POSTGRES_DB:-nova_erp}
+      NOVA_APP_PASSWORD: ${NOVA_APP_PASSWORD}
+      NOVA_SYSTEM_PASSWORD: ${NOVA_SYSTEM_PASSWORD}
+    volumes: ["../../database/ops:/ops:ro"]
+    depends_on: { postgres: { condition: service_healthy } }
   migrate:
     build: { context: ../.., dockerfile: infrastructure/compose/api.Dockerfile }
     restart: "no"
@@ -25,7 +112,8 @@ services:
       APP_MODE: production
       DEMO_MODE: "false"
       MOCK_CONNECTOR: "false"
-      DATABASE_URL: ${DATABASE_URL:?DATABASE_URL is required}
+      # 迁移账号（表的所有者）直连数据库，不经过连接池，也不进入 api / worker 容器
+      DATABASE_URL: ${DATABASE_OWNER_URL:-postgresql://${POSTGRES_USER:-nova}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-nova_erp}?schema=public}
       BOOTSTRAP_CONFIRM: ${BOOTSTRAP_CONFIRM:-}
       BOOTSTRAP_ADMIN_EMAIL: ${BOOTSTRAP_ADMIN_EMAIL:-}
       BOOTSTRAP_ADMIN_PASSWORD: ${BOOTSTRAP_ADMIN_PASSWORD:-}
@@ -33,20 +121,21 @@ services:
       BOOTSTRAP_TENANT_NAME: ${BOOTSTRAP_TENANT_NAME:-}
       BOOTSTRAP_TENANT_SLUG: ${BOOTSTRAP_TENANT_SLUG:-}
     command: ["sh", "-c", "pnpm --filter @nova/api prisma:deploy && if [ \"$BOOTSTRAP_CONFIRM\" = \"CREATE_FIRST_ADMIN\" ]; then pnpm --filter @nova/api prisma:bootstrap; fi"]
-    depends_on: { postgres: { condition: service_healthy } }
+    depends_on: { postgres: { condition: service_healthy }, roles: { condition: service_completed_successfully } }
   api:
-    build: { context: ../.., dockerfile: infrastructure/compose/api.Dockerfile }
+    build: { context: ../.., dockerfile: infrastructure/compose/api.Dockerfile, args: { NODE_MAX_OLD_SPACE_MB: "${API_NODE_HEAP_MB:-1024}" } }
     restart: unless-stopped
+    # 容器内存上限 = 堆上限 + 余量，进程不会长到被系统强杀（见 api.Dockerfile）
+    mem_limit: ${API_MEM_LIMIT:-1536m}
     environment:
+      <<: [*database, *redis, *encryption, *storage]
       APP_MODE: production
       DEMO_MODE: "false"
       MOCK_CONNECTOR: "false"
       PORT: 4000
-      DATABASE_URL: ${DATABASE_URL:?DATABASE_URL is required}
-      REDIS_URL: ${REDIS_URL:-redis://redis:6379}
-      JWT_SECRET: ${JWT_SECRET:?JWT_SECRET is required}
-      TOKEN_ENCRYPTION_KEY: ${TOKEN_ENCRYPTION_KEY:?TOKEN_ENCRYPTION_KEY is required}
-      CORS_ORIGINS: ${CORS_ORIGINS:?CORS_ORIGINS is required}
+      JWT_SECRET: ${JWT_SECRET:?必须设置 JWT_SECRET}
+      CORS_ORIGINS: ${CORS_ORIGINS:?必须设置 CORS_ORIGINS}
+      TRUST_PROXY: ${TRUST_PROXY:-}
       AMAZON_SP_API_APPROVED: ${AMAZON_SP_API_APPROVED:-false}
       AMAZON_SP_APPLICATION_ID: ${AMAZON_SP_APPLICATION_ID:-}
       AMAZON_SP_AUTH_URL: ${AMAZON_SP_AUTH_URL:-https://sellercentral.amazon.com/apps/authorize/consent}
@@ -64,18 +153,24 @@ services:
       AMAZON_ADS_LWA_TOKEN_URL: ${AMAZON_ADS_LWA_TOKEN_URL:-https://api.amazon.com/auth/o2/token}
       AMAZON_ADS_REDIRECT_URI: ${AMAZON_ADS_REDIRECT_URI:-https://dzanx.com/api/v1/ads/oauth/callback}
       AMAZON_ADS_SUCCESS_REDIRECT: ${AMAZON_ADS_SUCCESS_REDIRECT:-/app/connections}
+    volumes: [nova-aliyun-storage:/data/storage]
     healthcheck: { test: ["CMD-SHELL", "wget -q -O - http://127.0.0.1:4000/api/v1/health >/dev/null"], interval: 10s, timeout: 5s, start_period: 20s, retries: 12 }
-    depends_on: { postgres: { condition: service_healthy }, redis: { condition: service_healthy }, migrate: { condition: service_completed_successfully } }
+    depends_on:
+      pgbouncer: { condition: service_healthy }
+      queue-redis: { condition: service_healthy }
+      cache-redis: { condition: service_healthy }
+      migrate: { condition: service_completed_successfully }
   worker:
-    build: { context: ../.., dockerfile: infrastructure/compose/worker.Dockerfile }
+    build: { context: ../.., dockerfile: infrastructure/compose/worker.Dockerfile, args: { NODE_MAX_OLD_SPACE_MB: "${WORKER_NODE_HEAP_MB:-1536}" } }
     restart: unless-stopped
+    # 内存守卫（WORKER_RSS_LIMIT_MB）必须小于容器内存上限，才能在被系统强杀之前优雅退出
+    mem_limit: ${WORKER_MEM_LIMIT:-2g}
     environment:
+      <<: [*database, *redis, *encryption, *storage]
       APP_MODE: production
       DEMO_MODE: "false"
       MOCK_CONNECTOR: "false"
-      DATABASE_URL: ${DATABASE_URL:?DATABASE_URL is required}
-      REDIS_URL: ${REDIS_URL:-redis://redis:6379}
-      TOKEN_ENCRYPTION_KEY: ${TOKEN_ENCRYPTION_KEY:?TOKEN_ENCRYPTION_KEY is required}
+      WORKER_RSS_LIMIT_MB: ${WORKER_RSS_LIMIT_MB:-1700}
       AMAZON_SP_LWA_CLIENT_ID: ${AMAZON_SP_LWA_CLIENT_ID:-}
       AMAZON_SP_LWA_CLIENT_SECRET: ${AMAZON_SP_LWA_CLIENT_SECRET:-}
       AMAZON_SP_LWA_TOKEN_URL: ${AMAZON_SP_LWA_TOKEN_URL:-https://api.amazon.com/auth/o2/token}
@@ -90,7 +185,13 @@ services:
       AMAZON_ADS_LWA_TOKEN_URL: ${AMAZON_ADS_LWA_TOKEN_URL:-https://api.amazon.com/auth/o2/token}
       AMAZON_ADS_CAMPAIGNS_PATH: ${AMAZON_ADS_CAMPAIGNS_PATH:-/sp/campaigns/list}
       AMAZON_ADS_REPORTS_PATH: ${AMAZON_ADS_REPORTS_PATH:-/reporting/reports}
-    depends_on: { postgres: { condition: service_healthy }, redis: { condition: service_healthy }, migrate: { condition: service_completed_successfully } }
+    volumes: [nova-aliyun-storage:/data/storage]
+    depends_on:
+      pgbouncer: { condition: service_healthy }
+      queue-redis: { condition: service_healthy }
+      cache-redis: { condition: service_healthy }
+      migrate: { condition: service_completed_successfully }
+  # 网关：唯一对外的端口（官网、ERP 页面与 /api 反向代理）。HTTP_PORT 默认值对外开放 80；前面还有宿主机 nginx 或云负载均衡时写 127.0.0.1:8080
   web:
     build:
       context: ../..
@@ -102,3 +203,4 @@ services:
 volumes:
   nova-aliyun-postgres:
   nova-aliyun-redis:
+  nova-aliyun-storage:

@@ -1,0 +1,121 @@
+/* 事件带（P6-06）：只用 ERP 令牌变量，不写色值；每种类型一种颜色，与图例、圆点共用。 */
+.erp-event-band {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px solid var(--erp-line);
+}
+.erp-event-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  font-size: 12px;
+}
+.erp-event-title {
+  color: var(--erp-ink-soft);
+  font-weight: 500;
+}
+.erp-event-note {
+  color: var(--erp-ink-mute);
+  font-size: 12px;
+}
+.erp-event-lane {
+  display: flex;
+  align-items: center;
+  height: 22px;
+}
+.erp-event-lane-label {
+  flex: none;
+  overflow: hidden;
+  padding-inline-end: 4px;
+  color: var(--erp-ink-mute);
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.erp-event-track {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  border-bottom: 1px dashed var(--erp-line);
+}
+.erp-event-dot {
+  position: absolute;
+  top: 50%;
+  min-width: 14px;
+  height: 14px;
+  padding: 0 3px;
+  border: 0;
+  border-radius: var(--erp-r-md);
+  color: var(--erp-canvas);
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+.erp-event-dot:focus-visible {
+  outline: 2px solid var(--erp-brand-500);
+  outline-offset: 1px;
+}
+.erp-event-legend {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-inline-end: 4px;
+  border-radius: var(--erp-r-xs);
+}
+.erp-event-dot[data-type='OPERATION'],
+.erp-event-legend[data-type='OPERATION'] {
+  background: var(--erp-brand-500);
+}
+.erp-event-dot[data-type='PRICE'],
+.erp-event-legend[data-type='PRICE'] {
+  background: var(--erp-warning);
+}
+.erp-event-dot[data-type='ADS'],
+.erp-event-legend[data-type='ADS'] {
+  background: var(--erp-info);
+}
+.erp-event-dot[data-type='ALERT'],
+.erp-event-legend[data-type='ALERT'] {
+  background: var(--erp-danger);
+}
+.erp-event-dot[data-type='LISTING'],
+.erp-event-legend[data-type='LISTING'] {
+  background: var(--erp-success);
+}
+.erp-event-dot[data-type='AUDIT'],
+.erp-event-legend[data-type='AUDIT'] {
+  background: var(--erp-ink-mute);
+}
+.erp-event-dot[data-type='OTHER'],
+.erp-event-legend[data-type='OTHER'] {
+  background: var(--erp-ink-faint);
+}
+.erp-event-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 60vh;
+  overflow: auto;
+}
+.erp-event-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--erp-line-soft);
+}
+.erp-event-detail-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.erp-event-detail-meta {
+  color: var(--erp-ink-mute);
+  font-size: 12px;
+}

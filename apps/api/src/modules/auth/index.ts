@@ -1,0 +1,13 @@
+// 认证模块的公开面：其他模块只能从这里引用。
+export { AuthModule } from './auth.module'
+export { AuthGuard } from './auth.guard'
+export { ContextService } from './context.service'
+export { ScopeService } from './scope.service'
+export { permissionsOfRole, roleInclude, usesLegacy } from './role-permissions'
+export { PLATFORM_CHALLENGE_MINUTES, PLATFORM_TOKEN_MINUTES, platformJwtSecret, SUPPORT_USER_PREFIX } from './platform-token'
+export type { PlatformChallengePayload, PlatformTokenPayload, SupportTokenPayload } from './platform-token'
+export { adsProfileWhere, adsRelationWhere, assertStoreInScope, assertUnrestricted, connectionWhere, storeWhere } from './scope'
+export type { ResolvedScope } from './scope'
+export { readInternalAccessConfig } from './internal-access'
+export type { InternalAccessConfig } from './internal-access'
+export { generateTotpSecret, otpauthUri, totpAt, verifyTotp } from './totp'
